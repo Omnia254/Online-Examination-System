@@ -1,18 +1,4 @@
 -- Stored Procedure for deleting from Answer table
-CREATE PROCEDURE DeleteAnswer
-    @ExamID INT,
-    @StudentID INT,
-    @QuestionID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Answer WHERE ExamID = ' + CAST(@ExamID AS NVARCHAR(10)) +
-               ' AND StudentID = ' + CAST(@StudentID AS NVARCHAR(10)) +
-               ' AND QuestionID = ' + CAST(@QuestionID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from Answer table
 -- This procedure deletes answers from the Answer table based on the provided ExamID, StudentID, and QuestionID.
 -- Parameters:
 --   @ExamID - The ID of the exam.
@@ -46,20 +32,6 @@ BEGIN
     EXEC sp_executesql @SQL
 END
 
-
--- Stored Procedure for deleting from ExamQuestion table
-CREATE PROCEDURE DeleteExamQuestion
-    @ExamID INT,
-    @QuestionID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM ExamQuestion WHERE ExamID = ' + CAST(@ExamID AS NVARCHAR(10)) +
-               ' AND QuestionID = ' + CAST(@QuestionID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
-
 -- Stored Procedure for deleting from ExamQuestion table
 -- This procedure deletes records from the ExamQuestion table based on ExamID and QuestionID.
 -- Parameters:
@@ -85,18 +57,6 @@ BEGIN
         SET @SQL = @SQL + ' AND QuestionID = ' + CAST(@QuestionID AS NVARCHAR(10))
 
     -- Execute the dynamic SQL statement
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from Grades table
-CREATE PROCEDURE DeleteGrades
-    @StudentID INT,
-    @CourseID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Grades WHERE StudentID = ' + CAST(@StudentID AS NVARCHAR(10)) +
-               ' AND CourseID = ' + CAST(@CourseID AS NVARCHAR(10))
     EXEC sp_executesql @SQL
 END
 
@@ -129,16 +89,6 @@ BEGIN
 END
 
 -- Stored Procedure for deleting from Course table
-CREATE PROCEDURE DeleteCourse
-    @CourseID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Course WHERE CourseID = ' + CAST(@CourseID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from Course table
 -- This procedure deletes a course from the Course table based on the provided CourseID.
 -- Parameters:
 --   @CourseID - The ID of the course to be deleted.
@@ -161,16 +111,6 @@ BEGIN
 END
 
 -- Stored Procedure for deleting from Topic table
-CREATE PROCEDURE DeleteTopic
-    @TopicID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Topic WHERE TopicID = ' + CAST(@TopicID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from Topic table
 -- This procedure deletes a topic from the Topic table based on the provided TopicID.
 -- Parameters:
 --   @TopicID - The ID of the topic to be deleted.
@@ -189,18 +129,6 @@ BEGIN
         SET @SQL = @SQL + ' AND TopicID = ' + CAST(@TopicID AS NVARCHAR(10))
 
     -- Execute the dynamic SQL statement
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from StudentExam table
-CREATE PROCEDURE DeleteStudentExam
-    @ExamID INT,
-    @StudentID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM StudentExam WHERE ExamID = ' + CAST(@ExamID AS NVARCHAR(10)) +
-               ' AND StudentID = ' + CAST(@StudentID AS NVARCHAR(10))
     EXEC sp_executesql @SQL
 END
 
@@ -233,16 +161,6 @@ BEGIN
 END
 
 -- Stored Procedure for deleting from Exam table
-CREATE PROCEDURE DeleteExam
-    @ExamID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Exam WHERE ExamID = ' + CAST(@ExamID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from Exam table
 -- This procedure deletes an exam from the Exam table based on the provided ExamID.
 -- Parameters:
 --   @ExamID - The ID of the exam to be deleted.
@@ -263,27 +181,6 @@ BEGIN
     -- Execute the dynamic SQL statement
     EXEC sp_executesql @SQL
 END
-
--- Stored Procedure for deleting from Choice table
-CREATE PROCEDURE DeleteChoice
-    @ChoiceID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Choice WHERE ChoiceID = ' + CAST(@ChoiceID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
--- Stored Procedure for deleting from Choice table
-CREATE PROCEDURE DeleteChoice
-    @ChoiceID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Choice WHERE ChoiceID = ' + CAST(@ChoiceID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
 -- Stored Procedure for deleting from Choice table
 -- This procedure deletes a choice from the Choice table based on the provided ChoiceID.
 -- Parameters:
@@ -305,17 +202,6 @@ BEGIN
     -- Execute the dynamic SQL statement
     EXEC sp_executesql @SQL
 END
-
--- Stored Procedure for deleting from Question table
-CREATE PROCEDURE DeleteQuestion
-    @QuestionID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Question WHERE QuestionID = ' + CAST(@QuestionID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
 -- Stored Procedure for deleting from Question table
 -- This procedure deletes a question from the Question table based on the provided QuestionID.
 -- Parameters:
@@ -335,17 +221,6 @@ BEGIN
         SET @SQL = @SQL + ' AND QuestionID = ' + CAST(@QuestionID AS NVARCHAR(10))
 
     -- Execute the dynamic SQL statement
-    EXEC sp_executesql @SQL
-END
-
-
--- Stored Procedure for deleting from Instructor table
-CREATE PROCEDURE DeleteInstructor
-    @InstructorID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Instructor WHERE InstructorID = ' + CAST(@InstructorID AS NVARCHAR(10))
     EXEC sp_executesql @SQL
 END
 
@@ -371,17 +246,6 @@ BEGIN
     EXEC sp_executesql @SQL
 END
 
-
--- Stored Procedure for deleting from Student table
-CREATE PROCEDURE DeleteStudent
-    @StudentID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Student WHERE StudentID = ' + CAST(@StudentID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
 -- Stored Procedure for deleting from Student table
 -- This procedure deletes a student from the Student table based on the provided StudentID.
 -- Parameters:
@@ -403,17 +267,6 @@ BEGIN
     -- Execute the dynamic SQL statement
     EXEC sp_executesql @SQL
 END
-
--- Stored Procedure for deleting from Department table
-CREATE PROCEDURE DeleteDepartment
-    @DepartmentID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Department WHERE DepartmentID = ' + CAST(@DepartmentID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
 -- Stored Procedure for deleting from Department table
 -- This procedure deletes a department from the Department table based on the provided DepartmentID.
 -- Parameters:
@@ -435,21 +288,6 @@ BEGIN
     -- Execute the dynamic SQL statement
     EXEC sp_executesql @SQL
 END
-
-
-
--- Stored Procedure for deleting from Teach table
-CREATE PROCEDURE DeleteTeach
-    @CourseID INT,
-    @InstructorID INT
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(1000)
-    SET @SQL = 'DELETE FROM Teach WHERE CourseID = ' + CAST(@CourseID AS NVARCHAR(10)) +
-               ' AND InstructorID = ' + CAST(@InstructorID AS NVARCHAR(10))
-    EXEC sp_executesql @SQL
-END
-
 
 -- Stored Procedure for deleting from Teach table
 -- This procedure deletes records from the Teach table based on CourseID and InstructorID.
