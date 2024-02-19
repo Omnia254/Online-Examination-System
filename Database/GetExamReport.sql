@@ -2,6 +2,10 @@ CREATE PROCEDURE GetExamReport
     @ExamID INT
 AS
 BEGIN
+	IF NOT EXISTS(SELECT ExamID FROM Exam  WHERE ExamID = @ExamID)
+	  BEGIN
+	     SELECT 'This Exam is not exists'
+	  END
     SET NOCOUNT ON;
 
     SELECT 
@@ -21,4 +25,4 @@ BEGIN
 
 END;
 
-EXEC GetExamReport @ExamID =2 ;
+EXEC GetExamReport @ExamID =0 ;
