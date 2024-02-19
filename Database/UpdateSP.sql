@@ -1,4 +1,4 @@
-ALTER PROC DEPTUPDATE 
+CREATE PROC UPDATEDEPARTMENT 
 @COL1DATA INT,
 @COL2DATA NVARCHAR(50),
 @COL3DATA INT
@@ -46,11 +46,7 @@ BEGIN
 END
 
 
-DECLARE @ID INT=3,@InsId INT =102
-DECLARE @NAME NVARCHAR(50)='RG'
-EXEC DEPTUPDATE @ID,@NAME,@InsId
-
-CREATE PROC STUDENTUPDATE 
+CREATE PROC UPDATESTUDENT 
 @StudentId INT,
 @FirstName NVARCHAR(30),
 @LastName NVARCHAR(30),
@@ -117,7 +113,7 @@ This stored procedure works similarly to the previous one but for the Instructor
 It checks for the existence of the primary key, ensures that foreign key constraints are maintained,
 and constructs the dynamic SQL for updating the record accordingly.
 */
-CREATE PROC INSTRUCTORUPDATE 
+CREATE PROC UPDATEINSTRUCTOR 
 @InstructorID INT,
 @FirstName NVARCHAR(20),
 @LastName NVARCHAR(20),
@@ -184,7 +180,7 @@ This stored procedure will allow you to update records in the Question table bas
 It checks for the existence of the primary key, constructs the dynamic SQL for updating the record,
 and ensures that only non-null values are updated.
 */
-CREATE PROC QUESTIONUPDATE 
+CREATE PROC UPDATEQUESTION 
 @QuestionID INT,
 @QuestionText NVARCHAR(500),
 @QuestionType NVARCHAR(20),
@@ -235,7 +231,7 @@ ensures that foreign key constraints are maintained
 constructs the dynamic SQL for updating the record, 
 and ensures that only non-null values are updated
 */
-CREATE PROC CHOICEUPDATE 
+CREATE PROC UPDATECHOICE 
 @ChoiceID INT,
 @ChoiceText NVARCHAR(200),
 @IsCorrect BIT,
@@ -284,7 +280,7 @@ This stored procedure allows updating records in the Topic table based on the pr
 It checks for the existence of the primary key, constructs the dynamic SQL for updating the record,
 and ensures that only non-null values are updated.
 */
-CREATE PROC TOPICUPDATE 
+CREATE PROC UPDATETOPIC 
 @TopicID INT,
 @TopicTitle NVARCHAR(100)
 AS
@@ -326,7 +322,7 @@ ensures that foreign key constraints are maintained,
 and constructs the dynamic SQL for updating the record accordingly.
 and ensures that only non-null values are updated
 */
-CREATE PROC COURSEUPDATE 
+CREATE PROC UPDATECOURSE 
 @CourseID INT,
 @CourseName NVARCHAR(50),
 @TopicID INT
@@ -378,23 +374,23 @@ This stored procedure checks for the existence of the primary key values (Studen
 ensures that the required parameters are not null, constructs the dynamic SQL for updating the record,
 and ensures that only non-null values are updated.
 */
-CREATE PROC GRADEUPDATE 
+CREATE PROC UPDATEGRADE 
 @StudentID INT,
-@CourseID INT,
+@ExamID INT,
 @Score INT
 AS
 BEGIN
     DECLARE @SQL NVARCHAR(MAX) = 'UPDATE Grades SET '
     DECLARE @SetValues NVARCHAR(MAX) = ''
-    DECLARE @WhereClause NVARCHAR(MAX) = ' WHERE StudentID = ' + CAST(@StudentID AS NVARCHAR(10)) + ' AND CourseID = ' + CAST(@CourseID AS NVARCHAR(10))
+    DECLARE @WhereClause NVARCHAR(MAX) = ' WHERE StudentID = ' + CAST(@StudentID AS NVARCHAR(10)) + ' AND ExamID = ' + CAST(@ExamID AS NVARCHAR(10))
     
-    IF @StudentID IS NULL OR @CourseID IS NULL
+    IF @StudentID IS NULL OR @ExamID IS NULL
     BEGIN
         SELECT 'CANT UPDATE WITHOUT PK VALUES' AS ErrorMsg
         RETURN
     END
     
-    IF NOT EXISTS(SELECT * FROM Grades WHERE StudentID = @StudentID AND CourseID = @CourseID)
+    IF NOT EXISTS(SELECT * FROM Grades WHERE StudentID = @StudentID AND ExamID= @ExamID)
     BEGIN
         SELECT 'PK VALUES DO NOT EXIST' AS ErrorMsg
         RETURN
