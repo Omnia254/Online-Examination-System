@@ -184,7 +184,8 @@ CREATE PROC UPDATEQUESTION
 @QuestionID INT,
 @QuestionText NVARCHAR(500),
 @QuestionType NVARCHAR(20),
-@Complexity NVARCHAR(20)
+@Complexity NVARCHAR(20),
+@CourseID INT
 AS
 BEGIN
     DECLARE @SQL NVARCHAR(MAX) = 'UPDATE Question SET '
@@ -212,6 +213,16 @@ BEGIN
     IF @Complexity IS NOT NULL 
         SET @SetValues = @SetValues + ', Complexity = ''' + @Complexity + ''''
     
+    IF @CourseID IS NOT NULL
+    BEGIN
+        IF NOT EXISTS (SELECT CourseID FROM Course WHERE CourseID=@CourseID)
+        BEGIN
+            SELECT 'NO SUCH FK EXISTS' AS ErrorMsg
+            RETURN
+        END
+        SET @SetValues = @SetValues + ', CourseID = ' + CAST(@CourseID AS NVARCHAR(10))
+    END
+    
     IF LEN(@SetValues) = 0
     BEGIN
         SELECT 'NO VALUES TO UPDATE' AS ErrorMsg
@@ -224,6 +235,7 @@ BEGIN
     
     EXEC sp_executesql @SQL
 END
+
 
 /*
 This stored procedure checks for the existence of the primary key,
@@ -261,7 +273,14 @@ BEGIN
         SET @SetValues = @SetValues + ', IsCorrect = ' + CAST(@IsCorrect AS NVARCHAR(1))
     
     IF @QuestionID IS NOT NULL 
+    BEGIN
+        IF NOT EXISTS (SELECT QuestionID FROM Question WHERE QuestionID=@QuestionID)
+        BEGIN
+            SELECT 'NO SUCH FK EXISTS' AS ErrorMsg
+            RETURN
+        END
         SET @SetValues = @SetValues + ', QuestionID = ' + CAST(@QuestionID AS NVARCHAR(10))
+    END
     
     IF LEN(@SetValues) = 0
     BEGIN
@@ -275,6 +294,7 @@ BEGIN
     
     EXEC sp_executesql @SQL
 END
+
 /*
 This stored procedure allows updating records in the Topic table based on the provided parameters.
 It checks for the existence of the primary key, constructs the dynamic SQL for updating the record,
