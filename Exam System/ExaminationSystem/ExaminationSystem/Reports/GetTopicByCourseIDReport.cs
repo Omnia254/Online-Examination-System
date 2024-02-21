@@ -27,7 +27,9 @@ namespace ExaminationSystem.Reports
 
         private void GetTopicByCourseIDReport_Load(object sender, EventArgs e)
         {
-            ExaminationSystemContext examinationSystemContext;
+            ExaminationSystemContext examinationSystemContext = new ExaminationSystemContext();
+           // CrystalReport1 cr = new CrystalReport1();
+
 
         }
     }

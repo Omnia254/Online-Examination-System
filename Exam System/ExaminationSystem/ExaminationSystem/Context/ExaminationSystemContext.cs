@@ -2,7 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using ExaminationSystem.Models;
+using ExaminationSystem.StoredProcedure;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExaminationSystem.Context;
@@ -18,186 +18,13 @@ public partial class ExaminationSystemContext : DbContext
     {
     }
 
-    public virtual DbSet<Answer> Answers { get; set; }
-
-    public virtual DbSet<Choice> Choices { get; set; }
-
-    public virtual DbSet<Course> Courses { get; set; }
-
-    public virtual DbSet<Department> Departments { get; set; }
-
-    public virtual DbSet<Exam> Exams { get; set; }
-
-    public virtual DbSet<Grade> Grades { get; set; }
-
-    public virtual DbSet<Instructor> Instructors { get; set; }
-
-    public virtual DbSet<Question> Questions { get; set; }
-
-    public virtual DbSet<Student> Students { get; set; }
-
-    public virtual DbSet<Topic> Topics { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ExaminationSystem;Integrated Security=True;Encrypt=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Answer>(entity =>
-        {
-            entity.HasKey(e => new { e.ExamId, e.QuestionId }).HasName("PK__Answer__F9A9275F9F87B4EF");
-
-            entity.HasOne(d => d.Answer1Navigation).WithMany(p => p.Answers).HasConstraintName("FK__Answer__Answer__619B8048");
-
-            entity.HasOne(d => d.Exam).WithMany(p => p.Answers)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Answer__ExamID__5EBF139D");
-
-            entity.HasOne(d => d.Question).WithMany(p => p.Answers)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Answer__Question__5FB337D6");
-
-            entity.HasOne(d => d.Student).WithMany(p => p.Answers).HasConstraintName("FK__Answer__StudentI__60A75C0F");
-        });
-
-        modelBuilder.Entity<Choice>(entity =>
-        {
-            entity.HasKey(e => e.ChoiceId).HasName("PK__Choice__76F516865DCB2A6A");
-
-            entity.HasOne(d => d.Question).WithMany(p => p.Choices)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Choice__Question__48CFD27E");
-        });
-
-        modelBuilder.Entity<Course>(entity =>
-        {
-            entity.HasKey(e => e.CourseId).HasName("PK__Course__C92D7187F4F19FF4");
-
-            entity.HasOne(d => d.Topic).WithMany(p => p.Courses)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Course__TopicID__412EB0B6");
-
-            entity.HasMany(d => d.Instructors).WithMany(p => p.Courses)
-                .UsingEntity<Dictionary<string, object>>(
-                    "Teach",
-                    r => r.HasOne<Instructor>().WithMany()
-                        .HasForeignKey("InstructorId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__Teach__Instructo__5812160E"),
-                    l => l.HasOne<Course>().WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__Teach__CourseID__571DF1D5"),
-                    j =>
-                    {
-                        j.HasKey("CourseId", "InstructorId").HasName("PK__Teach__60FD613095B661D1");
-                        j.ToTable("Teach");
-                        j.IndexerProperty<int>("CourseId").HasColumnName("CourseID");
-                        j.IndexerProperty<int>("InstructorId").HasColumnName("InstructorID");
-                    });
-        });
-
-        modelBuilder.Entity<Department>(entity =>
-        {
-            entity.HasKey(e => e.DepartmentId).HasName("PK__Departme__B2079BCDBDF5FE11");
-        });
-
-        modelBuilder.Entity<Exam>(entity =>
-        {
-            entity.HasKey(e => e.ExamId).HasName("PK__Exam__297521A77BDF8E9B");
-
-            entity.HasOne(d => d.Course).WithMany(p => p.Exams)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Exam__CourseID__4CA06362");
-
-            entity.HasOne(d => d.Instructor).WithMany(p => p.Exams)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Exam__Instructor__4BAC3F29");
-
-            entity.HasMany(d => d.Questions).WithMany(p => p.Exams)
-                .UsingEntity<Dictionary<string, object>>(
-                    "ExamQuestion",
-                    r => r.HasOne<Question>().WithMany()
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__ExamQuest__Quest__5BE2A6F2"),
-                    l => l.HasOne<Exam>().WithMany()
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__ExamQuest__ExamI__5AEE82B9"),
-                    j =>
-                    {
-                        j.HasKey("ExamId", "QuestionId").HasName("PK__ExamQues__F9A9275FA1BDCC19");
-                        j.ToTable("ExamQuestion");
-                        j.IndexerProperty<int>("ExamId").HasColumnName("ExamID");
-                        j.IndexerProperty<int>("QuestionId").HasColumnName("QuestionID");
-                    });
-        });
-
-        modelBuilder.Entity<Grade>(entity =>
-        {
-            entity.HasKey(e => e.ExamId).HasName("PK__Grades__297521A753C42628");
-
-            entity.Property(e => e.ExamId).ValueGeneratedNever();
-
-            entity.HasOne(d => d.Exam).WithOne(p => p.Grade)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Grades__ExamID__5070F446");
-
-            entity.HasOne(d => d.Student).WithMany(p => p.Grades).HasConstraintName("FK__Grades__StudentI__4F7CD00D");
-        });
-
-        modelBuilder.Entity<Instructor>(entity =>
-        {
-            entity.HasKey(e => e.InstructorId).HasName("PK__Instruct__9D010B7B2FB03428");
-
-            entity.HasOne(d => d.Department).WithMany(p => p.Instructors)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Instructo__Depar__3C69FB99");
-        });
-
-        modelBuilder.Entity<Question>(entity =>
-        {
-            entity.HasKey(e => e.QuestionId).HasName("PK__Question__0DC06F8CDB1E48A3");
-
-            entity.HasOne(d => d.Course).WithMany(p => p.Questions)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Question__Course__45F365D3");
-        });
-
-        modelBuilder.Entity<Student>(entity =>
-        {
-            entity.HasKey(e => e.StudentId).HasName("PK__Student__32C52B99806E3CAB");
-
-            entity.HasOne(d => d.Department).WithMany(p => p.Students)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Student__Departm__398D8EEE");
-
-            entity.HasMany(d => d.Courses).WithMany(p => p.Students)
-                .UsingEntity<Dictionary<string, object>>(
-                    "Enroll",
-                    r => r.HasOne<Course>().WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__Enroll__CourseID__5441852A"),
-                    l => l.HasOne<Student>().WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__Enroll__StudentI__534D60F1"),
-                    j =>
-                    {
-                        j.HasKey("StudentId", "CourseId").HasName("PK__Enroll__5E57FD618B0259A0");
-                        j.ToTable("Enroll");
-                        j.IndexerProperty<int>("StudentId").HasColumnName("StudentID");
-                        j.IndexerProperty<int>("CourseId").HasColumnName("CourseID");
-                    });
-        });
-
-        modelBuilder.Entity<Topic>(entity =>
-        {
-            entity.HasKey(e => e.TopicId).HasName("PK__Topic__022E0F7D287F6083");
-        });
-
+        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }
 
