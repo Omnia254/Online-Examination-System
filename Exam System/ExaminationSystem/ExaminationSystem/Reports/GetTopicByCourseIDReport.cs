@@ -13,7 +13,7 @@ namespace ExaminationSystem.Reports
 {
     public partial class GetTopicByCourseIDReport : Form
     {
-        
+
         private int courseid;
         public GetTopicByCourseIDReport()
         {
@@ -28,8 +28,13 @@ namespace ExaminationSystem.Reports
         private void GetTopicByCourseIDReport_Load(object sender, EventArgs e)
         {
             ExaminationSystemContext examinationSystemContext = new ExaminationSystemContext();
-           // CrystalReport1 cr = new CrystalReport1();
+            // CrystalReport1 cr = new CrystalReport1();
 
+
+        }
+
+        private void sqlDataAdapter1_RowUpdated(object sender, Microsoft.Data.SqlClient.SqlRowUpdatedEventArgs e)
+        {
 
         }
     }
