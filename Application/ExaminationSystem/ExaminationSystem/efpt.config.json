@@ -7,7 +7,7 @@
    "IncludeConnectionString": true,
    "ModelNamespace": null,
    "OutputContextPath": "Context",
-   "OutputPath": "Models",
+   "OutputPath": "Stored Procedure",
    "PreserveCasingWithRegex": true,
    "ProjectRootNamespace": "ExaminationSystem",
    "Schemas": null,
@@ -16,56 +16,12 @@
    "T4TemplatePath": null,
    "Tables": [
       {
-         "Name": "[dbo].[Answer]",
-         "ObjectType": 0
+         "Name": "[dbo].[GetChoicesByQuestionId]",
+         "ObjectType": 1
       },
       {
-         "Name": "[dbo].[Choice]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Course]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Department]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Enroll]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Exam]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[ExamQuestion]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Grades]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Instructor]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Question]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Student]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Teach]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[Topic]",
-         "ObjectType": 0
+         "Name": "[dbo].[GetExamQuestionsTextById]",
+         "ObjectType": 1
       }
    ],
    "UiHint": "desktop-mn6njmt.ExaminationSystem.dbo",
@@ -75,7 +31,7 @@
    "UseDateOnlyTimeOnly": false,
    "UseDbContextSplitting": false,
    "UseDecimalDataAnnotationForSprocResult": true,
-   "UseFluentApiOnly": false,
+   "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseHierarchyId": false,
    "UseInflector": true,
