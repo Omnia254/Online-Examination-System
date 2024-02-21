@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.16" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1620.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ReportsOutput\" />
+    <Folder Include="Stored Procedure\" />
   </ItemGroup>
 
 </Project>
