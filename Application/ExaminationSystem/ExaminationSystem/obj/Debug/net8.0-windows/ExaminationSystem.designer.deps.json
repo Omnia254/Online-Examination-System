@@ -379,30 +379,46 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1620.0": {
+      "Microsoft.ReportingServices.ReportViewerControl.Winforms/140.337.80": {
         "dependencies": {
           "Microsoft.SqlServer.Types": "160.1000.6"
         },
         "runtime": {
           "lib/net40/Microsoft.ReportViewer.Common.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1620.0"
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
+          },
+          "lib/net40/Microsoft.ReportViewer.Common.resources.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
           },
           "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1620.0"
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
+          },
+          "lib/net40/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
           },
           "lib/net40/Microsoft.ReportViewer.Design.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1620.0"
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
+          },
+          "lib/net40/Microsoft.ReportViewer.Design.resources.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
           },
           "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1620.0"
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
           },
           "lib/net40/Microsoft.ReportViewer.WinForms.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.1620.0"
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
+          },
+          "lib/net40/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.337.80"
           }
         },
         "resources": {
@@ -525,6 +541,30 @@
           },
           "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll": {
             "locale": "zh-CHT"
+          },
+          "lib/net40/zh-HANS/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-HANS/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-HANS/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-HANS/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net40/zh-HANT/Microsoft.ReportViewer.Common.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/net40/zh-HANT/Microsoft.ReportViewer.DataVisualization.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/net40/zh-HANT/Microsoft.ReportViewer.Design.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/net40/zh-HANT/Microsoft.ReportViewer.WinForms.resources.dll": {
+            "locale": "zh-Hant"
           }
         }
       },
@@ -1153,12 +1193,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1620.0": {
+    "Microsoft.ReportingServices.ReportViewerControl.Winforms/140.337.80": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x5gR0feapdCWeFEsceoDUCDUwmX2StM/xRDkYLOmbX7oJDHCH7w6RVRQ3C4KtzW/5fdxgWOyhs4Kjw4pfOqdeg==",
-      "path": "microsoft.reportingservices.reportviewercontrol.winforms/150.1620.0",
-      "hashPath": "microsoft.reportingservices.reportviewercontrol.winforms.150.1620.0.nupkg.sha512"
+      "sha512": "sha512-BIH1+2uzq6pZ/sqJS5EwmVLTMuIt4i7bQ1cyRkvrDe5vS6kt0euRmk09EjhLzC4NyD/jFX+cExRRS3omxFyiCw==",
+      "path": "microsoft.reportingservices.reportviewercontrol.winforms/140.337.80",
+      "hashPath": "microsoft.reportingservices.reportviewercontrol.winforms.140.337.80.nupkg.sha512"
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
