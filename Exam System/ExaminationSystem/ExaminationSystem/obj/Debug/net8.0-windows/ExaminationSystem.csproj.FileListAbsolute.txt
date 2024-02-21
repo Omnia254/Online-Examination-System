@@ -1,0 +1,247 @@
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.exe
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.deps.json
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.runtimeconfig.json
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.pdb
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Azure.Core.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Azure.Identity.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.Memory.Data.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.AssemblyReference.cache
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.TakeExam.resources
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.GenerateResource.cache
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.GeneratedMSBuildEditorConfig.editorconfig
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.AssemblyInfoInputs.cache
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.AssemblyInfo.cs
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.CoreCompileInputs.cache
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.sourcelink.json
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.CopyComplete
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\refint\ExaminationSystem.dll
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.pdb
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.genruntimeconfig.cache
+H:\ITI_Intake44\Project DataBase\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ref\ExaminationSystem.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.exe
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.deps.json
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.runtimeconfig.json
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.pdb
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Azure.Core.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Azure.Identity.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.Memory.Data.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.AssemblyReference.cache
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.TakeExam.resources
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.GenerateResource.cache
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.AssemblyInfoInputs.cache
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.AssemblyInfo.cs
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.CoreCompileInputs.cache
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.sourcelink.json
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\Examinat.B0221FF7.Up2Date
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\refint\ExaminationSystem.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.pdb
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.genruntimeconfig.cache
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ref\ExaminationSystem.dll
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Reports.GetTopicByCourseIDReport.resources
+F:\ITI 9 Month SD\9.Advanced Sql\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Reports.TakeFromUserCourseId.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.exe
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.deps.json
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.runtimeconfig.json
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.pdb
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Properties.Resources.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Reports.GetTopicByCourseIDReport.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Reports.TakeFromUserCourseId.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.StudentDashboard.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.TakeExam.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.AssemblyInfo.cs
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.sourcelink.json
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.csproj.CopyComplete
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\refint\ExaminationSystem.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.pdb
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.genruntimeconfig.cache
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ref\ExaminationSystem.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.ReportViewer.Common.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.ReportViewer.Design.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\Microsoft.SqlServer.Types.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Exam System\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
