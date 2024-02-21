@@ -17,11 +17,12 @@ EXEC GetExamQuestionsById @ExamID;
 
 --GetTextOnly
 
-CREATE PROCEDURE GetExamQuestionsTextById
+alter PROCEDURE GetExamQuestionsTextById
     @ExamID INT
 AS
 BEGIN
     SELECT DISTINCT
+	 Q.QuestionID,
         Q.QuestionText
     FROM ExamQuestion EQ
     JOIN Question Q ON EQ.QuestionID = Q.QuestionID
