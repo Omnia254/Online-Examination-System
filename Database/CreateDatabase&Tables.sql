@@ -1,8 +1,8 @@
 -- Create a new database named "ExaminationSystem"
-CREATE DATABASE ExaminationSystem;
+CREATE DATABASE ExaminationSystem01;
 
 -- Switch to the newly created database for further operations
-USE ExaminationSystem;
+USE ExaminationSystem01;
 -- Table to store information about academic departments
 CREATE TABLE [Department] (
   [DepartmentID] INT IDENTITY(1,1),

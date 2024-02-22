@@ -1,0 +1,222 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\getexamreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\getexamreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\getexamreport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\getexamreport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\getexamreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\getexamreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\examinationsystemdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\examinationsystemdataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\getexamreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\getexamreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\report.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\report.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\examinationsystemdataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\examinationsystemdataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|f:\\iti 9 month sd\\9.advanced sql\\windowsformsapp1\\windowsformsapp1\\examinationsystemdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{89E2856D-40BD-4D1B-B9FF-80E5BF49252A}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\examinationsystemdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetExamReport.cs [Design]",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\GetExamReport.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\GetExamReport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T00:17:01.523Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetExamReport.Designer.cs",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\GetExamReport.Designer.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\GetExamReport.Designer.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAADwv0MAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T00:26:42.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T00:18:53.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExaminationSystemDataSet1.xsd",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\ExaminationSystemDataSet1.xsd",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ExaminationSystemDataSet1.xsd",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\ExaminationSystemDataSet1.xsd",
+              "RelativeToolTip": "WindowsFormsApp1\\ExaminationSystemDataSet1.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-02-22T00:20:11.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:37:55.226Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetExamReport.cs",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\GetExamReport.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\GetExamReport.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAlwBYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T00:26:35.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAWwBsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:33:14.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetExamReport.rdlc [Design]",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.rdlc",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\GetExamReport.rdlc",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\GetExamReport.rdlc [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\GetExamReport.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-02-22T00:16:14.864Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Report.rdlc [Design]",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Report.rdlc",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Report.rdlc",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Report.rdlc [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Report.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-02-21T23:27:57.757Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.Designer.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.Designer.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAADwv20AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:39:06.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ExaminationSystemDataSet.cs",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\ExaminationSystemDataSet.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ExaminationSystemDataSet.cs",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\ExaminationSystemDataSet.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ExaminationSystemDataSet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T23:51:48.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExaminationSystemDataSet.xsd",
+              "DocumentMoniker": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\ExaminationSystemDataSet.xsd",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ExaminationSystemDataSet.xsd",
+              "ToolTip": "F:\\ITI 9 Month SD\\9.Advanced Sql\\WindowsFormsApp1\\WindowsFormsApp1\\ExaminationSystemDataSet.xsd",
+              "RelativeToolTip": "WindowsFormsApp1\\ExaminationSystemDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-02-21T23:30:04.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
