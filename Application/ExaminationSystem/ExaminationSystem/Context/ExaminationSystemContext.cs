@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using ExaminationSystem.Models;
 using ExaminationSystem.StoredProcedure;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,27 @@ public partial class ExaminationSystemContext : DbContext
     {
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	public virtual DbSet<Answer> Answers { get; set; }
+
+	public virtual DbSet<Choice> Choices { get; set; }
+
+	public virtual DbSet<Course> Courses { get; set; }
+
+	public virtual DbSet<Department> Departments { get; set; }
+
+	public virtual DbSet<Exam> Exams { get; set; }
+
+	public virtual DbSet<Grade> Grades { get; set; }
+
+	public virtual DbSet<Instructor> Instructors { get; set; }
+
+	public virtual DbSet<Question> Questions { get; set; }
+
+	public virtual DbSet<Student> Students { get; set; }
+
+	public virtual DbSet<Topic> Topics { get; set; }
+
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ExaminationSystem;Integrated Security=True;Encrypt=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
