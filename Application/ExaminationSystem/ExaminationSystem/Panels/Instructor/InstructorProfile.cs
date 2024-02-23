@@ -77,7 +77,13 @@ namespace ExaminationSystem.Panels.Instructor
 			}
 
 			string firstThreeDigits = PhoneNumber.Text.Substring(0, 3);
+			string onlyNumbersPattern = @"^\d+$";
 
+			if (!Regex.IsMatch(PhoneNumber.Text, onlyNumbersPattern))
+			{
+				MessageBox.Show("Phone Number MUST Contain only Digits!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 			if (!(firstThreeDigits == "010" || firstThreeDigits == "011" || firstThreeDigits == "012" || firstThreeDigits == "015"))
 			{
 				MessageBox.Show("Phone Number MUST Start with 010, 011, 012, or 015.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
