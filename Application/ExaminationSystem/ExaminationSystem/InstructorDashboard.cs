@@ -18,7 +18,7 @@ namespace ExaminationSystem
 	{
 		List<Button> buttons = new List<Button>();
 		ExaminationSystemContext context = new ExaminationSystemContext();
-		Instructor instructor;
+		Instructor instructor = new();
 		int instructorID = 9;
 
 		public InstructorDashboard()

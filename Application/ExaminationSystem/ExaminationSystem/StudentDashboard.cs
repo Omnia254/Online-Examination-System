@@ -1,5 +1,6 @@
 ﻿using ExaminationSystem.Context;
 using ExaminationSystem.Models;
+using ExaminationSystem.Panels.Instructor;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,13 +19,14 @@ namespace ExaminationSystem
 	{
 		List<Button> buttons = new List<Button>();
 		ExaminationSystemContext context = new ExaminationSystemContext();
+		Student student = new();
 		int studentID = 7;
 
 		public StudentDashboard()
 		{
 			InitializeComponent();
 
-			buttons.Add(button1);
+			buttons.Add(ProfileButton);
 			buttons.Add(button2);
 			buttons.Add(button3);
 			buttons.Add(button4);
@@ -35,6 +37,17 @@ namespace ExaminationSystem
 				buttons[i].Click += Button_Click;
 			}
 
+			studentProfile1 = new Panels.Student.StudentProfile();
+
+			MainPanel.Controls.Add(studentProfile1);
+
+			studentProfile1.Visible = false;
+
+			ReloadForm();
+		}
+
+		public void ReloadForm()
+		{
 			try
 			{
 				Student stud = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
@@ -64,6 +77,25 @@ namespace ExaminationSystem
 					button.BackColor = Color.White;
 				}
 			}
+		}
+
+		private void ProfileButton_Click(object sender, EventArgs e)
+		{
+			context.Students.Load();
+
+			student = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
+					new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
+
+			studentProfile1.FirstName.Text = student.FirstName;
+			studentProfile1.LastName.Text = student.LastName;
+			studentProfile1.Address.Text = student.Address;
+			studentProfile1.PhoneNumber.Text = student.PhoneNum;
+			studentProfile1.Email.Text = student.Email;
+
+			studentProfile1.SetStudent(student);
+			studentProfile1.DisableFields();
+
+			studentProfile1.Visible = true;
 		}
 	}
 }

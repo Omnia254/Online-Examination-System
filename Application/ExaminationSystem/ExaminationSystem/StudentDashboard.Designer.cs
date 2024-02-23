@@ -1,4 +1,6 @@
-﻿namespace ExaminationSystem
+﻿using ExaminationSystem.Panels.Student;
+
+namespace ExaminationSystem
 {
 	partial class StudentDashboard
 	{
@@ -34,7 +36,7 @@
 			button4 = new Button();
 			button3 = new Button();
 			button2 = new Button();
-			button1 = new Button();
+			ProfileButton = new Button();
 			StudentNameLabel = new Label();
 			StudentImage = new PictureBox();
 			Header = new Panel();
@@ -53,7 +55,7 @@
 			LeftSideBar.Controls.Add(button4);
 			LeftSideBar.Controls.Add(button3);
 			LeftSideBar.Controls.Add(button2);
-			LeftSideBar.Controls.Add(button1);
+			LeftSideBar.Controls.Add(ProfileButton);
 			LeftSideBar.Controls.Add(StudentNameLabel);
 			LeftSideBar.Controls.Add(StudentImage);
 			LeftSideBar.Location = new Point(0, 0);
@@ -118,19 +120,20 @@
 			button2.Text = "button2";
 			button2.UseVisualStyleBackColor = false;
 			// 
-			// button1
+			// ProfileButton
 			// 
-			button1.BackColor = Color.White;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button1.ForeColor = Color.Black;
-			button1.Location = new Point(0, 425);
-			button1.Name = "button1";
-			button1.Size = new Size(350, 49);
-			button1.TabIndex = 2;
-			button1.Text = "button1";
-			button1.UseVisualStyleBackColor = false;
+			ProfileButton.BackColor = Color.White;
+			ProfileButton.FlatAppearance.BorderSize = 0;
+			ProfileButton.FlatStyle = FlatStyle.Flat;
+			ProfileButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			ProfileButton.ForeColor = Color.Black;
+			ProfileButton.Location = new Point(0, 425);
+			ProfileButton.Name = "ProfileButton";
+			ProfileButton.Size = new Size(350, 49);
+			ProfileButton.TabIndex = 2;
+			ProfileButton.Text = "Profile";
+			ProfileButton.UseVisualStyleBackColor = false;
+			ProfileButton.Click += ProfileButton_Click;
 			// 
 			// StudentNameLabel
 			// 
@@ -214,10 +217,11 @@
 		private Panel MainPanel;
 		private PictureBox StudentImage;
 		private Label StudentNameLabel;
-		private Button button1;
+		private Button ProfileButton;
 		private Button button4;
 		private Button button3;
 		private Button button2;
 		private Button LogOut;
+		private StudentProfile studentProfile1;
 	}
 }

@@ -8,44 +8,42 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace ExaminationSystem.Panels.Instructor
+namespace ExaminationSystem.Panels.Student
 {
-	public partial class InstructorProfile : UserControl
+	public partial class StudentProfile : UserControl
 	{
 		ExaminationSystemContext context = new ExaminationSystemContext();
-		public Models.Instructor instructor = new();
-		int instructorID;
+		public Models.Student student = new();
+		int studentID;
 
-		public InstructorProfile()
+		public StudentProfile()
 		{
 			InitializeComponent();
 
-			Load += InstructorProfile_Load;
+			Load += StudentProfile_Load;
 		}
 
-		private void InstructorProfile_Load(object sender, EventArgs e)
+		private void StudentProfile_Load(object sender, EventArgs e)
 		{
-			context.Instructors.Load();
-
+			context.Students.Load();
 			DisableFields();
 
-			FirstName.Text = instructor.FirstName;
-			LastName.Text = instructor.LastName;
-			PhoneNumber.Text = instructor.PhoneNumber;
-			Email.Text = instructor.Email;
+			FirstName.Text = student.FirstName;
+			LastName.Text = student.LastName;
+			Address.Text = student.Address;
+			PhoneNumber.Text = student.PhoneNum;
+			Email.Text = student.Email;
 		}
 
-		public void SetInstructor(Models.Instructor _instructor)
+		public void SetStudent(Models.Student _student)
 		{
-			instructor = _instructor;
-			instructorID = _instructor.InstructorId;
+			student = _student;
+			studentID = _student.StudentId;
 		}
 
 		private void SaveBtn_Click(object sender, EventArgs e)
@@ -58,6 +56,11 @@ namespace ExaminationSystem.Panels.Instructor
 			if (string.IsNullOrEmpty(LastName.Text))
 			{
 				MessageBox.Show("Please enter your Last Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			if (string.IsNullOrEmpty(Address.Text))
+			{
+				MessageBox.Show("Please enter your Address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			if (string.IsNullOrEmpty(PhoneNumber.Text))
@@ -101,28 +104,29 @@ namespace ExaminationSystem.Panels.Instructor
 
 			try
 			{
-				var instructirIDParameter = new SqlParameter("@InstructorID", instructorID);
+				var studentIDParameter = new SqlParameter("@StudentId", studentID);
 				var firstNameParameter = new SqlParameter("@FirstName", FirstName.Text);
 				var lastNameParameter = new SqlParameter("@LastName", LastName.Text);
-				var hireDateParameter = new SqlParameter("@HireDate", instructor.HireDate);
-				var phoneNumberParameter = new SqlParameter("@PhoneNumber", PhoneNumber.Text);
+				var addressParameter = new SqlParameter("@Address", Address.Text);
+				var phoneNumberParameter = new SqlParameter("@PhoneNum", PhoneNumber.Text);
 				var emailParameter = new SqlParameter("@Email", Email.Text);
-				var deptIDParameter = new SqlParameter("@DepartmentID", instructor.DepartmentId);
+				var deptIDParameter = new SqlParameter("@DepartmentID", student.DepartmentId);
 
-				context.Database.ExecuteSqlRaw("EXECUTE UPDATEINSTRUCTOR @InstructorID, @FirstName, @LastName, @HireDate, @PhoneNumber, @Email, @DepartmentID",
-					instructirIDParameter, firstNameParameter, lastNameParameter, hireDateParameter, phoneNumberParameter, emailParameter, deptIDParameter);
+				context.Database.ExecuteSqlRaw("EXECUTE UPDATESTUDENT @StudentId, @FirstName, @LastName, @Address, @PhoneNum, @Email, @DepartmentID",
+					studentIDParameter, firstNameParameter, lastNameParameter, addressParameter, phoneNumberParameter, emailParameter, deptIDParameter);
 
 				MessageBox.Show("Your Profile Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				instructor.FirstName = FirstName.Text;
-				instructor.LastName = LastName.Text;
-				instructor.PhoneNumber = PhoneNumber.Text;
-				instructor.Email = Email.Text;
+				student.FirstName = FirstName.Text;
+				student.LastName = LastName.Text;
+				student.Address = Address.Text;
+				student.PhoneNum = PhoneNumber.Text;
+				student.Email = Email.Text;
 
 				context.SaveChanges();
 
-				var instructorDashboardForm = Application.OpenForms.OfType<InstructorDashboard>().FirstOrDefault();
-				instructorDashboardForm?.ReloadForm();
+				var studentDashboardForm = Application.OpenForms.OfType<StudentDashboard>().FirstOrDefault();
+				studentDashboardForm?.ReloadForm();
 			}
 			catch (Exception ex)
 			{
@@ -139,13 +143,9 @@ namespace ExaminationSystem.Panels.Instructor
 
 		public void EnableFields()
 		{
-			FirstName.Text = instructor.FirstName;
-			LastName.Text = instructor.LastName;
-			PhoneNumber.Text = instructor.PhoneNumber;
-			Email.Text = instructor.Email;
-
 			FirstName.Enabled = true;
 			LastName.Enabled = true;
+			Address.Enabled = true;
 			PhoneNumber.Enabled = true;
 			Email.Enabled = true;
 
@@ -155,8 +155,15 @@ namespace ExaminationSystem.Panels.Instructor
 
 		public void DisableFields()
 		{
+			FirstName.Text = student.FirstName;
+			LastName.Text = student.LastName;
+			Address.Text = student.Address;
+			PhoneNumber.Text = student.PhoneNum;
+			Email.Text = student.Email;
+
 			FirstName.Enabled = false;
 			LastName.Enabled = false;
+			Address.Enabled = false;
 			PhoneNumber.Enabled = false;
 			Email.Enabled = false;
 
