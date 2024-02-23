@@ -29,14 +29,12 @@
 		private void InitializeComponent()
 		{
 			GenerateExamPanel = new Panel();
-			InstructorIDLabel = new Label();
 			NoOfMCQQuestions = new ComboBox();
 			NoOfMCQLabel = new Label();
 			NoOfTFQuestion = new ComboBox();
 			NoOfTFLabel = new Label();
 			Complexity = new ComboBox();
 			ComplexityLabel = new Label();
-			InstructorID = new TextBox();
 			GenerateBtn = new Button();
 			Course = new ComboBox();
 			CourseLabel = new Label();
@@ -47,14 +45,12 @@
 			// GenerateExamPanel
 			// 
 			GenerateExamPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			GenerateExamPanel.Controls.Add(InstructorIDLabel);
 			GenerateExamPanel.Controls.Add(NoOfMCQQuestions);
 			GenerateExamPanel.Controls.Add(NoOfMCQLabel);
 			GenerateExamPanel.Controls.Add(NoOfTFQuestion);
 			GenerateExamPanel.Controls.Add(NoOfTFLabel);
 			GenerateExamPanel.Controls.Add(Complexity);
 			GenerateExamPanel.Controls.Add(ComplexityLabel);
-			GenerateExamPanel.Controls.Add(InstructorID);
 			GenerateExamPanel.Controls.Add(GenerateBtn);
 			GenerateExamPanel.Controls.Add(Course);
 			GenerateExamPanel.Controls.Add(CourseLabel);
@@ -64,19 +60,6 @@
 			GenerateExamPanel.Size = new Size(930, 728);
 			GenerateExamPanel.TabIndex = 0;
 			// 
-			// InstructorIDLabel
-			// 
-			InstructorIDLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-			InstructorIDLabel.AutoSize = true;
-			InstructorIDLabel.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			InstructorIDLabel.Location = new Point(222, 155);
-			InstructorIDLabel.MaximumSize = new Size(0, 30);
-			InstructorIDLabel.MinimumSize = new Size(0, 30);
-			InstructorIDLabel.Name = "InstructorIDLabel";
-			InstructorIDLabel.Size = new Size(136, 30);
-			InstructorIDLabel.TabIndex = 57;
-			InstructorIDLabel.Text = "Instructor ID";
-			// 
 			// NoOfMCQQuestions
 			// 
 			NoOfMCQQuestions.Anchor = AnchorStyles.Left | AnchorStyles.Right;
@@ -84,7 +67,7 @@
 			NoOfMCQQuestions.Font = new Font("Candara", 10.8F);
 			NoOfMCQQuestions.FormattingEnabled = true;
 			NoOfMCQQuestions.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-			NoOfMCQQuestions.Location = new Point(485, 498);
+			NoOfMCQQuestions.Location = new Point(485, 437);
 			NoOfMCQQuestions.MaximumSize = new Size(250, 0);
 			NoOfMCQQuestions.MinimumSize = new Size(250, 0);
 			NoOfMCQQuestions.Name = "NoOfMCQQuestions";
@@ -97,7 +80,7 @@
 			NoOfMCQLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
 			NoOfMCQLabel.AutoSize = true;
 			NoOfMCQLabel.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			NoOfMCQLabel.Location = new Point(222, 495);
+			NoOfMCQLabel.Location = new Point(222, 434);
 			NoOfMCQLabel.MaximumSize = new Size(0, 30);
 			NoOfMCQLabel.MinimumSize = new Size(0, 30);
 			NoOfMCQLabel.Name = "NoOfMCQLabel";
@@ -112,7 +95,7 @@
 			NoOfTFQuestion.Font = new Font("Candara", 10.8F);
 			NoOfTFQuestion.FormattingEnabled = true;
 			NoOfTFQuestion.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-			NoOfTFQuestion.Location = new Point(485, 413);
+			NoOfTFQuestion.Location = new Point(485, 352);
 			NoOfTFQuestion.MaximumSize = new Size(250, 0);
 			NoOfTFQuestion.MinimumSize = new Size(250, 0);
 			NoOfTFQuestion.Name = "NoOfTFQuestion";
@@ -125,7 +108,7 @@
 			NoOfTFLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
 			NoOfTFLabel.AutoSize = true;
 			NoOfTFLabel.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			NoOfTFLabel.Location = new Point(222, 410);
+			NoOfTFLabel.Location = new Point(222, 349);
 			NoOfTFLabel.MaximumSize = new Size(0, 30);
 			NoOfTFLabel.MinimumSize = new Size(0, 30);
 			NoOfTFLabel.Name = "NoOfTFLabel";
@@ -140,7 +123,7 @@
 			Complexity.Font = new Font("Candara", 10.8F);
 			Complexity.FormattingEnabled = true;
 			Complexity.Items.AddRange(new object[] { "Easy", "Medium", "Hard" });
-			Complexity.Location = new Point(485, 329);
+			Complexity.Location = new Point(485, 268);
 			Complexity.MaximumSize = new Size(250, 0);
 			Complexity.MinimumSize = new Size(250, 0);
 			Complexity.Name = "Complexity";
@@ -153,26 +136,13 @@
 			ComplexityLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
 			ComplexityLabel.AutoSize = true;
 			ComplexityLabel.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			ComplexityLabel.Location = new Point(222, 326);
+			ComplexityLabel.Location = new Point(222, 265);
 			ComplexityLabel.MaximumSize = new Size(0, 30);
 			ComplexityLabel.MinimumSize = new Size(0, 30);
 			ComplexityLabel.Name = "ComplexityLabel";
 			ComplexityLabel.Size = new Size(125, 30);
 			ComplexityLabel.TabIndex = 51;
 			ComplexityLabel.Text = "Complexity";
-			// 
-			// InstructorID
-			// 
-			InstructorID.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-			InstructorID.BackColor = Color.White;
-			InstructorID.BorderStyle = BorderStyle.None;
-			InstructorID.Font = new Font("Candara", 10.8F);
-			InstructorID.Location = new Point(485, 158);
-			InstructorID.MaximumSize = new Size(250, 30);
-			InstructorID.MinimumSize = new Size(250, 30);
-			InstructorID.Name = "InstructorID";
-			InstructorID.Size = new Size(250, 30);
-			InstructorID.TabIndex = 50;
 			// 
 			// GenerateBtn
 			// 
@@ -181,7 +151,7 @@
 			GenerateBtn.FlatStyle = FlatStyle.Flat;
 			GenerateBtn.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			GenerateBtn.ForeColor = Color.White;
-			GenerateBtn.Location = new Point(578, 586);
+			GenerateBtn.Location = new Point(578, 525);
 			GenerateBtn.Name = "GenerateBtn";
 			GenerateBtn.Size = new Size(157, 49);
 			GenerateBtn.TabIndex = 49;
@@ -196,7 +166,7 @@
 			Course.Font = new Font("Candara", 10.8F);
 			Course.FormattingEnabled = true;
 			Course.Items.AddRange(new object[] { "T/F", "MCQ" });
-			Course.Location = new Point(485, 244);
+			Course.Location = new Point(485, 183);
 			Course.MaximumSize = new Size(250, 0);
 			Course.MinimumSize = new Size(250, 0);
 			Course.Name = "Course";
@@ -208,7 +178,7 @@
 			CourseLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
 			CourseLabel.AutoSize = true;
 			CourseLabel.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			CourseLabel.Location = new Point(222, 241);
+			CourseLabel.Location = new Point(222, 180);
 			CourseLabel.MaximumSize = new Size(0, 30);
 			CourseLabel.MinimumSize = new Size(0, 30);
 			CourseLabel.Name = "CourseLabel";
@@ -248,7 +218,6 @@
 		private Label Title;
 		private ComboBox Complexity;
 		private Label ComplexityLabel;
-		private TextBox InstructorID;
 		private Button GenerateBtn;
 		private ComboBox Course;
 		private Label CourseLabel;
@@ -256,6 +225,5 @@
 		private Label NoOfTFLabel;
 		private ComboBox NoOfMCQQuestions;
 		private Label NoOfMCQLabel;
-		private Label InstructorIDLabel;
 	}
 }

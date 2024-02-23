@@ -15,12 +15,18 @@ namespace ExaminationSystem.Panels.Instructor
 	public partial class GenerateExam : UserControl
 	{
 		ExaminationSystemContext context = new();
+		int instructorID;
 
 		public GenerateExam()
 		{
 			InitializeComponent();
 
 			Load += GenerateExam_Load;
+		}
+
+		public void SetInstructorID(int _instructorID)
+		{
+			instructorID = _instructorID;
 		}
 
 		private void GenerateExam_Load(object sender, EventArgs e)
@@ -35,7 +41,7 @@ namespace ExaminationSystem.Panels.Instructor
 		private void GenerateBtn_Click(object sender, EventArgs e)
 		{
 			// Calculate the sum of the values of the numeric up-down controls
-			int sum = (NoOfTFQuestion.SelectedIndex + 1) + (NoOfMCQQuestions.SelectedIndex + 1);
+			int sum = NoOfTFQuestion.SelectedIndex + NoOfMCQQuestions.SelectedIndex;
 
 			// Check if the sum not equal 10
 			if (sum != 10)
@@ -48,7 +54,7 @@ namespace ExaminationSystem.Panels.Instructor
 			try
 			{
 				// Assuming context is your DbContext instance
-				context.Database.ExecuteSqlRaw($"EXECUTE [ExamGeneration] {Course.SelectedValue}, {NoOfTFQuestion.SelectedIndex + 1}, {NoOfMCQQuestions.SelectedIndex + 1}, {Complexity.SelectedItem}, {Convert.ToInt32(InstructorID.Text)}");
+				context.Database.ExecuteSqlRaw($"EXECUTE [ExamGeneration] {Course.SelectedValue}, {NoOfTFQuestion.SelectedIndex}, {NoOfMCQQuestions.SelectedIndex}, {Complexity.SelectedItem}, {instructorID}");
 
 				MessageBox.Show("Exam added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}

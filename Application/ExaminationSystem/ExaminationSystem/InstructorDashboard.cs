@@ -86,6 +86,8 @@ namespace ExaminationSystem
 
 		private void GenerateExam_Click(object sender, EventArgs e)
 		{
+			generateExam1.SetInstructorID(instructorID);
+
 			generateExam1.Visible = true;
 			addQuestion1.Visible = false;
 			editQuestion1.Visible = false;
