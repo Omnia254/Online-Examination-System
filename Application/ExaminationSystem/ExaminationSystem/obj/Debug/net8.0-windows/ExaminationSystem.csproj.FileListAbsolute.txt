@@ -137,3 +137,5 @@ C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\Examinati
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.StudentDashboard.resources
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Instructor.InstructorProfile.resources
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.StudentProfile.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.TakeExam.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.Grades.resources

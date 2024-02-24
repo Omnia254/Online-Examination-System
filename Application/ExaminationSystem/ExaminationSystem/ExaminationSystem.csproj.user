@@ -19,7 +19,13 @@
     <Compile Update="Panels\Instructor\Test.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Panels\Student\Grades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Panels\Student\StudentProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\Student\TakeExam.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="StudentDashboard.cs">

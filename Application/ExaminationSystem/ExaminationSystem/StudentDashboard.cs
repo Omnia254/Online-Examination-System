@@ -27,8 +27,8 @@ namespace ExaminationSystem
 			InitializeComponent();
 
 			buttons.Add(ProfileButton);
-			buttons.Add(button2);
-			buttons.Add(button3);
+			buttons.Add(TakeExamButton);
+			buttons.Add(GradesButton);
 			buttons.Add(button4);
 			buttons.Add(LogOut);
 
@@ -38,10 +38,16 @@ namespace ExaminationSystem
 			}
 
 			studentProfile1 = new Panels.Student.StudentProfile();
+			takeExam1 = new Panels.Student.TakeExam();
+			grades1 = new Panels.Student.Grades();
 
 			MainPanel.Controls.Add(studentProfile1);
+			MainPanel.Controls.Add(takeExam1);
+			MainPanel.Controls.Add(grades1);
 
 			studentProfile1.Visible = false;
+			takeExam1.Visible = false;
+			grades1.Visible = false;
 
 			ReloadForm();
 		}
@@ -96,6 +102,26 @@ namespace ExaminationSystem
 			studentProfile1.DisableFields();
 
 			studentProfile1.Visible = true;
+			takeExam1.Visible = false;
+			grades1.Visible = false;
+		}
+
+		private void TakeExamButton_Click(object sender, EventArgs e)
+		{
+			takeExam1.SetStudentID(studentID);
+
+			takeExam1.Visible = true;
+			studentProfile1.Visible = false;
+			grades1.Visible = false;
+		}
+
+		private void GradesButton_Click(object sender, EventArgs e)
+		{
+			grades1.SetStudentID(studentID);
+
+			grades1.Visible = true;
+			studentProfile1.Visible = false;
+			takeExam1.Visible = false;
 		}
 	}
 }
