@@ -33,8 +33,8 @@ namespace ExaminationSystem
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstructorDashboard));
 			LeftSideBar = new Panel();
 			LogOut = new Button();
-			button4 = new Button();
-			GenerateExam = new Button();
+			ProfileButton = new Button();
+			GenerateExamButton = new Button();
 			EditQuestionButton = new Button();
 			AddQuestionButton = new Button();
 			InstructorNameLabel = new Label();
@@ -42,9 +42,7 @@ namespace ExaminationSystem
 			Header = new Panel();
 			ImagePanel = new Panel();
 			MainPanel = new Panel();
-			generateExam1 = new GenerateExam();
-			addQuestion1 = new AddQuestion();
-			editQuestion1 = new EditQuestion();
+			HomeButton = new Button();
 			LeftSideBar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)StudentImage).BeginInit();
 			Header.SuspendLayout();
@@ -54,9 +52,10 @@ namespace ExaminationSystem
 			// 
 			LeftSideBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
 			LeftSideBar.BackColor = Color.FromArgb(174, 37, 43);
+			LeftSideBar.Controls.Add(HomeButton);
 			LeftSideBar.Controls.Add(LogOut);
-			LeftSideBar.Controls.Add(button4);
-			LeftSideBar.Controls.Add(GenerateExam);
+			LeftSideBar.Controls.Add(ProfileButton);
+			LeftSideBar.Controls.Add(GenerateExamButton);
 			LeftSideBar.Controls.Add(EditQuestionButton);
 			LeftSideBar.Controls.Add(AddQuestionButton);
 			LeftSideBar.Controls.Add(InstructorNameLabel);
@@ -81,34 +80,35 @@ namespace ExaminationSystem
 			LogOut.Text = "Log Out";
 			LogOut.UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// ProfileButton
 			// 
-			button4.BackColor = Color.White;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatStyle = FlatStyle.Flat;
-			button4.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button4.ForeColor = Color.Black;
-			button4.Location = new Point(0, 590);
-			button4.Name = "button4";
-			button4.Size = new Size(350, 49);
-			button4.TabIndex = 5;
-			button4.Text = "button4";
-			button4.UseVisualStyleBackColor = false;
+			ProfileButton.BackColor = Color.White;
+			ProfileButton.FlatAppearance.BorderSize = 0;
+			ProfileButton.FlatStyle = FlatStyle.Flat;
+			ProfileButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			ProfileButton.ForeColor = Color.Black;
+			ProfileButton.Location = new Point(0, 465);
+			ProfileButton.Name = "ProfileButton";
+			ProfileButton.Size = new Size(350, 49);
+			ProfileButton.TabIndex = 5;
+			ProfileButton.Text = "Profile";
+			ProfileButton.UseVisualStyleBackColor = false;
+			ProfileButton.Click += ProfileButton_Click;
 			// 
-			// GenerateExam
+			// GenerateExamButton
 			// 
-			GenerateExam.BackColor = Color.White;
-			GenerateExam.FlatAppearance.BorderSize = 0;
-			GenerateExam.FlatStyle = FlatStyle.Flat;
-			GenerateExam.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			GenerateExam.ForeColor = Color.Black;
-			GenerateExam.Location = new Point(0, 535);
-			GenerateExam.Name = "GenerateExam";
-			GenerateExam.Size = new Size(350, 49);
-			GenerateExam.TabIndex = 4;
-			GenerateExam.Text = "Generate Exam";
-			GenerateExam.UseVisualStyleBackColor = false;
-			GenerateExam.Click += GenerateExam_Click;
+			GenerateExamButton.BackColor = Color.White;
+			GenerateExamButton.FlatAppearance.BorderSize = 0;
+			GenerateExamButton.FlatStyle = FlatStyle.Flat;
+			GenerateExamButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			GenerateExamButton.ForeColor = Color.Black;
+			GenerateExamButton.Location = new Point(0, 630);
+			GenerateExamButton.Name = "GenerateExamButton";
+			GenerateExamButton.Size = new Size(350, 49);
+			GenerateExamButton.TabIndex = 4;
+			GenerateExamButton.Text = "Generate Exam";
+			GenerateExamButton.UseVisualStyleBackColor = false;
+			GenerateExamButton.Click += GenerateExam_Click;
 			// 
 			// EditQuestionButton
 			// 
@@ -117,7 +117,7 @@ namespace ExaminationSystem
 			EditQuestionButton.FlatStyle = FlatStyle.Flat;
 			EditQuestionButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			EditQuestionButton.ForeColor = Color.Black;
-			EditQuestionButton.Location = new Point(0, 480);
+			EditQuestionButton.Location = new Point(0, 575);
 			EditQuestionButton.Name = "EditQuestionButton";
 			EditQuestionButton.Size = new Size(350, 49);
 			EditQuestionButton.TabIndex = 3;
@@ -132,7 +132,7 @@ namespace ExaminationSystem
 			AddQuestionButton.FlatStyle = FlatStyle.Flat;
 			AddQuestionButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			AddQuestionButton.ForeColor = Color.Black;
-			AddQuestionButton.Location = new Point(0, 425);
+			AddQuestionButton.Location = new Point(0, 520);
 			AddQuestionButton.Name = "AddQuestionButton";
 			AddQuestionButton.Size = new Size(350, 49);
 			AddQuestionButton.TabIndex = 2;
@@ -191,13 +191,25 @@ namespace ExaminationSystem
 			// 
 			MainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 			MainPanel.BackColor = Color.FromArgb(242, 242, 242);
-			MainPanel.Controls.Add(generateExam1);
-			MainPanel.Controls.Add(addQuestion1);
-			MainPanel.Controls.Add(editQuestion1);
 			MainPanel.Location = new Point(350, 125);
 			MainPanel.Name = "MainPanel";
 			MainPanel.Size = new Size(930, 728);
 			MainPanel.TabIndex = 2;
+			// 
+			// HomeButton
+			// 
+			HomeButton.BackColor = Color.White;
+			HomeButton.FlatAppearance.BorderSize = 0;
+			HomeButton.FlatStyle = FlatStyle.Flat;
+			HomeButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			HomeButton.ForeColor = Color.Black;
+			HomeButton.Location = new Point(0, 410);
+			HomeButton.Name = "HomeButton";
+			HomeButton.Size = new Size(350, 49);
+			HomeButton.TabIndex = 7;
+			HomeButton.Text = "Home";
+			HomeButton.UseVisualStyleBackColor = false;
+			HomeButton.Click += HomeButton_Click;
 			// 
 			// InstructorDashboard
 			// 
@@ -226,12 +238,15 @@ namespace ExaminationSystem
 		private PictureBox StudentImage;
 		private Label InstructorNameLabel;
 		private Button AddQuestionButton;
-		private Button button4;
-		private Button GenerateExam;
+		private Button ProfileButton;
+		private Button GenerateExamButton;
 		private Button EditQuestionButton;
 		private Button LogOut;
 		private Panels.Instructor.AddQuestion addQuestion1;
 		private Panels.Instructor.GenerateExam generateExam1;
 		private Panels.Instructor.EditQuestion editQuestion1;
+		private InstructorProfile instructorProfile1;
+		private InstructorHome instructorHome1;
+		private Button HomeButton;
 	}
 }

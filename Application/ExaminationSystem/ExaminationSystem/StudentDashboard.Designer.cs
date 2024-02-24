@@ -1,4 +1,6 @@
-﻿namespace ExaminationSystem
+﻿using ExaminationSystem.Panels.Student;
+
+namespace ExaminationSystem
 {
 	partial class StudentDashboard
 	{
@@ -31,10 +33,10 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
 			LeftSideBar = new Panel();
 			LogOut = new Button();
-			button4 = new Button();
-			button3 = new Button();
-			button2 = new Button();
-			button1 = new Button();
+			HomeButton = new Button();
+			GradesButton = new Button();
+			TakeExamButton = new Button();
+			ProfileButton = new Button();
 			StudentNameLabel = new Label();
 			StudentImage = new PictureBox();
 			Header = new Panel();
@@ -50,10 +52,10 @@
 			LeftSideBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
 			LeftSideBar.BackColor = Color.FromArgb(174, 37, 43);
 			LeftSideBar.Controls.Add(LogOut);
-			LeftSideBar.Controls.Add(button4);
-			LeftSideBar.Controls.Add(button3);
-			LeftSideBar.Controls.Add(button2);
-			LeftSideBar.Controls.Add(button1);
+			LeftSideBar.Controls.Add(HomeButton);
+			LeftSideBar.Controls.Add(GradesButton);
+			LeftSideBar.Controls.Add(TakeExamButton);
+			LeftSideBar.Controls.Add(ProfileButton);
 			LeftSideBar.Controls.Add(StudentNameLabel);
 			LeftSideBar.Controls.Add(StudentImage);
 			LeftSideBar.Location = new Point(0, 0);
@@ -76,61 +78,65 @@
 			LogOut.Text = "Log Out";
 			LogOut.UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// HomeButton
 			// 
-			button4.BackColor = Color.White;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatStyle = FlatStyle.Flat;
-			button4.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button4.ForeColor = Color.Black;
-			button4.Location = new Point(0, 590);
-			button4.Name = "button4";
-			button4.Size = new Size(350, 49);
-			button4.TabIndex = 5;
-			button4.Text = "button4";
-			button4.UseVisualStyleBackColor = false;
+			HomeButton.BackColor = Color.White;
+			HomeButton.FlatAppearance.BorderSize = 0;
+			HomeButton.FlatStyle = FlatStyle.Flat;
+			HomeButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			HomeButton.ForeColor = Color.Black;
+			HomeButton.Location = new Point(0, 425);
+			HomeButton.Name = "HomeButton";
+			HomeButton.Size = new Size(350, 49);
+			HomeButton.TabIndex = 5;
+			HomeButton.Text = "Home";
+			HomeButton.UseVisualStyleBackColor = false;
+			HomeButton.Click += HomeButton_Click;
 			// 
-			// button3
+			// GradesButton
 			// 
-			button3.BackColor = Color.White;
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatStyle = FlatStyle.Flat;
-			button3.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button3.ForeColor = Color.Black;
-			button3.Location = new Point(0, 535);
-			button3.Name = "button3";
-			button3.Size = new Size(350, 49);
-			button3.TabIndex = 4;
-			button3.Text = "button3";
-			button3.UseVisualStyleBackColor = false;
+			GradesButton.BackColor = Color.White;
+			GradesButton.FlatAppearance.BorderSize = 0;
+			GradesButton.FlatStyle = FlatStyle.Flat;
+			GradesButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			GradesButton.ForeColor = Color.Black;
+			GradesButton.Location = new Point(0, 590);
+			GradesButton.Name = "GradesButton";
+			GradesButton.Size = new Size(350, 49);
+			GradesButton.TabIndex = 4;
+			GradesButton.Text = "Grades";
+			GradesButton.UseVisualStyleBackColor = false;
+			GradesButton.Click += GradesButton_Click;
 			// 
-			// button2
+			// TakeExamButton
 			// 
-			button2.BackColor = Color.White;
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatStyle = FlatStyle.Flat;
-			button2.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button2.ForeColor = Color.Black;
-			button2.Location = new Point(0, 480);
-			button2.Name = "button2";
-			button2.Size = new Size(350, 49);
-			button2.TabIndex = 3;
-			button2.Text = "button2";
-			button2.UseVisualStyleBackColor = false;
+			TakeExamButton.BackColor = Color.White;
+			TakeExamButton.FlatAppearance.BorderSize = 0;
+			TakeExamButton.FlatStyle = FlatStyle.Flat;
+			TakeExamButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			TakeExamButton.ForeColor = Color.Black;
+			TakeExamButton.Location = new Point(0, 535);
+			TakeExamButton.Name = "TakeExamButton";
+			TakeExamButton.Size = new Size(350, 49);
+			TakeExamButton.TabIndex = 3;
+			TakeExamButton.Text = "Take Exam";
+			TakeExamButton.UseVisualStyleBackColor = false;
+			TakeExamButton.Click += TakeExamButton_Click;
 			// 
-			// button1
+			// ProfileButton
 			// 
-			button1.BackColor = Color.White;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button1.ForeColor = Color.Black;
-			button1.Location = new Point(0, 425);
-			button1.Name = "button1";
-			button1.Size = new Size(350, 49);
-			button1.TabIndex = 2;
-			button1.Text = "button1";
-			button1.UseVisualStyleBackColor = false;
+			ProfileButton.BackColor = Color.White;
+			ProfileButton.FlatAppearance.BorderSize = 0;
+			ProfileButton.FlatStyle = FlatStyle.Flat;
+			ProfileButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			ProfileButton.ForeColor = Color.Black;
+			ProfileButton.Location = new Point(0, 480);
+			ProfileButton.Name = "ProfileButton";
+			ProfileButton.Size = new Size(350, 49);
+			ProfileButton.TabIndex = 2;
+			ProfileButton.Text = "Profile";
+			ProfileButton.UseVisualStyleBackColor = false;
+			ProfileButton.Click += ProfileButton_Click;
 			// 
 			// StudentNameLabel
 			// 
@@ -214,10 +220,14 @@
 		private Panel MainPanel;
 		private PictureBox StudentImage;
 		private Label StudentNameLabel;
-		private Button button1;
-		private Button button4;
-		private Button button3;
-		private Button button2;
+		private Button ProfileButton;
+		private Button HomeButton;
+		private Button GradesButton;
+		private Button TakeExamButton;
 		private Button LogOut;
+		private StudentProfile studentProfile1;
+		private Panels.Student.TakeExam takeExam1;
+		private Grades grades1;
+		private StudentHome studentHome1;
 	}
 }

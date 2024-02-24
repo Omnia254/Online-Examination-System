@@ -58,6 +58,7 @@
 			QuestionTypeLabel = new Label();
 			QuestionTextLabel = new Label();
 			Title = new Label();
+			SaveBtn = new Button();
 			EditQuestionPanel.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -65,6 +66,7 @@
 			// 
 			EditQuestionPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 			EditQuestionPanel.BackColor = Color.FromArgb(242, 242, 242);
+			EditQuestionPanel.Controls.Add(SaveBtn);
 			EditQuestionPanel.Controls.Add(SearchID);
 			EditQuestionPanel.Controls.Add(DeleteQuestionBtn);
 			EditQuestionPanel.Controls.Add(QuestionID);
@@ -483,6 +485,21 @@
 			Title.TabIndex = 33;
 			Title.Text = "EDIT QUESTION";
 			// 
+			// SaveBtn
+			// 
+			SaveBtn.Anchor = AnchorStyles.None;
+			SaveBtn.BackColor = Color.FromArgb(174, 37, 43);
+			SaveBtn.FlatStyle = FlatStyle.Flat;
+			SaveBtn.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			SaveBtn.ForeColor = Color.White;
+			SaveBtn.Location = new Point(731, 642);
+			SaveBtn.Name = "SaveBtn";
+			SaveBtn.Size = new Size(103, 49);
+			SaveBtn.TabIndex = 62;
+			SaveBtn.Text = "Save";
+			SaveBtn.UseVisualStyleBackColor = false;
+			SaveBtn.Click += SaveBtn_Click;
+			// 
 			// EditQuestion
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
@@ -523,9 +540,10 @@
 		private System.Windows.Forms.TextBox ChoiceText4;
 		private System.Windows.Forms.TextBox ChoiceText1;
 		private System.Windows.Forms.Button EditQuestionBtn;
-		private TextBox QuestionID;
+		public TextBox QuestionID;
 		private Label EnterQuestionIDLabel;
 		private Button DeleteQuestionBtn;
 		private Button SearchID;
+		private Button SaveBtn;
 	}
 }
