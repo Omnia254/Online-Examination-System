@@ -97,6 +97,9 @@ namespace ExaminationSystem
 
 		private void EditQuestionButton_Click(object sender, EventArgs e)
 		{
+			editQuestion1.HideFields();
+			editQuestion1.QuestionID.Text = string.Empty;
+
 			editQuestion1.Visible = true;
 			instructorProfile1.Visible = false;
 			addQuestion1.Visible = false;

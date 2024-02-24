@@ -112,8 +112,8 @@ namespace ExaminationSystem.Panels.Student
 				var emailParameter = new SqlParameter("@Email", Email.Text);
 				var deptIDParameter = new SqlParameter("@DepartmentID", student.DepartmentId);
 
-				context.Database.ExecuteSqlRaw("EXECUTE UPDATESTUDENT @StudentId, @FirstName, @LastName, @Address, @PhoneNum, @Email, @DepartmentID",
-					studentIDParameter, firstNameParameter, lastNameParameter, addressParameter, phoneNumberParameter, emailParameter, deptIDParameter);
+				context.Database.ExecuteSqlRaw("EXECUTE UPDATESTUDENT @StudentId, @FirstName, @LastName, @Address, @Email, @PhoneNum, @DepartmentID",
+					studentIDParameter, firstNameParameter, lastNameParameter, addressParameter, emailParameter, phoneNumberParameter, deptIDParameter);
 
 				MessageBox.Show("Your Profile Updated Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -34,6 +34,36 @@ namespace ExaminationSystem.Panels.Instructor
 			HideFields();
 		}
 
+		public void DisableFields()
+		{
+			QuestionTextLabel.Enabled = false;
+			QuestionTypeLabel.Enabled = false;
+			ComplexityLabel.Enabled = false;
+			CourseName.Enabled = false;
+			Option1Label.Enabled = false;
+			Option2Label.Enabled = false;
+			Option3Label.Enabled = false;
+			Option4Label.Enabled = false;
+			Option5Label.Enabled = false;
+
+			QuestionText.Enabled = false;
+			QuestionType.Enabled = false;
+			Complexity.Enabled = false;
+			Course.Enabled = false;
+
+			ChoiceText1.Enabled = false;
+			ChoiceText2.Enabled = false;
+			ChoiceText3.Enabled = false;
+			ChoiceText4.Enabled = false;
+			ChoiceText5.Enabled = false;
+
+			radioButton1.Enabled = false;
+			radioButton2.Enabled = false;
+			radioButton3.Enabled = false;
+			radioButton4.Enabled = false;
+			radioButton5.Enabled = false;
+		}
+
 		public void HideFields()
 		{
 			QuestionTextLabel.Visible = false;
@@ -65,6 +95,7 @@ namespace ExaminationSystem.Panels.Instructor
 
 			DeleteQuestionBtn.Visible = false;
 			EditQuestionBtn.Visible = false;
+			SaveBtn.Visible = false;
 		}
 
 		public void ShowFields()
@@ -98,6 +129,7 @@ namespace ExaminationSystem.Panels.Instructor
 
 			DeleteQuestionBtn.Visible = true;
 			EditQuestionBtn.Visible = true;
+			SaveBtn.Visible = false;
 
 			choices = context.Choices.FromSql($"SelectALLChoice").ToList()
 				.Where(C => C.QuestionId == question.QuestionId)
@@ -109,31 +141,6 @@ namespace ExaminationSystem.Panels.Instructor
 
 			int questionTypeIndex = QuestionType.FindStringExact(question.QuestionType);
 			int complexityIndex = Complexity.FindStringExact(question.Complexity);
-
-			ChoiceText1.Enabled = true;
-			ChoiceText2.Enabled = true;
-			ChoiceText3.Enabled = true;
-			ChoiceText4.Enabled = true;
-			ChoiceText5.Enabled = true;
-
-			radioButton1.Enabled = true;
-			radioButton2.Enabled = true;
-			radioButton3.Enabled = true;
-			radioButton4.Enabled = true;
-			radioButton5.Enabled = true;
-
-			if (question.QuestionType == "T/F")
-			{
-				ChoiceText1.Enabled = false;
-				ChoiceText2.Enabled = false;
-				ChoiceText3.Enabled = false;
-				ChoiceText4.Enabled = false;
-				ChoiceText5.Enabled = false;
-
-				radioButton3.Enabled = false;
-				radioButton4.Enabled = false;
-				radioButton5.Enabled = false;
-			}
 
 			ChoiceText1.Text = choices[0].ChoiceText;
 			ChoiceText2.Text = choices[1].ChoiceText;
@@ -165,9 +172,6 @@ namespace ExaminationSystem.Panels.Instructor
 					radioButton3.Checked = true;
 				else if (choices[3].IsCorrect)
 					radioButton4.Checked = true;
-
-				ChoiceText5.Enabled = false;
-				radioButton5.Enabled = false;
 			}
 			else if (choices.Count() == 3)
 			{
@@ -175,15 +179,53 @@ namespace ExaminationSystem.Panels.Instructor
 
 				if (choices[2].IsCorrect)
 					radioButton3.Checked = true;
-
-				ChoiceText4.Enabled = false;
-				ChoiceText5.Enabled = false;
-
-				radioButton4.Enabled = false;
-				radioButton5.Enabled = false;
 			}
-			else
+
+			QuestionText.Text = question.QuestionText;
+			QuestionType.SelectedIndex = questionTypeIndex;
+			Complexity.SelectedIndex = complexityIndex;
+			Course.SelectedValue = question.CourseId;
+
+			QuestionType.Enabled = false;
+		}
+
+		public void EnableFields()
+		{
+			QuestionTextLabel.Enabled = true;
+			ComplexityLabel.Enabled = true;
+			CourseName.Enabled = true;
+			Option1Label.Enabled = true;
+			Option2Label.Enabled = true;
+			Option3Label.Enabled = true;
+			Option4Label.Enabled = true;
+			Option5Label.Enabled = true;
+
+			QuestionText.Enabled = true;
+			Complexity.Enabled = true;
+			Course.Enabled = true;
+
+			ChoiceText1.Enabled = true;
+			ChoiceText2.Enabled = true;
+			ChoiceText3.Enabled = true;
+			ChoiceText4.Enabled = true;
+			ChoiceText5.Enabled = true;
+
+			radioButton1.Enabled = true;
+			radioButton2.Enabled = true;
+			radioButton3.Enabled = true;
+			radioButton4.Enabled = true;
+			radioButton5.Enabled = true;
+
+			if (question.QuestionType == "T/F")
 			{
+				Option1Label.Enabled = true;
+				Option2Label.Enabled = true;
+				Option3Label.Enabled = false;
+				Option4Label.Enabled = false;
+				Option5Label.Enabled = false;
+
+				ChoiceText1.Enabled = false;
+				ChoiceText2.Enabled = false;
 				ChoiceText3.Enabled = false;
 				ChoiceText4.Enabled = false;
 				ChoiceText5.Enabled = false;
@@ -193,12 +235,38 @@ namespace ExaminationSystem.Panels.Instructor
 				radioButton5.Enabled = false;
 			}
 
-			QuestionText.Text = question.QuestionText;
-			QuestionType.SelectedIndex = questionTypeIndex;
-			Complexity.SelectedIndex = complexityIndex;
-			Course.SelectedValue = question.CourseId;
+			if (choices.Count() == 4)
+			{
+				Option5Label.Enabled = false;
 
-			QuestionType.Enabled = false;
+				ChoiceText5.Enabled = false;
+				radioButton5.Enabled = false;
+			}
+			else if (choices.Count() == 3)
+			{
+				Option4Label.Enabled = false;
+				Option5Label.Enabled = false;
+
+				ChoiceText4.Enabled = false;
+				ChoiceText5.Enabled = false;
+
+				radioButton4.Enabled = false;
+				radioButton5.Enabled = false;
+			}
+			else
+			{
+				Option3Label.Enabled = false;
+				Option4Label.Enabled = false;
+				Option5Label.Enabled = false;
+
+				ChoiceText3.Enabled = false;
+				ChoiceText4.Enabled = false;
+				ChoiceText5.Enabled = false;
+
+				radioButton3.Enabled = false;
+				radioButton4.Enabled = false;
+				radioButton5.Enabled = false;
+			}
 		}
 
 		private void SearchID_Click(object sender, EventArgs e)
@@ -234,6 +302,7 @@ namespace ExaminationSystem.Panels.Instructor
 					question = q;
 				}
 
+				DisableFields();
 				ShowFields();
 			}
 			catch (Exception ex)
@@ -243,6 +312,62 @@ namespace ExaminationSystem.Panels.Instructor
 		}
 
 		private void EditQuestionBtn_Click(object sender, EventArgs e)
+		{
+			EditQuestionBtn.Visible = false;
+			SaveBtn.Visible = true;
+
+			EnableFields();
+		}
+
+		private void DeleteQuestionBtn_Click(object sender, EventArgs e)
+		{
+			if (string.IsNullOrEmpty(QuestionID.Text))
+			{
+				MessageBox.Show("PLEASE ENTER A QUESTION ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			if (!int.TryParse(QuestionID.Text, out int questionId))
+			{
+				MessageBox.Show("INVALID QUESTION ID. PLEASE ENTER A VALID INTEGER.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			try
+			{
+				var result = context.Questions.FromSqlRaw("EXECUTE SelectQuestion @QuestionID",
+					new SqlParameter("@QuestionID", questionId)).ToList().FirstOrDefault();
+
+				if (result == null)
+				{
+					MessageBox.Show("Question with the provided ID does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+				var choices = context.Choices.FromSql($"SelectALLChoice").ToList()
+											 .Where(C => C.QuestionId == questionId)
+											 .ToList();
+
+				foreach (var choice in choices)
+				{
+					context.Database.ExecuteSqlRaw("EXECUTE DeleteChoice @ChoiceID",
+						new SqlParameter("@ChoiceID", choice.ChoiceId));
+				}
+
+				context.Database.ExecuteSqlRaw("EXECUTE DeleteQuestion @QuestionID",
+					new SqlParameter("@QuestionID", questionId));
+
+				MessageBox.Show("Question Deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+				HideFields();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"An error occurred while executing the stored procedure: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void SaveBtn_Click(object sender, EventArgs e)
 		{
 			if (string.IsNullOrEmpty(QuestionText.Text))
 			{
@@ -307,6 +432,10 @@ namespace ExaminationSystem.Panels.Instructor
 				context.Database.ExecuteSqlRaw("EXECUTE UPDATEQUESTION @QuestionID, @QuestionText, @QuestionType, @Complexity, @CourseID",
 					questionIdParameter, questionTextParameter, questionTypeParameter, complexityParameter, courseIdParameter);
 
+				question.QuestionText = QuestionText.Text;
+				question.Complexity = Complexity.SelectedItem.ToString();
+				question.CourseId = Convert.ToInt32(Course.SelectedValue);
+
 				if (!string.IsNullOrEmpty(ChoiceText1.Text))
 				{
 					var choice1IdParameter = new SqlParameter("@ChoiceID", choices[0].ChoiceId);
@@ -315,6 +444,9 @@ namespace ExaminationSystem.Panels.Instructor
 
 					context.Database.ExecuteSqlRaw("EXECUTE UPDATECHOICE @ChoiceID, @ChoiceText, @IsCorrect, @QuestionID",
 						choice1IdParameter, choice1TextParameter, isCorrect1Parameter, questionIdParameter);
+
+					choices[0].ChoiceText = ChoiceText1.Text;
+					choices[0].IsCorrect = radioButton1.Checked;
 				}
 				if (!string.IsNullOrEmpty(ChoiceText2.Text))
 				{
@@ -324,6 +456,9 @@ namespace ExaminationSystem.Panels.Instructor
 
 					context.Database.ExecuteSqlRaw("EXECUTE UPDATECHOICE @ChoiceID, @ChoiceText, @IsCorrect, @QuestionID",
 						choice2IdParameter, choice2TextParameter, isCorrect2Parameter, questionIdParameter);
+
+					choices[1].ChoiceText = ChoiceText2.Text;
+					choices[1].IsCorrect = radioButton2.Checked;
 				}
 				if (!string.IsNullOrEmpty(ChoiceText3.Text) && choices.Count() >= 3)
 				{
@@ -333,6 +468,9 @@ namespace ExaminationSystem.Panels.Instructor
 
 					context.Database.ExecuteSqlRaw("EXECUTE UPDATECHOICE @ChoiceID, @ChoiceText, @IsCorrect, @QuestionID",
 						choice3IdParameter, choice3TextParameter, isCorrect3Parameter, questionIdParameter);
+
+					choices[2].ChoiceText = ChoiceText3.Text;
+					choices[2].IsCorrect = radioButton3.Checked;
 				}
 				if (!string.IsNullOrEmpty(ChoiceText4.Text) && choices.Count() >= 4)
 				{
@@ -342,6 +480,9 @@ namespace ExaminationSystem.Panels.Instructor
 
 					context.Database.ExecuteSqlRaw("EXECUTE UPDATECHOICE @ChoiceID, @ChoiceText, @IsCorrect, @QuestionID",
 						choice4IdParameter, choice4TextParameter, isCorrect4Parameter, questionIdParameter);
+
+					choices[3].ChoiceText = ChoiceText4.Text;
+					choices[3].IsCorrect = radioButton4.Checked;
 				}
 				if (!string.IsNullOrEmpty(ChoiceText5.Text) && choices.Count() == 5)
 				{
@@ -351,63 +492,23 @@ namespace ExaminationSystem.Panels.Instructor
 
 					context.Database.ExecuteSqlRaw("EXECUTE UPDATECHOICE @ChoiceID, @ChoiceText, @IsCorrect, @QuestionID",
 						choice5IdParameter, choice5TextParameter, isCorrect5Parameter, questionIdParameter);
+
+					choices[4].ChoiceText = ChoiceText5.Text;
+					choices[4].IsCorrect = radioButton5.Checked;
 				}
 
 				MessageBox.Show("Question Updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-				HideFields();
+				context.SaveChanges();
+
+				EditQuestionBtn.Visible = true;
+				SaveBtn.Visible = false;
+
+				DisableFields();
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show($"An error occurred while Updating the question: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
-
-		private void DeleteQuestionBtn_Click(object sender, EventArgs e)
-		{
-			if (string.IsNullOrEmpty(QuestionID.Text))
-			{
-				MessageBox.Show("PLEASE ENTER A QUESTION ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			if (!int.TryParse(QuestionID.Text, out int questionId))
-			{
-				MessageBox.Show("INVALID QUESTION ID. PLEASE ENTER A VALID INTEGER.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			try
-			{
-				var result = context.Questions.FromSqlRaw("EXECUTE SelectQuestion @QuestionID",
-					new SqlParameter("@QuestionID", questionId)).ToList().FirstOrDefault();
-
-				if (result == null)
-				{
-					MessageBox.Show("Question with the provided ID does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return;
-				}
-
-				var choices = context.Choices.FromSql($"SelectALLChoice").ToList()
-											 .Where(C => C.QuestionId == questionId)
-											 .ToList();
-
-				foreach (var choice in choices)
-				{
-					context.Database.ExecuteSqlRaw("EXECUTE DeleteChoice @ChoiceID",
-						new SqlParameter("@ChoiceID", choice.ChoiceId));
-				}
-
-				context.Database.ExecuteSqlRaw("EXECUTE DeleteQuestion @QuestionID",
-					new SqlParameter("@QuestionID", questionId));
-
-				MessageBox.Show("Question Deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-				HideFields();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show($"An error occurred while executing the stored procedure: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}
