@@ -36,6 +36,7 @@
 			// TakeExamPanel
 			// 
 			TakeExamPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			TakeExamPanel.BackColor = SystemColors.Control;
 			TakeExamPanel.Controls.Add(Title);
 			TakeExamPanel.Location = new Point(0, 0);
 			TakeExamPanel.Name = "TakeExamPanel";

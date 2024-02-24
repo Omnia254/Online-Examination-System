@@ -33,7 +33,7 @@ namespace ExaminationSystem
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
 			LeftSideBar = new Panel();
 			LogOut = new Button();
-			button4 = new Button();
+			HomeButton = new Button();
 			GradesButton = new Button();
 			TakeExamButton = new Button();
 			ProfileButton = new Button();
@@ -52,7 +52,7 @@ namespace ExaminationSystem
 			LeftSideBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
 			LeftSideBar.BackColor = Color.FromArgb(174, 37, 43);
 			LeftSideBar.Controls.Add(LogOut);
-			LeftSideBar.Controls.Add(button4);
+			LeftSideBar.Controls.Add(HomeButton);
 			LeftSideBar.Controls.Add(GradesButton);
 			LeftSideBar.Controls.Add(TakeExamButton);
 			LeftSideBar.Controls.Add(ProfileButton);
@@ -78,19 +78,20 @@ namespace ExaminationSystem
 			LogOut.Text = "Log Out";
 			LogOut.UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// HomeButton
 			// 
-			button4.BackColor = Color.White;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatStyle = FlatStyle.Flat;
-			button4.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button4.ForeColor = Color.Black;
-			button4.Location = new Point(0, 590);
-			button4.Name = "button4";
-			button4.Size = new Size(350, 49);
-			button4.TabIndex = 5;
-			button4.Text = "button4";
-			button4.UseVisualStyleBackColor = false;
+			HomeButton.BackColor = Color.White;
+			HomeButton.FlatAppearance.BorderSize = 0;
+			HomeButton.FlatStyle = FlatStyle.Flat;
+			HomeButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			HomeButton.ForeColor = Color.Black;
+			HomeButton.Location = new Point(0, 425);
+			HomeButton.Name = "HomeButton";
+			HomeButton.Size = new Size(350, 49);
+			HomeButton.TabIndex = 5;
+			HomeButton.Text = "Home";
+			HomeButton.UseVisualStyleBackColor = false;
+			HomeButton.Click += HomeButton_Click;
 			// 
 			// GradesButton
 			// 
@@ -99,7 +100,7 @@ namespace ExaminationSystem
 			GradesButton.FlatStyle = FlatStyle.Flat;
 			GradesButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			GradesButton.ForeColor = Color.Black;
-			GradesButton.Location = new Point(0, 535);
+			GradesButton.Location = new Point(0, 590);
 			GradesButton.Name = "GradesButton";
 			GradesButton.Size = new Size(350, 49);
 			GradesButton.TabIndex = 4;
@@ -114,7 +115,7 @@ namespace ExaminationSystem
 			TakeExamButton.FlatStyle = FlatStyle.Flat;
 			TakeExamButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			TakeExamButton.ForeColor = Color.Black;
-			TakeExamButton.Location = new Point(0, 480);
+			TakeExamButton.Location = new Point(0, 535);
 			TakeExamButton.Name = "TakeExamButton";
 			TakeExamButton.Size = new Size(350, 49);
 			TakeExamButton.TabIndex = 3;
@@ -129,7 +130,7 @@ namespace ExaminationSystem
 			ProfileButton.FlatStyle = FlatStyle.Flat;
 			ProfileButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			ProfileButton.ForeColor = Color.Black;
-			ProfileButton.Location = new Point(0, 425);
+			ProfileButton.Location = new Point(0, 480);
 			ProfileButton.Name = "ProfileButton";
 			ProfileButton.Size = new Size(350, 49);
 			ProfileButton.TabIndex = 2;
@@ -220,12 +221,13 @@ namespace ExaminationSystem
 		private PictureBox StudentImage;
 		private Label StudentNameLabel;
 		private Button ProfileButton;
-		private Button button4;
+		private Button HomeButton;
 		private Button GradesButton;
 		private Button TakeExamButton;
 		private Button LogOut;
 		private StudentProfile studentProfile1;
 		private Panels.Student.TakeExam takeExam1;
 		private Grades grades1;
+		private StudentHome studentHome1;
 	}
 }

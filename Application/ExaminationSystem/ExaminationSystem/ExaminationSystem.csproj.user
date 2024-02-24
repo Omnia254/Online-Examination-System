@@ -13,6 +13,9 @@
     <Compile Update="Panels\Instructor\GenerateExam.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Panels\Instructor\InstructorHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Panels\Instructor\InstructorProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -20,6 +23,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Panels\Student\Grades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\Student\StudentHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Panels\Student\StudentProfile.cs">

@@ -29,7 +29,7 @@ namespace ExaminationSystem
 			buttons.Add(ProfileButton);
 			buttons.Add(TakeExamButton);
 			buttons.Add(GradesButton);
-			buttons.Add(button4);
+			buttons.Add(HomeButton);
 			buttons.Add(LogOut);
 
 			for (int i = 0; i < buttons.Count(); i++)
@@ -37,14 +37,17 @@ namespace ExaminationSystem
 				buttons[i].Click += Button_Click;
 			}
 
+			studentHome1 = new Panels.Student.StudentHome();
 			studentProfile1 = new Panels.Student.StudentProfile();
 			takeExam1 = new Panels.Student.TakeExam();
 			grades1 = new Panels.Student.Grades();
 
+			MainPanel.Controls.Add(studentHome1);
 			MainPanel.Controls.Add(studentProfile1);
 			MainPanel.Controls.Add(takeExam1);
 			MainPanel.Controls.Add(grades1);
 
+			studentHome1.Visible = true;
 			studentProfile1.Visible = false;
 			takeExam1.Visible = false;
 			grades1.Visible = false;
@@ -102,6 +105,7 @@ namespace ExaminationSystem
 			studentProfile1.DisableFields();
 
 			studentProfile1.Visible = true;
+			studentHome1.Visible = false;
 			takeExam1.Visible = false;
 			grades1.Visible = false;
 		}
@@ -111,6 +115,7 @@ namespace ExaminationSystem
 			takeExam1.SetStudentID(studentID);
 
 			takeExam1.Visible = true;
+			studentHome1.Visible = false;
 			studentProfile1.Visible = false;
 			grades1.Visible = false;
 		}
@@ -120,6 +125,15 @@ namespace ExaminationSystem
 			grades1.SetStudentID(studentID);
 
 			grades1.Visible = true;
+			studentHome1.Visible = false;
+			studentProfile1.Visible = false;
+			takeExam1.Visible = false;
+		}
+
+		private void HomeButton_Click(object sender, EventArgs e)
+		{
+			studentHome1.Visible = true;
+			grades1.Visible = false;
 			studentProfile1.Visible = false;
 			takeExam1.Visible = false;
 		}

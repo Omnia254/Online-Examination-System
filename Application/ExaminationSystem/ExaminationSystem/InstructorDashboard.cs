@@ -25,6 +25,7 @@ namespace ExaminationSystem
 		{
 			InitializeComponent();
 
+			buttons.Add(HomeButton);
 			buttons.Add(AddQuestionButton);
 			buttons.Add(EditQuestionButton);
 			buttons.Add(GenerateExamButton);
@@ -36,16 +37,19 @@ namespace ExaminationSystem
 				buttons[i].Click += Button_Click;
 			}
 
+			instructorHome1 = new Panels.Instructor.InstructorHome();
 			instructorProfile1 = new Panels.Instructor.InstructorProfile();
 			addQuestion1 = new Panels.Instructor.AddQuestion();
 			editQuestion1 = new Panels.Instructor.EditQuestion();
 			generateExam1 = new Panels.Instructor.GenerateExam();
 
+			MainPanel.Controls.Add(instructorHome1);
 			MainPanel.Controls.Add(instructorProfile1);
 			MainPanel.Controls.Add(addQuestion1);
 			MainPanel.Controls.Add(editQuestion1);
 			MainPanel.Controls.Add(generateExam1);
 
+			instructorHome1.Visible = true;
 			instructorProfile1.Visible = false;
 			addQuestion1.Visible = false;
 			editQuestion1.Visible = false;
@@ -90,6 +94,7 @@ namespace ExaminationSystem
 		private void AddQuestionBtn_Click(object sender, EventArgs e)
 		{
 			addQuestion1.Visible = true;
+			instructorHome1.Visible = false;
 			instructorProfile1.Visible = false;
 			editQuestion1.Visible = false;
 			generateExam1.Visible = false;
@@ -101,6 +106,7 @@ namespace ExaminationSystem
 			editQuestion1.QuestionID.Text = string.Empty;
 
 			editQuestion1.Visible = true;
+			instructorHome1.Visible = false;
 			instructorProfile1.Visible = false;
 			addQuestion1.Visible = false;
 			generateExam1.Visible = false;
@@ -111,6 +117,7 @@ namespace ExaminationSystem
 			generateExam1.SetInstructorID(instructorID);
 
 			generateExam1.Visible = true;
+			instructorHome1.Visible = false;
 			instructorProfile1.Visible = false;
 			addQuestion1.Visible = false;
 			editQuestion1.Visible = false;
@@ -131,6 +138,16 @@ namespace ExaminationSystem
 			instructorProfile1.SetInstructor(instructor);
 
 			instructorProfile1.Visible = true;
+			instructorHome1.Visible = false;
+			generateExam1.Visible = false;
+			addQuestion1.Visible = false;
+			editQuestion1.Visible = false;
+		}
+
+		private void HomeButton_Click(object sender, EventArgs e)
+		{
+			instructorHome1.Visible = true;
+			instructorProfile1.Visible = false;
 			generateExam1.Visible = false;
 			addQuestion1.Visible = false;
 			editQuestion1.Visible = false;
