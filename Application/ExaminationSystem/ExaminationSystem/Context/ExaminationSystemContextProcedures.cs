@@ -34,6 +34,7 @@ namespace ExaminationSystem.Context
 
         protected void OnModelCreatingGeneratedProcedures(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ExamCorrectionResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<GetChoicesByQuestionIdResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<GetExamQuestionsTextByIdResult>().HasNoKey().ToView(null);
         }
@@ -46,6 +47,205 @@ namespace ExaminationSystem.Context
         public ExaminationSystemContextProcedures(ExaminationSystemContext context)
         {
             _context = context;
+        }
+
+        public virtual async Task<List<ExamCorrectionResult>> ExamCorrectionAsync(int? ExId, int? StId, int? CID, OutputParameter<int?> TotalScore, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterTotalScore = new SqlParameter
+            {
+                ParameterName = "TotalScore",
+                Direction = System.Data.ParameterDirection.InputOutput,
+                Value = TotalScore?._value ?? Convert.DBNull,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "ExId",
+                    Value = ExId ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "StId",
+                    Value = StId ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "CID",
+                    Value = CID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterTotalScore,
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<ExamCorrectionResult>("EXEC @returnValue = [dbo].[ExamCorrection] @ExId, @StId, @CID, @TotalScore OUTPUT", sqlParameters, cancellationToken);
+
+            TotalScore.SetValue(parameterTotalScore.Value);
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<int> ExammAnswersAsync(int? Exam_ID, int? Student_ID, int? QID1, int? Ans1, int? QID2, int? Ans2, int? QID3, int? Ans3, int? QID4, int? Ans4, int? QID5, int? Ans5, int? QID6, int? Ans6, int? QID7, int? Ans7, int? QID8, int? Ans8, int? QID9, int? Ans9, int? QID10, int? Ans10, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "Exam_ID",
+                    Value = Exam_ID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Student_ID",
+                    Value = Student_ID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID1",
+                    Value = QID1 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans1",
+                    Value = Ans1 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID2",
+                    Value = QID2 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans2",
+                    Value = Ans2 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID3",
+                    Value = QID3 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans3",
+                    Value = Ans3 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID4",
+                    Value = QID4 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans4",
+                    Value = Ans4 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID5",
+                    Value = QID5 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans5",
+                    Value = Ans5 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID6",
+                    Value = QID6 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans6",
+                    Value = Ans6 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID7",
+                    Value = QID7 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans7",
+                    Value = Ans7 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID8",
+                    Value = QID8 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans8",
+                    Value = Ans8 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID9",
+                    Value = QID9 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans9",
+                    Value = Ans9 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "QID10",
+                    Value = QID10 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Ans10",
+                    Value = Ans10 ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[ExammAnswers] @Exam_ID, @Student_ID, @QID1, @Ans1, @QID2, @Ans2, @QID3, @Ans3, @QID4, @Ans4, @QID5, @Ans5, @QID6, @Ans6, @QID7, @Ans7, @QID8, @Ans8, @QID9, @Ans9, @QID10, @Ans10", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
         }
 
         public virtual async Task<List<GetChoicesByQuestionIdResult>> GetChoicesByQuestionIdAsync(int? QuestionID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
