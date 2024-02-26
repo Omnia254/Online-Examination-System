@@ -14,5 +14,6 @@ namespace ExaminationSystem.Context
     {
         Task<List<GetChoicesByQuestionIdResult>> GetChoicesByQuestionIdAsync(int? QuestionID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<GetExamQuestionsTextByIdResult>> GetExamQuestionsTextByIdAsync(int? ExamID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        
     }
 }

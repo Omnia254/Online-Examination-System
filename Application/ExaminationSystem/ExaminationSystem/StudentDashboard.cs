@@ -20,7 +20,7 @@ namespace ExaminationSystem
 		List<Button> buttons = new List<Button>();
 		ExaminationSystemContext context = new ExaminationSystemContext();
 		Student student = new();
-		int studentID = 7;
+		int studentID = 2;
 
 		public StudentDashboard()
 		{

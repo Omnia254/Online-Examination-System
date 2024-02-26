@@ -38,8 +38,24 @@ public partial class ExaminationSystemContext : DbContext
 	public virtual DbSet<Student> Students { get; set; }
 
 	public virtual DbSet<Topic> Topics { get; set; }
+    public virtual DbSet<StudentGradeResult> StudentGradeResult{ get; set; }
+    public virtual DbSet<ExamAnsModel> ExamAnsModel { get; set; }
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<StudentGradeResult>(entity =>
+            entity.HasNoKey());
+        modelBuilder.Entity<ExamAnsModel>(entity =>
+           entity.HasNoKey());
+    }
+    public IEnumerable<StudentGradeResult>
+    SP_GetStudentGrades(int id)
+    {
+        return this.StudentGradeResult
+            .FromSqlInterpolated($"[dbo].[GetStudentGrades] {id}")
+            .ToArray();
+    }
 
-	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ExaminationSystem;Integrated Security=True;Encrypt=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

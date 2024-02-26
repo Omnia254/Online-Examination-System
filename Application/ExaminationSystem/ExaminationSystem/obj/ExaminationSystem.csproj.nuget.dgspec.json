@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Documents\\GitHub\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj": {}
+    "C:\\Users\\heba ali\\Documents\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Documents\\GitHub\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj": {
+    "C:\\Users\\heba ali\\Documents\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\GitHub\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj",
+        "projectUniqueName": "C:\\Users\\heba ali\\Documents\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj",
         "projectName": "ExaminationSystem",
-        "projectPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\obj\\",
+        "projectPath": "C:\\Users\\heba ali\\Documents\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\ExaminationSystem.csproj",
+        "packagesPath": "C:\\Users\\heba ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\heba ali\\Documents\\Online-Examination-System\\Application\\ExaminationSystem\\ExaminationSystem\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\heba ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
