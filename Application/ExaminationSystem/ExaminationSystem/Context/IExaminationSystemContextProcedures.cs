@@ -12,6 +12,8 @@ namespace ExaminationSystem.Context
 {
     public partial interface IExaminationSystemContextProcedures
     {
+        Task<List<ExamCorrectionResult>> ExamCorrectionAsync(int? ExId, int? StId, int? CID, OutputParameter<int?> TotalScore, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<int> ExammAnswersAsync(int? Exam_ID, int? Student_ID, int? QID1, int? Ans1, int? QID2, int? Ans2, int? QID3, int? Ans3, int? QID4, int? Ans4, int? QID5, int? Ans5, int? QID6, int? Ans6, int? QID7, int? Ans7, int? QID8, int? Ans8, int? QID9, int? Ans9, int? QID10, int? Ans10, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<GetChoicesByQuestionIdResult>> GetChoicesByQuestionIdAsync(int? QuestionID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<GetExamQuestionsTextByIdResult>> GetExamQuestionsTextByIdAsync(int? ExamID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         

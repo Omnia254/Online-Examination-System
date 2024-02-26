@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿
 namespace ExaminationSystem.Panels.Student
+=======
+﻿namespace ExaminationSystem.Panels.Student
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
 {
     partial class Grievance
     {
@@ -29,6 +33,7 @@ namespace ExaminationSystem.Panels.Student
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             panel1 = new Panel();
             Question6txt = new RichTextBox();
             QuestionTextLabel6 = new Label();
@@ -632,11 +637,41 @@ namespace ExaminationSystem.Panels.Student
             yourAnsLabel1.Size = new Size(136, 30);
             yourAnsLabel1.TabIndex = 73;
             yourAnsLabel1.Text = "Your answer";
+=======
+            GrievancePanel = new Panel();
+            Title = new Label();
+            GrievancePanel.SuspendLayout();
+            SuspendLayout();
+            // 
+            // GrievancePanel
+            // 
+            GrievancePanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            GrievancePanel.Controls.Add(Title);
+            GrievancePanel.Location = new Point(0, 0);
+            GrievancePanel.Name = "GrievancePanel";
+            GrievancePanel.Size = new Size(930, 728);
+            GrievancePanel.TabIndex = 0;
+            // 
+            // Title
+            // 
+            Title.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            Title.AutoSize = true;
+            Title.Font = new Font("Candara", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Title.ForeColor = Color.FromArgb(174, 37, 43);
+            Title.Location = new Point(363, 24);
+            Title.MaximumSize = new Size(0, 50);
+            Title.MinimumSize = new Size(0, 50);
+            Title.Name = "Title";
+            Title.Size = new Size(203, 50);
+            Title.TabIndex = 35;
+            Title.Text = "GRIEVANCE";
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
             // 
             // Grievance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
             Controls.Add(panel1);
             Name = "Grievance";
             Size = new Size(930, 728);
@@ -690,5 +725,19 @@ namespace ExaminationSystem.Panels.Student
         private TextBox studentAns4;
         private TextBox correctAns4;
         private Label yourAnsLabel4;
+=======
+            Controls.Add(GrievancePanel);
+            Name = "Grievance";
+            Size = new Size(930, 728);
+            GrievancePanel.ResumeLayout(false);
+            GrievancePanel.PerformLayout();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel GrievancePanel;
+        private Label Title;
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
     }
 }

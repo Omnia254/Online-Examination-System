@@ -141,6 +141,7 @@ C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\Examinati
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.Grades.resources
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.StudentHome.resources
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Instructor.InstructorHome.resources
+<<<<<<< HEAD
 C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.exe
 C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.deps.json
 C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\bin\Debug\net8.0-windows\ExaminationSystem.runtimeconfig.json
@@ -220,3 +221,6 @@ C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSys
 C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ref\ExaminationSystem.dll
 C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Instructor.Grievance.resources
 C:\Users\heba ali\Documents\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.Grievance.resources
+=======
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.Grievance.resources
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a

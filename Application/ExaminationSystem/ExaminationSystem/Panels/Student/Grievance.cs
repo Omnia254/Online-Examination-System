@@ -1,7 +1,10 @@
 ﻿using ExaminationSystem.Context;
+<<<<<<< HEAD
 using ExaminationSystem.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+=======
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,12 +21,16 @@ namespace ExaminationSystem.Panels.Student
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
         int studentID;
+<<<<<<< HEAD
         List<Course> courses = new List<Course>();
         List<ExamAnsModel> examGrievance = new();
+=======
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
 
         public Grievance()
         {
             InitializeComponent();
+<<<<<<< HEAD
             Load += Grievance_Load;
         }
         private void Grievance_Load(object sender, EventArgs e)
@@ -159,10 +166,15 @@ namespace ExaminationSystem.Panels.Student
             studentAns6.Text = examGrievance[5].answerText;
 
         }
+=======
+        }
+
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
         public void SetStudentID(int _studentID)
         {
             studentID = _studentID;
         }
+<<<<<<< HEAD
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -226,5 +238,7 @@ namespace ExaminationSystem.Panels.Student
             }
 
         }
+=======
+>>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
     }
 }

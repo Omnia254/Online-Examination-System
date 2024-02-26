@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // Form2
+            // TakeExam
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "Form2";
-            Text = "Form2";
-            Load += Form2_Load;
+            Name = "TakeExam";
+            Text = "TakeExam";
+            Load += TakeExam_Load;
             ResumeLayout(false);
         }
 
