@@ -25,6 +25,9 @@
     <Compile Update="Panels\Student\Grades.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Panels\Student\Grievance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Panels\Student\StudentHome.cs">
       <SubType>UserControl</SubType>
     </Compile>

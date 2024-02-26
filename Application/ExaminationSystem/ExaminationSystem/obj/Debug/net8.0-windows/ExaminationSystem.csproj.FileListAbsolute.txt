@@ -141,3 +141,4 @@ C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\Examinati
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.Grades.resources
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.StudentHome.resources
 C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Instructor.InstructorHome.resources
+C:\Users\Lenovo\Documents\GitHub\Online-Examination-System\Application\ExaminationSystem\ExaminationSystem\obj\Debug\net8.0-windows\ExaminationSystem.Panels.Student.Grievance.resources
