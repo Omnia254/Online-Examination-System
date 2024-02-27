@@ -1,6 +1,6 @@
 ﻿namespace ExaminationSystem
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             ImagePanel = new Panel();
             EmailTxt = new TextBox();
             label1 = new Label();
@@ -103,8 +103,9 @@
             insLogin.TabIndex = 8;
             insLogin.Text = "Login As Instructor";
             insLogin.UseVisualStyleBackColor = true;
+            insLogin.Click += insLogin_Click;
             // 
-            // Login
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -118,7 +119,7 @@
             Controls.Add(label1);
             Controls.Add(EmailTxt);
             Controls.Add(ImagePanel);
-            Name = "Login";
+            Name = "LoginForm";
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

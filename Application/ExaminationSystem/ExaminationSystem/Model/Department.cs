@@ -2,29 +2,18 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace ExaminationSystem.Models;
+namespace ExaminationSystem.Model;
 
-[Table("Department")]
 public partial class Department
 {
-    [Key]
-    [Column("DepartmentID")]
     public int DepartmentId { get; set; }
 
-    [Required]
-    [StringLength(50)]
     public string DepartmentName { get; set; }
 
-    [Column("ManagerID")]
     public int? ManagerId { get; set; }
 
-    [InverseProperty("Department")]
     public virtual ICollection<Instructor> Instructors { get; set; } = new List<Instructor>();
 
-    [InverseProperty("Department")]
     public virtual ICollection<Student> Students { get; set; } = new List<Student>();
 }

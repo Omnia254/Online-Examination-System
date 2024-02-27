@@ -1,5 +1,5 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Models;
+using ExaminationSystem.Model;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;

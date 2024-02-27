@@ -1,5 +1,5 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Models;
+using ExaminationSystem.Model;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,10 +21,10 @@ namespace ExaminationSystem
 		Instructor instructor = new();
 		int instructorID = 9;
 
-		public InstructorDashboard()
+		public InstructorDashboard(Instructor ins)
 		{
 			InitializeComponent();
-
+			instructor=ins;
 			buttons.Add(HomeButton);
 			buttons.Add(AddQuestionButton);
 			buttons.Add(EditQuestionButton);
@@ -62,8 +62,8 @@ namespace ExaminationSystem
 		{
 			try
 			{
-				instructor = context.Instructors.FromSqlRaw("EXECUTE SelectInstructor @InstructorID",
-					new SqlParameter("@InstructorID", instructorID)).ToList().FirstOrDefault();
+				//instructor = context.Instructors.FromSqlRaw("EXECUTE SelectInstructor @InstructorID",
+				//	new SqlParameter("@InstructorID", instructorID)).ToList().FirstOrDefault();
 
 				if (instructor != null)
 				{
@@ -127,8 +127,8 @@ namespace ExaminationSystem
 		{
 			context.Instructors.Load();
 
-			instructor = context.Instructors.FromSqlRaw("EXECUTE SelectInstructor @InstructorID",
-					new SqlParameter("@InstructorID", instructorID)).ToList().FirstOrDefault();
+			//instructor = context.Instructors.FromSqlRaw("EXECUTE SelectInstructor @InstructorID",
+			//		new SqlParameter("@InstructorID", instructorID)).ToList().FirstOrDefault();
 
 			instructorProfile1.FirstName.Text = instructor.FirstName;
 			instructorProfile1.LastName.Text = instructor.LastName;

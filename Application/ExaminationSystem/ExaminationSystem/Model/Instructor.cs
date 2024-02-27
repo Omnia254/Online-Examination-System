@@ -2,49 +2,28 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace ExaminationSystem.Models;
+namespace ExaminationSystem.Model;
 
-[Table("Instructor")]
 public partial class Instructor
 {
-    [Key]
-    [Column("InstructorID")]
     public int InstructorId { get; set; }
 
-    [Required]
-    [StringLength(20)]
     public string FirstName { get; set; }
 
-    [Required]
-    [StringLength(20)]
     public string LastName { get; set; }
 
-    [Column(TypeName = "date")]
-    public DateTime HireDate { get; set; }
+    public DateOnly HireDate { get; set; }
 
-    [Required]
-    [StringLength(11)]
     public string PhoneNumber { get; set; }
 
-    [Required]
-    [StringLength(30)]
     public string Email { get; set; }
 
-    [Column("DepartmentID")]
     public int DepartmentId { get; set; }
 
-    [ForeignKey("DepartmentId")]
-    [InverseProperty("Instructors")]
     public virtual Department Department { get; set; }
 
-    [InverseProperty("Instructor")]
     public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
 
-    [ForeignKey("InstructorId")]
-    [InverseProperty("Instructors")]
     public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
 }

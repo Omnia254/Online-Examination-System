@@ -2,32 +2,20 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace ExaminationSystem.Models;
+namespace ExaminationSystem.Model;
 
-[Table("Choice")]
 public partial class Choice
 {
-    [Key]
-    [Column("ChoiceID")]
     public int ChoiceId { get; set; }
 
-    [Required]
-    [StringLength(200)]
     public string ChoiceText { get; set; }
 
     public bool IsCorrect { get; set; }
 
-    [Column("QuestionID")]
     public int QuestionId { get; set; }
 
-    [InverseProperty("Answer1Navigation")]
     public virtual ICollection<Answer> Answers { get; set; } = new List<Answer>();
 
-    [ForeignKey("QuestionId")]
-    [InverseProperty("Choices")]
     public virtual Question Question { get; set; }
 }

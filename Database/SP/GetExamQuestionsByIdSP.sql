@@ -17,7 +17,7 @@ EXEC GetExamQuestionsById @ExamID;
 
 --GetTextOnly
 
-alter PROCEDURE GetExamQuestionsTextById
+CREATE PROCEDURE GetExamQuestionsTextById
     @ExamID INT
 AS
 BEGIN

@@ -1,17 +1,7 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Models;
-using ExaminationSystem.Panels.Instructor;
-using Microsoft.Data.SqlClient;
+using ExaminationSystem.Model;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace ExaminationSystem
 {
@@ -22,10 +12,10 @@ namespace ExaminationSystem
 		Student student = new();
 		int studentID = 7;
 
-		public StudentDashboard()
+		public StudentDashboard(Student std)
 		{
 			InitializeComponent();
-
+			student = std;
 			buttons.Add(ProfileButton);
 			buttons.Add(TakeExamButton);
 			buttons.Add(GradesButton);
@@ -59,12 +49,12 @@ namespace ExaminationSystem
 		{
 			try
 			{
-				Student stud = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
-					new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
+				//Student stud = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
+				//	new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
 
-				if (stud != null)
+				if (student != null)
 				{
-					StudentNameLabel.Text = stud.FirstName + " " + stud.LastName;
+					StudentNameLabel.Text = student.FirstName + " " + student.LastName;
 				}
 			}
 			catch (Exception ex)
@@ -92,10 +82,10 @@ namespace ExaminationSystem
 		{
 			context.Students.Load();
 
-			student = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
-					new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
-
-			studentProfile1.FirstName.Text = student.FirstName;
+            //student = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
+            //		new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
+            //student = context.Students.Where(S=>S.StudentId==studentID).FirstOrDefault();
+            studentProfile1.FirstName.Text = student.FirstName;
 			studentProfile1.LastName.Text = student.LastName;
 			studentProfile1.Address.Text = student.Address;
 			studentProfile1.PhoneNumber.Text = student.PhoneNum;

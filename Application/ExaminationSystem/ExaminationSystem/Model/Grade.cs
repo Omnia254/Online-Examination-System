@@ -2,28 +2,18 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace ExaminationSystem.Models;
+namespace ExaminationSystem.Model;
 
 public partial class Grade
 {
-    [Key]
-    [Column("ExamID")]
     public int ExamId { get; set; }
 
-    [Column("StudentID")]
     public int? StudentId { get; set; }
 
     public int Score { get; set; }
 
-    [ForeignKey("ExamId")]
-    [InverseProperty("Grade")]
     public virtual Exam Exam { get; set; }
 
-    [ForeignKey("StudentId")]
-    [InverseProperty("Grades")]
     public virtual Student Student { get; set; }
 }
