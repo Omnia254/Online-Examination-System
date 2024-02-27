@@ -1,24 +1,25 @@
 ﻿namespace ExaminationSystem.Panels.Student
 {
-	partial class Grades
-	{
-		/// <summary> 
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class Grades
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary> 
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            //
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         #region Component Designer generated code
 
@@ -33,10 +34,10 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             GradesPanel = new Panel();
             gradesView = new DataGridView();
-            showGradesBtn = new Button();
-            Title = new Label();
             Course = new DataGridViewTextBoxColumn();
             Grade = new DataGridViewTextBoxColumn();
+            showGradesBtn = new Button();
+            Title = new Label();
             GradesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gradesView).BeginInit();
             SuspendLayout();
@@ -55,6 +56,8 @@
             // gradesView
             // 
             gradesView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            gradesView.BackgroundColor = SystemColors.Control;
+            gradesView.BorderStyle = BorderStyle.None;
             gradesView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(174, 37, 43);
@@ -72,8 +75,26 @@
             gradesView.Size = new Size(514, 188);
             gradesView.TabIndex = 83;
             gradesView.CellContentClick += gradesView_CellContentClick;
-            gradesView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(174, 37, 43);
-            gradesView.ColumnHeadersDefaultCellStyle.ForeColor= Color.White;
+            // 
+            // Course
+            // 
+            Course.DataPropertyName = "CourseName";
+            dataGridViewCellStyle2.BackColor = Color.White;
+            Course.DefaultCellStyle = dataGridViewCellStyle2;
+            Course.HeaderText = "Course";
+            Course.MinimumWidth = 6;
+            Course.Name = "Course";
+            Course.Width = 250;
+            // 
+            // Grade
+            // 
+            Grade.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Grade.DataPropertyName = "Score";
+            dataGridViewCellStyle3.BackColor = Color.White;
+            Grade.DefaultCellStyle = dataGridViewCellStyle3;
+            Grade.HeaderText = "Grade";
+            Grade.MinimumWidth = 6;
+            Grade.Name = "Grade";
             // 
             // showGradesBtn
             // 
@@ -104,26 +125,6 @@
             Title.TabIndex = 35;
             Title.Text = "GRADES";
             // 
-            // Course
-            // 
-            Course.DataPropertyName = "CourseName";
-            dataGridViewCellStyle2.BackColor = Color.White;
-            Course.DefaultCellStyle = dataGridViewCellStyle2;
-            Course.HeaderText = "Course";
-            Course.MinimumWidth = 6;
-            Course.Name = "Course";
-            Course.Width = 250;
-            // 
-            // Grade
-            // 
-            Grade.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Grade.DataPropertyName = "Score";
-            dataGridViewCellStyle3.BackColor = Color.White;
-            Grade.DefaultCellStyle = dataGridViewCellStyle3;
-            Grade.HeaderText = "Grade";
-            Grade.MinimumWidth = 6;
-            Grade.Name = "Grade";
-            // 
             // Grades
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -140,7 +141,7 @@
         #endregion
 
         private Panel GradesPanel;
-		private Label Title;
+        private Label Title;
         private Button showGradesBtn;
         private DataGridView gradesView;
         private DataGridViewTextBoxColumn Course;

@@ -1,26 +1,27 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Model;
+using ExaminationSystem.Models;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace ExaminationSystem
 {
-	public partial class StudentDashboard : Form
-	{
-		List<Button> buttons = new List<Button>();
-		ExaminationSystemContext context = new ExaminationSystemContext();
-		Student student = new();
-		int studentID = 2;
+    public partial class StudentDashboard : Form
+    {
+        List<Button> buttons = new List<Button>();
+        ExaminationSystemContext context = new ExaminationSystemContext();
+        Student student = new();
 
-		public StudentDashboard(Student std)
-		{
-			InitializeComponent();
-			student = std;
-			buttons.Add(ProfileButton);
-			buttons.Add(TakeExamButton);
-			buttons.Add(GradesButton);
-			buttons.Add(HomeButton);
-			buttons.Add(LogOut);
+        public StudentDashboard(Student std)
+        {
+            InitializeComponent();
+            student = std;
+            buttons.Add(ProfileButton);
+            buttons.Add(TakeExamButton);
+            buttons.Add(GradesButton);
+            buttons.Add(HomeButton);
+            buttons.Add(GrievanceButton);
+            buttons.Add(LogOut);
 
             for (int i = 0; i < buttons.Count(); i++)
             {
@@ -48,23 +49,23 @@ namespace ExaminationSystem
             ReloadForm();
         }
 
-		public void ReloadForm()
-		{
-			try
-			{
-				//Student stud = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
-				//	new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
+        public void ReloadForm()
+        {
+            try
+            {
+                Student stud = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
+                    new SqlParameter("@StudentID", student.StudentId)).ToList().FirstOrDefault();
 
-				if (student != null)
-				{
-					StudentNameLabel.Text = student.FirstName + " " + student.LastName;
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show($"An error occurred while executing the stored procedure: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
+                if (student != null)
+                {
+                    StudentNameLabel.Text = student.FirstName + " " + student.LastName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while executing the stored procedure: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void Button_Click(object sender, EventArgs e)
         {
@@ -83,16 +84,12 @@ namespace ExaminationSystem
 
         private void ProfileButton_Click(object sender, EventArgs e)
         {
-            context.Students.Load();
 
-            //student = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
-            //		new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
-            //student = context.Students.Where(S=>S.StudentId==studentID).FirstOrDefault();
             studentProfile1.FirstName.Text = student.FirstName;
-			studentProfile1.LastName.Text = student.LastName;
-			studentProfile1.Address.Text = student.Address;
-			studentProfile1.PhoneNumber.Text = student.PhoneNum;
-			studentProfile1.Email.Text = student.Email;
+            studentProfile1.LastName.Text = student.LastName;
+            studentProfile1.Address.Text = student.Address;
+            studentProfile1.PhoneNumber.Text = student.PhoneNum;
+            studentProfile1.Email.Text = student.Email;
 
             studentProfile1.SetStudent(student);
             studentProfile1.DisableFields();
@@ -106,7 +103,7 @@ namespace ExaminationSystem
 
         private void TakeExamButton_Click(object sender, EventArgs e)
         {
-            takeExam1.SetStudentID(studentID);
+            takeExam1.SetStudentID(student.StudentId);
 
             takeExam1.Visible = true;
             studentHome1.Visible = false;
@@ -117,7 +114,7 @@ namespace ExaminationSystem
 
         private void GradesButton_Click(object sender, EventArgs e)
         {
-            grades1.SetStudentID(studentID);
+            grades1.SetStudentID(student.StudentId);
 
             grades1.Visible = true;
             studentHome1.Visible = false;
@@ -137,13 +134,24 @@ namespace ExaminationSystem
 
         private void GrievanceButton_Click(object sender, EventArgs e)
         {
-            grievance1.SetStudentID(studentID);
+            grievance1.SetStudentID(student.StudentId);
 
             grievance1.Visible = true;
             studentHome1.Visible = false;
             studentProfile1.Visible = false;
             takeExam1.Visible = false;
             grades1.Visible = false;
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+        private void StudentDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-﻿
+
+
 namespace ExaminationSystem.Panels.Student
-=======
-﻿namespace ExaminationSystem.Panels.Student
->>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
 {
     partial class Grievance
     {
@@ -33,8 +30,31 @@ namespace ExaminationSystem.Panels.Student
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             panel1 = new Panel();
+            Question10txt = new RichTextBox();
+            QuestionTextLabel10 = new Label();
+            correctAnsLabel10 = new Label();
+            studentAns10 = new TextBox();
+            correctAns10 = new TextBox();
+            yourAnsLabel10 = new Label();
+            Question9txt = new RichTextBox();
+            QuestionTextLabel9 = new Label();
+            correctAnsLabel9 = new Label();
+            studentAns9 = new TextBox();
+            correctAns9 = new TextBox();
+            yourAnsLabel9 = new Label();
+            Question8txt = new RichTextBox();
+            QuestionTextLabel8 = new Label();
+            correctAnsLabel8 = new Label();
+            studentAns8 = new TextBox();
+            correctAns8 = new TextBox();
+            yourAnsLabel8 = new Label();
+            Question7txt = new RichTextBox();
+            QuestionTextLabel7 = new Label();
+            correctAnsLabel7 = new Label();
+            studentAns7 = new TextBox();
+            correctAns7 = new TextBox();
+            yourAnsLabel7 = new Label();
             Question6txt = new RichTextBox();
             QuestionTextLabel6 = new Label();
             correctAnsLabel6 = new Label();
@@ -75,11 +95,39 @@ namespace ExaminationSystem.Panels.Student
             studentAns1 = new TextBox();
             correctAns1 = new TextBox();
             yourAnsLabel1 = new Label();
+            GrievancePanel = new Panel();
+            Title = new Label();
             panel1.SuspendLayout();
+            GrievancePanel.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.AutoScroll = true;
+            panel1.Controls.Add(Question10txt);
+            panel1.Controls.Add(QuestionTextLabel10);
+            panel1.Controls.Add(correctAnsLabel10);
+            panel1.Controls.Add(studentAns10);
+            panel1.Controls.Add(correctAns10);
+            panel1.Controls.Add(yourAnsLabel10);
+            panel1.Controls.Add(Question9txt);
+            panel1.Controls.Add(QuestionTextLabel9);
+            panel1.Controls.Add(correctAnsLabel9);
+            panel1.Controls.Add(studentAns9);
+            panel1.Controls.Add(correctAns9);
+            panel1.Controls.Add(yourAnsLabel9);
+            panel1.Controls.Add(Question8txt);
+            panel1.Controls.Add(QuestionTextLabel8);
+            panel1.Controls.Add(correctAnsLabel8);
+            panel1.Controls.Add(studentAns8);
+            panel1.Controls.Add(correctAns8);
+            panel1.Controls.Add(yourAnsLabel8);
+            panel1.Controls.Add(Question7txt);
+            panel1.Controls.Add(QuestionTextLabel7);
+            panel1.Controls.Add(correctAnsLabel7);
+            panel1.Controls.Add(studentAns7);
+            panel1.Controls.Add(correctAns7);
+            panel1.Controls.Add(yourAnsLabel7);
             panel1.Controls.Add(Question6txt);
             panel1.Controls.Add(QuestionTextLabel6);
             panel1.Controls.Add(correctAnsLabel6);
@@ -122,8 +170,314 @@ namespace ExaminationSystem.Panels.Student
             panel1.Controls.Add(yourAnsLabel1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(930, 728);
+            panel1.Size = new Size(930, 1338);
             panel1.TabIndex = 0;
+            // 
+            // Question10txt
+            // 
+            Question10txt.Anchor = AnchorStyles.Top;
+            Question10txt.BorderStyle = BorderStyle.None;
+            Question10txt.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Question10txt.Location = new Point(23, 1045);
+            Question10txt.Name = "Question10txt";
+            Question10txt.Size = new Size(219, 108);
+            Question10txt.TabIndex = 142;
+            Question10txt.Text = "";
+            // 
+            // QuestionTextLabel10
+            // 
+            QuestionTextLabel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            QuestionTextLabel10.AutoSize = true;
+            QuestionTextLabel10.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            QuestionTextLabel10.Location = new Point(23, 1012);
+            QuestionTextLabel10.MaximumSize = new Size(0, 30);
+            QuestionTextLabel10.MinimumSize = new Size(0, 30);
+            QuestionTextLabel10.Name = "QuestionTextLabel10";
+            QuestionTextLabel10.Size = new Size(150, 30);
+            QuestionTextLabel10.TabIndex = 141;
+            QuestionTextLabel10.Text = "Question Text";
+            // 
+            // correctAnsLabel10
+            // 
+            correctAnsLabel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAnsLabel10.AutoSize = true;
+            correctAnsLabel10.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            correctAnsLabel10.Location = new Point(23, 1166);
+            correctAnsLabel10.MaximumSize = new Size(0, 30);
+            correctAnsLabel10.MinimumSize = new Size(0, 30);
+            correctAnsLabel10.Name = "correctAnsLabel10";
+            correctAnsLabel10.Size = new Size(164, 30);
+            correctAnsLabel10.TabIndex = 140;
+            correctAnsLabel10.Text = "Correct answer";
+            // 
+            // studentAns10
+            // 
+            studentAns10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            studentAns10.BackColor = Color.White;
+            studentAns10.BorderStyle = BorderStyle.None;
+            studentAns10.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            studentAns10.Location = new Point(22, 1265);
+            studentAns10.MaximumSize = new Size(250, 30);
+            studentAns10.MinimumSize = new Size(250, 30);
+            studentAns10.Name = "studentAns10";
+            studentAns10.Size = new Size(250, 30);
+            studentAns10.TabIndex = 137;
+            // 
+            // correctAns10
+            // 
+            correctAns10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAns10.BackColor = Color.White;
+            correctAns10.BorderStyle = BorderStyle.None;
+            correctAns10.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            correctAns10.Location = new Point(23, 1199);
+            correctAns10.MaximumSize = new Size(250, 30);
+            correctAns10.MinimumSize = new Size(250, 30);
+            correctAns10.Name = "correctAns10";
+            correctAns10.Size = new Size(250, 30);
+            correctAns10.TabIndex = 138;
+            // 
+            // yourAnsLabel10
+            // 
+            yourAnsLabel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            yourAnsLabel10.AutoSize = true;
+            yourAnsLabel10.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            yourAnsLabel10.Location = new Point(22, 1232);
+            yourAnsLabel10.MaximumSize = new Size(0, 30);
+            yourAnsLabel10.MinimumSize = new Size(0, 30);
+            yourAnsLabel10.Name = "yourAnsLabel10";
+            yourAnsLabel10.Size = new Size(136, 30);
+            yourAnsLabel10.TabIndex = 139;
+            yourAnsLabel10.Text = "Your answer";
+            // 
+            // Question9txt
+            // 
+            Question9txt.Anchor = AnchorStyles.Top;
+            Question9txt.BorderStyle = BorderStyle.None;
+            Question9txt.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Question9txt.Location = new Point(591, 747);
+            Question9txt.Name = "Question9txt";
+            Question9txt.Size = new Size(219, 108);
+            Question9txt.TabIndex = 136;
+            Question9txt.Text = "";
+            // 
+            // QuestionTextLabel9
+            // 
+            QuestionTextLabel9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            QuestionTextLabel9.AutoSize = true;
+            QuestionTextLabel9.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            QuestionTextLabel9.Location = new Point(591, 714);
+            QuestionTextLabel9.MaximumSize = new Size(0, 30);
+            QuestionTextLabel9.MinimumSize = new Size(0, 30);
+            QuestionTextLabel9.Name = "QuestionTextLabel9";
+            QuestionTextLabel9.Size = new Size(150, 30);
+            QuestionTextLabel9.TabIndex = 135;
+            QuestionTextLabel9.Text = "Question Text";
+            // 
+            // correctAnsLabel9
+            // 
+            correctAnsLabel9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAnsLabel9.AutoSize = true;
+            correctAnsLabel9.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            correctAnsLabel9.Location = new Point(591, 868);
+            correctAnsLabel9.MaximumSize = new Size(0, 30);
+            correctAnsLabel9.MinimumSize = new Size(0, 30);
+            correctAnsLabel9.Name = "correctAnsLabel9";
+            correctAnsLabel9.Size = new Size(164, 30);
+            correctAnsLabel9.TabIndex = 134;
+            correctAnsLabel9.Text = "Correct answer";
+            // 
+            // studentAns9
+            // 
+            studentAns9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            studentAns9.BackColor = Color.White;
+            studentAns9.BorderStyle = BorderStyle.None;
+            studentAns9.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            studentAns9.Location = new Point(591, 967);
+            studentAns9.MaximumSize = new Size(250, 30);
+            studentAns9.MinimumSize = new Size(250, 30);
+            studentAns9.Name = "studentAns9";
+            studentAns9.Size = new Size(250, 30);
+            studentAns9.TabIndex = 131;
+            // 
+            // correctAns9
+            // 
+            correctAns9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAns9.BackColor = Color.White;
+            correctAns9.BorderStyle = BorderStyle.None;
+            correctAns9.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            correctAns9.Location = new Point(591, 901);
+            correctAns9.MaximumSize = new Size(250, 30);
+            correctAns9.MinimumSize = new Size(250, 30);
+            correctAns9.Name = "correctAns9";
+            correctAns9.Size = new Size(250, 30);
+            correctAns9.TabIndex = 132;
+            // 
+            // yourAnsLabel9
+            // 
+            yourAnsLabel9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            yourAnsLabel9.AutoSize = true;
+            yourAnsLabel9.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            yourAnsLabel9.Location = new Point(591, 934);
+            yourAnsLabel9.MaximumSize = new Size(0, 30);
+            yourAnsLabel9.MinimumSize = new Size(0, 30);
+            yourAnsLabel9.Name = "yourAnsLabel9";
+            yourAnsLabel9.Size = new Size(136, 30);
+            yourAnsLabel9.TabIndex = 133;
+            yourAnsLabel9.Text = "Your answer";
+            yourAnsLabel9.Click += label4_Click;
+            // 
+            // Question8txt
+            // 
+            Question8txt.Anchor = AnchorStyles.Top;
+            Question8txt.BorderStyle = BorderStyle.None;
+            Question8txt.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Question8txt.Location = new Point(317, 747);
+            Question8txt.Name = "Question8txt";
+            Question8txt.Size = new Size(219, 108);
+            Question8txt.TabIndex = 130;
+            Question8txt.Text = "";
+            // 
+            // QuestionTextLabel8
+            // 
+            QuestionTextLabel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            QuestionTextLabel8.AutoSize = true;
+            QuestionTextLabel8.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            QuestionTextLabel8.Location = new Point(317, 714);
+            QuestionTextLabel8.MaximumSize = new Size(0, 30);
+            QuestionTextLabel8.MinimumSize = new Size(0, 30);
+            QuestionTextLabel8.Name = "QuestionTextLabel8";
+            QuestionTextLabel8.Size = new Size(150, 30);
+            QuestionTextLabel8.TabIndex = 129;
+            QuestionTextLabel8.Text = "Question Text";
+            // 
+            // correctAnsLabel8
+            // 
+            correctAnsLabel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAnsLabel8.AutoSize = true;
+            correctAnsLabel8.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            correctAnsLabel8.Location = new Point(317, 868);
+            correctAnsLabel8.MaximumSize = new Size(0, 30);
+            correctAnsLabel8.MinimumSize = new Size(0, 30);
+            correctAnsLabel8.Name = "correctAnsLabel8";
+            correctAnsLabel8.Size = new Size(164, 30);
+            correctAnsLabel8.TabIndex = 128;
+            correctAnsLabel8.Text = "Correct answer";
+            // 
+            // studentAns8
+            // 
+            studentAns8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            studentAns8.BackColor = Color.White;
+            studentAns8.BorderStyle = BorderStyle.None;
+            studentAns8.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            studentAns8.Location = new Point(316, 967);
+            studentAns8.MaximumSize = new Size(250, 30);
+            studentAns8.MinimumSize = new Size(250, 30);
+            studentAns8.Name = "studentAns8";
+            studentAns8.Size = new Size(250, 30);
+            studentAns8.TabIndex = 125;
+            // 
+            // correctAns8
+            // 
+            correctAns8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAns8.BackColor = Color.White;
+            correctAns8.BorderStyle = BorderStyle.None;
+            correctAns8.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            correctAns8.Location = new Point(317, 901);
+            correctAns8.MaximumSize = new Size(250, 30);
+            correctAns8.MinimumSize = new Size(250, 30);
+            correctAns8.Name = "correctAns8";
+            correctAns8.Size = new Size(250, 30);
+            correctAns8.TabIndex = 126;
+            // 
+            // yourAnsLabel8
+            // 
+            yourAnsLabel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            yourAnsLabel8.AutoSize = true;
+            yourAnsLabel8.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            yourAnsLabel8.Location = new Point(316, 934);
+            yourAnsLabel8.MaximumSize = new Size(0, 30);
+            yourAnsLabel8.MinimumSize = new Size(0, 30);
+            yourAnsLabel8.Name = "yourAnsLabel8";
+            yourAnsLabel8.Size = new Size(136, 30);
+            yourAnsLabel8.TabIndex = 127;
+            yourAnsLabel8.Text = "Your answer";
+            // 
+            // Question7txt
+            // 
+            Question7txt.Anchor = AnchorStyles.Top;
+            Question7txt.BorderStyle = BorderStyle.None;
+            Question7txt.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Question7txt.Location = new Point(23, 747);
+            Question7txt.Name = "Question7txt";
+            Question7txt.Size = new Size(219, 108);
+            Question7txt.TabIndex = 124;
+            Question7txt.Text = "";
+            // 
+            // QuestionTextLabel7
+            // 
+            QuestionTextLabel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            QuestionTextLabel7.AutoSize = true;
+            QuestionTextLabel7.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            QuestionTextLabel7.Location = new Point(23, 714);
+            QuestionTextLabel7.MaximumSize = new Size(0, 30);
+            QuestionTextLabel7.MinimumSize = new Size(0, 30);
+            QuestionTextLabel7.Name = "QuestionTextLabel7";
+            QuestionTextLabel7.Size = new Size(150, 30);
+            QuestionTextLabel7.TabIndex = 123;
+            QuestionTextLabel7.Text = "Question Text";
+            QuestionTextLabel7.Click += label8_Click_1;
+            // 
+            // correctAnsLabel7
+            // 
+            correctAnsLabel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAnsLabel7.AutoSize = true;
+            correctAnsLabel7.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            correctAnsLabel7.Location = new Point(23, 868);
+            correctAnsLabel7.MaximumSize = new Size(0, 30);
+            correctAnsLabel7.MinimumSize = new Size(0, 30);
+            correctAnsLabel7.Name = "correctAnsLabel7";
+            correctAnsLabel7.Size = new Size(164, 30);
+            correctAnsLabel7.TabIndex = 122;
+            correctAnsLabel7.Text = "Correct answer";
+            // 
+            // studentAns7
+            // 
+            studentAns7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            studentAns7.BackColor = Color.White;
+            studentAns7.BorderStyle = BorderStyle.None;
+            studentAns7.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            studentAns7.Location = new Point(23, 967);
+            studentAns7.MaximumSize = new Size(250, 30);
+            studentAns7.MinimumSize = new Size(250, 30);
+            studentAns7.Name = "studentAns7";
+            studentAns7.Size = new Size(250, 30);
+            studentAns7.TabIndex = 119;
+            // 
+            // correctAns7
+            // 
+            correctAns7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            correctAns7.BackColor = Color.White;
+            correctAns7.BorderStyle = BorderStyle.None;
+            correctAns7.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            correctAns7.Location = new Point(23, 901);
+            correctAns7.MaximumSize = new Size(250, 30);
+            correctAns7.MinimumSize = new Size(250, 30);
+            correctAns7.Name = "correctAns7";
+            correctAns7.Size = new Size(250, 30);
+            correctAns7.TabIndex = 120;
+            // 
+            // yourAnsLabel7
+            // 
+            yourAnsLabel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            yourAnsLabel7.AutoSize = true;
+            yourAnsLabel7.Font = new Font("Candara", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            yourAnsLabel7.Location = new Point(23, 934);
+            yourAnsLabel7.MaximumSize = new Size(0, 30);
+            yourAnsLabel7.MinimumSize = new Size(0, 30);
+            yourAnsLabel7.Name = "yourAnsLabel7";
+            yourAnsLabel7.Size = new Size(136, 30);
+            yourAnsLabel7.TabIndex = 121;
+            yourAnsLabel7.Text = "Your answer";
             // 
             // Question6txt
             // 
@@ -532,7 +886,7 @@ namespace ExaminationSystem.Panels.Student
             // 
             // ShowGrievance
             // 
-            ShowGrievance.Anchor = AnchorStyles.Right;
+            ShowGrievance.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ShowGrievance.BackColor = Color.FromArgb(174, 37, 43);
             ShowGrievance.FlatStyle = FlatStyle.Flat;
             ShowGrievance.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -637,11 +991,6 @@ namespace ExaminationSystem.Panels.Student
             yourAnsLabel1.Size = new Size(136, 30);
             yourAnsLabel1.TabIndex = 73;
             yourAnsLabel1.Text = "Your answer";
-=======
-            GrievancePanel = new Panel();
-            Title = new Label();
-            GrievancePanel.SuspendLayout();
-            SuspendLayout();
             // 
             // GrievancePanel
             // 
@@ -649,7 +998,7 @@ namespace ExaminationSystem.Panels.Student
             GrievancePanel.Controls.Add(Title);
             GrievancePanel.Location = new Point(0, 0);
             GrievancePanel.Name = "GrievancePanel";
-            GrievancePanel.Size = new Size(930, 728);
+            GrievancePanel.Size = new Size(930, 1500);
             GrievancePanel.TabIndex = 0;
             // 
             // Title
@@ -665,22 +1014,22 @@ namespace ExaminationSystem.Panels.Student
             Title.Size = new Size(203, 50);
             Title.TabIndex = 35;
             Title.Text = "GRIEVANCE";
->>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
             // 
             // Grievance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
             Controls.Add(panel1);
             Name = "Grievance";
-            Size = new Size(930, 728);
+            Size = new Size(930, 1339);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            GrievancePanel.ResumeLayout(false);
+            GrievancePanel.PerformLayout();
             ResumeLayout(false);
         }
 
-        
+
 
         #endregion
 
@@ -725,19 +1074,31 @@ namespace ExaminationSystem.Panels.Student
         private TextBox studentAns4;
         private TextBox correctAns4;
         private Label yourAnsLabel4;
-=======
-            Controls.Add(GrievancePanel);
-            Name = "Grievance";
-            Size = new Size(930, 728);
-            GrievancePanel.ResumeLayout(false);
-            GrievancePanel.PerformLayout();
-            ResumeLayout(false);
-        }
-
-        #endregion
-
         private Panel GrievancePanel;
         private Label Title;
->>>>>>> 79e27462d310e8e001baf81a5e76ccf20c9f653a
+        private RichTextBox Question9txt;
+        private Label QuestionTextLabel9;
+        private Label correctAnsLabel9;
+        private TextBox studentAns9;
+        private TextBox correctAns9;
+        private Label yourAnsLabel9;
+        private RichTextBox Question8txt;
+        private Label QuestionTextLabel8;
+        private Label correctAnsLabel8;
+        private TextBox studentAns8;
+        private TextBox correctAns8;
+        private Label yourAnsLabel8;
+        private RichTextBox Question7txt;
+        private Label QuestionTextLabel7;
+        private Label correctAnsLabel7;
+        private TextBox studentAns7;
+        private TextBox correctAns7;
+        private Label yourAnsLabel7;
+        private RichTextBox Question10txt;
+        private Label QuestionTextLabel10;
+        private Label correctAnsLabel10;
+        private TextBox studentAns10;
+        private TextBox correctAns10;
+        private Label yourAnsLabel10;
     }
 }

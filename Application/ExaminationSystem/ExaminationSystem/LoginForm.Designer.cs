@@ -70,6 +70,7 @@
             // 
             PassTxt.Location = new Point(255, 300);
             PassTxt.Name = "PassTxt";
+            PassTxt.PasswordChar = '*';
             PassTxt.Size = new Size(225, 27);
             PassTxt.TabIndex = 5;
             // 
@@ -121,6 +122,7 @@
             Controls.Add(ImagePanel);
             Name = "LoginForm";
             Text = "Login";
+            FormClosing += LoginForm_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

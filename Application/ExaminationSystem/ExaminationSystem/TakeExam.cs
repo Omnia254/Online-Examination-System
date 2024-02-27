@@ -102,7 +102,7 @@ namespace ExaminationSystem
 
         private async void SubmitButton_Click(object sender, EventArgs e)
         {
-            int result = await procedures.ExammAnswersAsync(
+            int result = await procedures.ExamAnswersAsync(
                             ExamId,
                            StudentId,
                            QuestuinsIdArray[0], AnswersIdArray[0],

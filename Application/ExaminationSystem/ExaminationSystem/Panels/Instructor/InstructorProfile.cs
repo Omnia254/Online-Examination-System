@@ -1,5 +1,5 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Model;
+using ExaminationSystem.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -20,7 +20,7 @@ namespace ExaminationSystem.Panels.Instructor
 	public partial class InstructorProfile : UserControl
 	{
 		ExaminationSystemContext context = new ExaminationSystemContext();
-		public Model.Instructor instructor = new();
+		public Models.Instructor instructor = new();
 		int instructorID;
 
 		public InstructorProfile()
@@ -42,7 +42,7 @@ namespace ExaminationSystem.Panels.Instructor
 			Email.Text = instructor.Email;
 		}
 
-		public void SetInstructor(Model.Instructor _instructor)
+		public void SetInstructor(Models.Instructor _instructor)
 		{
 			instructor = _instructor;
 			instructorID = _instructor.InstructorId;

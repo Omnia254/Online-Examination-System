@@ -1,16 +1,8 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Model;
+using ExaminationSystem.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ExaminationSystem
 {
@@ -36,6 +28,7 @@ namespace ExaminationSystem
                         Login selectedLogin = context.Logins.Where(L => L.Email == email).FirstOrDefault();
                         if (selectedLogin != null && selectedLogin.Password == PassTxt.Text)
                         {
+                            Hide();
                             StudentDashboard studentDashboard = new(context.Students.Local.Where(S => S.Email == email).FirstOrDefault());
                             studentDashboard.Show();
                         }
@@ -75,10 +68,11 @@ namespace ExaminationSystem
                 {
                     if (context.Instructors.Where(I => I.Email == email).Any())
                     {
-                        
+
                         Login selectedLogin = context.Logins.Where(L => L.Email == email).FirstOrDefault();
                         if (selectedLogin != null && selectedLogin.Password == PassTxt.Text)
                         {
+                            Hide();
                             InstructorDashboard instructorDashboard = new(context.Instructors.Where(I => I.Email == email).FirstOrDefault());
                             instructorDashboard.Show();
                         }
@@ -98,6 +92,11 @@ namespace ExaminationSystem
                 }
             }
             catch { MessageBox.Show("Failed To Sign in..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

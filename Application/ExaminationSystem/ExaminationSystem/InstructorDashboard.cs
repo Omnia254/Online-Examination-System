@@ -1,16 +1,8 @@
 ﻿using ExaminationSystem.Context;
-using ExaminationSystem.Model;
+using ExaminationSystem.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace ExaminationSystem
 {
@@ -19,8 +11,6 @@ namespace ExaminationSystem
 		List<Button> buttons = new List<Button>();
 		ExaminationSystemContext context = new ExaminationSystemContext();
 		Instructor instructor = new();
-		int instructorID = 9;
-
 		public InstructorDashboard(Instructor ins)
 		{
 			InitializeComponent();
@@ -62,8 +52,8 @@ namespace ExaminationSystem
 		{
 			try
 			{
-				//instructor = context.Instructors.FromSqlRaw("EXECUTE SelectInstructor @InstructorID",
-				//	new SqlParameter("@InstructorID", instructorID)).ToList().FirstOrDefault();
+				instructor = context.Instructors.FromSqlRaw("EXECUTE SelectInstructor @InstructorID",
+					new SqlParameter("@InstructorID", instructor.InstructorId)).ToList().FirstOrDefault();
 
 				if (instructor != null)
 				{
@@ -114,7 +104,7 @@ namespace ExaminationSystem
 
 		private void GenerateExam_Click(object sender, EventArgs e)
 		{
-			generateExam1.SetInstructorID(instructorID);
+			generateExam1.SetInstructorID(instructor.InstructorId);
 
 			generateExam1.Visible = true;
 			instructorHome1.Visible = false;
@@ -152,5 +142,15 @@ namespace ExaminationSystem
 			addQuestion1.Visible = false;
 			editQuestion1.Visible = false;
 		}
-	}
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+        private void InstructorDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+    }
 }

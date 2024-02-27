@@ -79,6 +79,7 @@ namespace ExaminationSystem
 			LogOut.TabIndex = 6;
 			LogOut.Text = "Log Out";
 			LogOut.UseVisualStyleBackColor = false;
+			LogOut.Click += LogOut_Click;
 			// 
 			// ProfileButton
 			// 
@@ -222,7 +223,8 @@ namespace ExaminationSystem
 			MinimumSize = new Size(1300, 900);
 			Name = "InstructorDashboard";
 			Text = "StudentDashboard";
-			LeftSideBar.ResumeLayout(false);
+			FormClosing += InstructorDashboard_FormClosing;
+            LeftSideBar.ResumeLayout(false);
 			LeftSideBar.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)StudentImage).EndInit();
 			Header.ResumeLayout(false);

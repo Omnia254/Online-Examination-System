@@ -32,6 +32,7 @@ namespace ExaminationSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
             LeftSideBar = new Panel();
+            GrievanceButton = new Button();
             LogOut = new Button();
             HomeButton = new Button();
             GradesButton = new Button();
@@ -42,7 +43,6 @@ namespace ExaminationSystem
             Header = new Panel();
             ImagePanel = new Panel();
             MainPanel = new Panel();
-            GrievanceButton = new Button();
             LeftSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentImage).BeginInit();
             Header.SuspendLayout();
@@ -65,6 +65,21 @@ namespace ExaminationSystem
             LeftSideBar.Size = new Size(350, 855);
             LeftSideBar.TabIndex = 0;
             // 
+            // GrievanceButton
+            // 
+            GrievanceButton.BackColor = Color.White;
+            GrievanceButton.FlatAppearance.BorderSize = 0;
+            GrievanceButton.FlatStyle = FlatStyle.Flat;
+            GrievanceButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GrievanceButton.ForeColor = Color.Black;
+            GrievanceButton.Location = new Point(0, 645);
+            GrievanceButton.Name = "GrievanceButton";
+            GrievanceButton.Size = new Size(350, 49);
+            GrievanceButton.TabIndex = 7;
+            GrievanceButton.Text = "Grievance";
+            GrievanceButton.UseVisualStyleBackColor = false;
+            GrievanceButton.Click += GrievanceButton_Click;
+            // 
             // LogOut
             // 
             LogOut.Anchor = AnchorStyles.Bottom;
@@ -79,6 +94,7 @@ namespace ExaminationSystem
             LogOut.TabIndex = 6;
             LogOut.Text = "Log Out";
             LogOut.UseVisualStyleBackColor = false;
+            LogOut.Click += LogOut_Click;
             // 
             // HomeButton
             // 
@@ -190,26 +206,12 @@ namespace ExaminationSystem
             // MainPanel
             // 
             MainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            MainPanel.AutoScroll = true;
             MainPanel.BackColor = Color.FromArgb(242, 242, 242);
             MainPanel.Location = new Point(350, 125);
             MainPanel.Name = "MainPanel";
             MainPanel.Size = new Size(930, 728);
             MainPanel.TabIndex = 2;
-            // 
-            // GrievanceButton
-            // 
-            GrievanceButton.BackColor = Color.White;
-            GrievanceButton.FlatAppearance.BorderSize = 0;
-            GrievanceButton.FlatStyle = FlatStyle.Flat;
-            GrievanceButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GrievanceButton.ForeColor = Color.Black;
-            GrievanceButton.Location = new Point(0, 645);
-            GrievanceButton.Name = "GrievanceButton";
-            GrievanceButton.Size = new Size(350, 49);
-            GrievanceButton.TabIndex = 7;
-            GrievanceButton.Text = "Grievance";
-            GrievanceButton.UseVisualStyleBackColor = false;
-            GrievanceButton.Click += GrievanceButton_Click;
             // 
             // StudentDashboard
             // 
@@ -222,6 +224,7 @@ namespace ExaminationSystem
             MinimumSize = new Size(1300, 900);
             Name = "StudentDashboard";
             Text = "StudentDashboard";
+            FormClosing += StudentDashboard_FormClosing;
             LeftSideBar.ResumeLayout(false);
             LeftSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)StudentImage).EndInit();
