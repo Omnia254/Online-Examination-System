@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExaminationSystem.Panels.Instructor
 {
-	public partial class Test : UserControl
+	public partial class Grievance : UserControl
 	{
-		public Test()
+		public Grievance()
 		{
 			InitializeComponent();
 		}

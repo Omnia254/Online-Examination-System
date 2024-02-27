@@ -10,7 +10,7 @@ namespace ExaminationSystem
 		List<Button> buttons = new List<Button>();
 		ExaminationSystemContext context = new ExaminationSystemContext();
 		Student student = new();
-		int studentID = 7;
+		int studentID = 2;
 
 		public StudentDashboard(Student std)
 		{
@@ -22,28 +22,31 @@ namespace ExaminationSystem
 			buttons.Add(HomeButton);
 			buttons.Add(LogOut);
 
-			for (int i = 0; i < buttons.Count(); i++)
-			{
-				buttons[i].Click += Button_Click;
-			}
+            for (int i = 0; i < buttons.Count(); i++)
+            {
+                buttons[i].Click += Button_Click;
+            }
 
-			studentHome1 = new Panels.Student.StudentHome();
-			studentProfile1 = new Panels.Student.StudentProfile();
-			takeExam1 = new Panels.Student.TakeExam();
-			grades1 = new Panels.Student.Grades();
+            studentHome1 = new Panels.Student.StudentHome();
+            studentProfile1 = new Panels.Student.StudentProfile();
+            takeExam1 = new Panels.Student.TakeExam();
+            grades1 = new Panels.Student.Grades();
+            grievance1 = new Panels.Student.Grievance();
 
-			MainPanel.Controls.Add(studentHome1);
-			MainPanel.Controls.Add(studentProfile1);
-			MainPanel.Controls.Add(takeExam1);
-			MainPanel.Controls.Add(grades1);
+            MainPanel.Controls.Add(studentHome1);
+            MainPanel.Controls.Add(studentProfile1);
+            MainPanel.Controls.Add(takeExam1);
+            MainPanel.Controls.Add(grades1);
+            MainPanel.Controls.Add(grievance1);
 
-			studentHome1.Visible = true;
-			studentProfile1.Visible = false;
-			takeExam1.Visible = false;
-			grades1.Visible = false;
+            studentHome1.Visible = true;
+            studentProfile1.Visible = false;
+            takeExam1.Visible = false;
+            grades1.Visible = false;
+            grievance1.Visible = false;
 
-			ReloadForm();
-		}
+            ReloadForm();
+        }
 
 		public void ReloadForm()
 		{
@@ -63,24 +66,24 @@ namespace ExaminationSystem
 			}
 		}
 
-		private void Button_Click(object sender, EventArgs e)
-		{
-			Button clickedButton = (Button)sender;
+        private void Button_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
 
-			clickedButton.BackColor = Color.LightGray;
+            clickedButton.BackColor = Color.LightGray;
 
-			foreach (var button in buttons)
-			{
-				if (button != clickedButton)
-				{
-					button.BackColor = Color.White;
-				}
-			}
-		}
+            foreach (var button in buttons)
+            {
+                if (button != clickedButton)
+                {
+                    button.BackColor = Color.White;
+                }
+            }
+        }
 
-		private void ProfileButton_Click(object sender, EventArgs e)
-		{
-			context.Students.Load();
+        private void ProfileButton_Click(object sender, EventArgs e)
+        {
+            context.Students.Load();
 
             //student = context.Students.FromSqlRaw("EXECUTE SelectStudent @StudentID",
             //		new SqlParameter("@StudentID", studentID)).ToList().FirstOrDefault();
@@ -91,41 +94,56 @@ namespace ExaminationSystem
 			studentProfile1.PhoneNumber.Text = student.PhoneNum;
 			studentProfile1.Email.Text = student.Email;
 
-			studentProfile1.SetStudent(student);
-			studentProfile1.DisableFields();
+            studentProfile1.SetStudent(student);
+            studentProfile1.DisableFields();
 
-			studentProfile1.Visible = true;
-			studentHome1.Visible = false;
-			takeExam1.Visible = false;
-			grades1.Visible = false;
-		}
+            studentProfile1.Visible = true;
+            studentHome1.Visible = false;
+            takeExam1.Visible = false;
+            grades1.Visible = false;
+            grievance1.Visible = false;
+        }
 
-		private void TakeExamButton_Click(object sender, EventArgs e)
-		{
-			takeExam1.SetStudentID(studentID);
+        private void TakeExamButton_Click(object sender, EventArgs e)
+        {
+            takeExam1.SetStudentID(studentID);
 
-			takeExam1.Visible = true;
-			studentHome1.Visible = false;
-			studentProfile1.Visible = false;
-			grades1.Visible = false;
-		}
+            takeExam1.Visible = true;
+            studentHome1.Visible = false;
+            studentProfile1.Visible = false;
+            grades1.Visible = false;
+            grievance1.Visible = false;
+        }
 
-		private void GradesButton_Click(object sender, EventArgs e)
-		{
-			grades1.SetStudentID(studentID);
+        private void GradesButton_Click(object sender, EventArgs e)
+        {
+            grades1.SetStudentID(studentID);
 
-			grades1.Visible = true;
-			studentHome1.Visible = false;
-			studentProfile1.Visible = false;
-			takeExam1.Visible = false;
-		}
+            grades1.Visible = true;
+            studentHome1.Visible = false;
+            studentProfile1.Visible = false;
+            takeExam1.Visible = false;
+            grievance1.Visible = false;
+        }
 
-		private void HomeButton_Click(object sender, EventArgs e)
-		{
-			studentHome1.Visible = true;
-			grades1.Visible = false;
-			studentProfile1.Visible = false;
-			takeExam1.Visible = false;
-		}
-	}
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            studentHome1.Visible = true;
+            grades1.Visible = false;
+            studentProfile1.Visible = false;
+            takeExam1.Visible = false;
+            grievance1.Visible = false;
+        }
+
+        private void GrievanceButton_Click(object sender, EventArgs e)
+        {
+            grievance1.SetStudentID(studentID);
+
+            grievance1.Visible = true;
+            studentHome1.Visible = false;
+            studentProfile1.Visible = false;
+            takeExam1.Visible = false;
+            grades1.Visible = false;
+        }
+    }
 }
