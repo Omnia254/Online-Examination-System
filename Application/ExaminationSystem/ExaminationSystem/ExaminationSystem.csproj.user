@@ -7,10 +7,25 @@
     <Compile Update="InstructorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Panels\Instructor\AddCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Panels\Instructor\AddQuestion.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Panels\Instructor\AddTopic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\Instructor\Advanced.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Panels\Instructor\EditQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\Instructor\EnrollStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Panels\Instructor\GenerateExam.cs">
@@ -23,6 +38,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Panels\Instructor\Test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\Student\AssignExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\Student\EnrolledCourses.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Panels\Student\Grades.cs">

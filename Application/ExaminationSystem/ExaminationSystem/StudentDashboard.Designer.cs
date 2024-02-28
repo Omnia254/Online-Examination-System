@@ -43,6 +43,7 @@ namespace ExaminationSystem
             Header = new Panel();
             ImagePanel = new Panel();
             MainPanel = new Panel();
+            EnrolledCoursesBtn = new Button();
             LeftSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentImage).BeginInit();
             Header.SuspendLayout();
@@ -52,6 +53,7 @@ namespace ExaminationSystem
             // 
             LeftSideBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             LeftSideBar.BackColor = Color.FromArgb(174, 37, 43);
+            LeftSideBar.Controls.Add(EnrolledCoursesBtn);
             LeftSideBar.Controls.Add(GrievanceButton);
             LeftSideBar.Controls.Add(LogOut);
             LeftSideBar.Controls.Add(HomeButton);
@@ -88,7 +90,7 @@ namespace ExaminationSystem
             LogOut.FlatStyle = FlatStyle.Flat;
             LogOut.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LogOut.ForeColor = Color.Black;
-            LogOut.Location = new Point(0, 776);
+            LogOut.Location = new Point(0, 792);
             LogOut.Name = "LogOut";
             LogOut.Size = new Size(350, 49);
             LogOut.TabIndex = 6;
@@ -213,6 +215,21 @@ namespace ExaminationSystem
             MainPanel.Size = new Size(930, 728);
             MainPanel.TabIndex = 2;
             // 
+            // EnrolledCoursesBtn
+            // 
+            EnrolledCoursesBtn.BackColor = Color.White;
+            EnrolledCoursesBtn.FlatAppearance.BorderSize = 0;
+            EnrolledCoursesBtn.FlatStyle = FlatStyle.Flat;
+            EnrolledCoursesBtn.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EnrolledCoursesBtn.ForeColor = Color.Black;
+            EnrolledCoursesBtn.Location = new Point(0, 700);
+            EnrolledCoursesBtn.Name = "EnrolledCoursesBtn";
+            EnrolledCoursesBtn.Size = new Size(350, 49);
+            EnrolledCoursesBtn.TabIndex = 8;
+            EnrolledCoursesBtn.Text = "Enrolled Courses";
+            EnrolledCoursesBtn.UseVisualStyleBackColor = false;
+            EnrolledCoursesBtn.Click += EnrolledCoursesBtn_Click;
+            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -246,10 +263,13 @@ namespace ExaminationSystem
 		private Button TakeExamButton;
 		private Button LogOut;
 		private StudentProfile studentProfile1;
-		private Panels.Student.TakeExam takeExam1;
+		public Panels.Student.TakeExam takeExam1;
 		private Grades grades1;
         private Grievance grievance1;
 		private StudentHome studentHome1;
+        private EnrolledCourses enrolledCourses1;
+        public AssignExam assignExam1;
         private Button GrievanceButton;
+        private Button EnrolledCoursesBtn;
     }
 }

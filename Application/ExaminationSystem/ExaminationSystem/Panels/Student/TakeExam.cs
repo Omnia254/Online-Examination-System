@@ -18,10 +18,9 @@ namespace ExaminationSystem.Panels.Student
         int[] QuestuinsIdArray = new int[10];
         int[] AnswersIdArray = new int[10];
         int Counter = 0;
-        int StudentId = 1;
-        int ExamId = 1;
-        int CourseId = 1;
-        int studentID;
+        int ExamId;
+        int CourseId;
+        int StudentId;
 
         public TakeExam()
         {
@@ -33,7 +32,17 @@ namespace ExaminationSystem.Panels.Student
 
         public void SetStudentID(int _studentID)
         {
-            studentID = _studentID;
+            StudentId = _studentID;
+        }
+
+        public void SetCourseID(int _courseID)
+        {
+            CourseId = _courseID;
+        }
+
+        public void SetExamID(int _examID)
+        {
+            ExamId = _examID;
         }
 
         private async void TakeExam_Load(object sender, EventArgs e)
@@ -150,8 +159,7 @@ namespace ExaminationSystem.Panels.Student
             }
             else
             {
-                // Close the current form or continue with any other logic
-                //this.Close();
+                this.Visible = false;
             }
         }
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -164,7 +172,6 @@ namespace ExaminationSystem.Panels.Student
             AnswersIdArray[Counter] = choiceIndex;
             QuestuinsIdArray[Counter] = questionIndex;
             Counter++;
-
         }
     }
 }
