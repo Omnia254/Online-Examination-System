@@ -15,6 +15,7 @@ namespace ExaminationSystem.Panels.Student
     {
         ExaminationSystemContext context;
         ExaminationSystemContextProcedures procedures;
+        AssignExam assignExamPanel = new();
         int[] QuestuinsIdArray = new int[10];
         int[] AnswersIdArray = new int[10];
         int Counter = 0;
@@ -22,11 +23,13 @@ namespace ExaminationSystem.Panels.Student
         int CourseId;
         int StudentId;
 
-        public TakeExam()
+        public TakeExam(AssignExam assignExam)
         {
             InitializeComponent();
+
             context = new ExaminationSystemContext();
             procedures = new ExaminationSystemContextProcedures(context);
+            assignExamPanel = assignExam;
             //this.FormClosed += (sender, e) => context.Dispose();
         }
 
@@ -43,6 +46,13 @@ namespace ExaminationSystem.Panels.Student
         public void SetExamID(int _examID)
         {
             ExamId = _examID;
+        }
+
+        public void ClearVariables()
+        {
+            QuestuinsIdArray = new int[10];
+            AnswersIdArray = new int[10];
+            Counter = 0;
         }
 
         private async void TakeExam_Load(object sender, EventArgs e)
@@ -151,15 +161,13 @@ namespace ExaminationSystem.Panels.Student
             int? totalScore = totalScoreOutputParameter.Value;
             DialogResult dialogResult = MessageBox.Show($"Exam Submitted! Result: {result}. Do you want to view your grade?", "Submission Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            assignExamPanel.ShowFields();
+
             if (dialogResult == DialogResult.Yes)
             {
                 // Open the GradesForm
                 GradesForm gradesForm = new GradesForm(totalScore ?? 0);
                 gradesForm.ShowDialog();
-            }
-            else
-            {
-                this.Visible = false;
             }
         }
         private void RadioButton_CheckedChanged(object sender, EventArgs e)

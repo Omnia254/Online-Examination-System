@@ -17,7 +17,7 @@ namespace ExaminationSystem.Panels.Student
     public partial class AssignExam : UserControl
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
-        public TakeExam takeExam1 = new ();
+        public TakeExam takeExam1;
         int studentID;
 
         public AssignExam()
@@ -54,7 +54,7 @@ namespace ExaminationSystem.Panels.Student
             
             if (Examobject == null)
             {
-                MessageBox.Show($"YOU ARE NOT ASSIGNED TO AN EXAM!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"NO EXAM AVAILABLE RIGHT NOW!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -64,8 +64,9 @@ namespace ExaminationSystem.Panels.Student
             }
             else
             {
-                takeExam1 = new();
+                takeExam1 = new(this);
 
+                takeExam1.ClearVariables();
                 takeExam1.SetStudentID(studentID);
                 takeExam1.SetCourseID(Examobject.CourseId);
                 takeExam1.SetExamID(Examobject.ExamId);
