@@ -17,14 +17,12 @@ namespace ExaminationSystem.Panels.Student
     public partial class AssignExam : UserControl
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
-        public TakeExam takeExam1 = new();
+        public TakeExam takeExam1 = new ();
         int studentID;
 
         public AssignExam()
         {
             InitializeComponent();
-
-            takeExam1.Visible = false;
 
             Load += AssignExam_Load;
         }
@@ -38,6 +36,7 @@ namespace ExaminationSystem.Panels.Student
         {
             var Cour = context.Courses.FromSqlRaw("EXECUTE GetEnrolledStudentCourses @StudentID",
                     new SqlParameter("@StudentID", studentID)).ToList();
+
             CName.DataSource = Cour;
             CName.DisplayMember = "CourseName";
             CName.ValueMember = "CourseId";
@@ -61,15 +60,39 @@ namespace ExaminationSystem.Panels.Student
 
             if (CName.SelectedIndex == -1)
             {
-                MessageBox.Show($"An error occurred while adding the Course", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                takeExam1 = new();
+
                 takeExam1.SetStudentID(studentID);
                 takeExam1.SetCourseID(Examobject.CourseId);
                 takeExam1.SetExamID(Examobject.ExamId);
-                takeExam1.Visible = true;
-                //this.Visible = false;
+                HideFields();
+
+                AssignExamPanel.Controls.Add(takeExam1);
+            }
+        }
+
+        public void HideFields()
+        {
+            CName.Visible = false;
+            Title.Visible = false;
+            TakeExamBtn.Visible = false;
+            CourseNameLabel.Visible = false;
+        }
+
+        public void ShowFields()
+        {
+            CName.Visible = true;
+            Title.Visible = true;
+            TakeExamBtn.Visible = true;
+            CourseNameLabel.Visible = true;
+            
+            if (takeExam1 != null)
+            {
+                AssignExamPanel.Controls.Remove(takeExam1);
             }
         }
     }

@@ -105,11 +105,11 @@ namespace ExaminationSystem
             grades1.Visible = false;
             grievance1.Visible = false;
             enrolledCourses1.Visible = false;
-            //takeExam1.Visible = false;
         }
 
         private void TakeExamButton_Click(object sender, EventArgs e)
         {
+            assignExam1.ShowFields();
             assignExam1.SetStudentID(student.StudentId);
 
             assignExam1.Visible = true;
@@ -118,7 +118,6 @@ namespace ExaminationSystem
             grades1.Visible = false;
             grievance1.Visible = false;
             enrolledCourses1.Visible = false;
-            //takeExam1.Visible = false;
         }
 
         private void GradesButton_Click(object sender, EventArgs e)
@@ -131,7 +130,6 @@ namespace ExaminationSystem
             assignExam1.Visible = false;
             grievance1.Visible = false;
             enrolledCourses1.Visible = false;
-            //takeExam1.Visible = false;
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -142,7 +140,6 @@ namespace ExaminationSystem
             assignExam1.Visible = false;
             grievance1.Visible = false;
             enrolledCourses1.Visible = false;
-            //takeExam1.Visible = false;
         }
 
         private void GrievanceButton_Click(object sender, EventArgs e)
@@ -155,7 +152,6 @@ namespace ExaminationSystem
             assignExam1.Visible = false;
             grades1.Visible = false;
             enrolledCourses1.Visible = false;
-            //takeExam1.Visible = false;
         }
 
         private void EnrolledCoursesBtn_Click(object sender, EventArgs e)
@@ -168,7 +164,6 @@ namespace ExaminationSystem
             studentProfile1.Visible = false;
             assignExam1.Visible = false;
             grievance1.Visible = false;
-            //takeExam1.Visible = false;
         }
 
         private void LogOut_Click(object sender, EventArgs e)
