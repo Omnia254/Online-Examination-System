@@ -147,7 +147,6 @@ namespace ExaminationSystem.Panels.Student
 			LastName.Enabled = true;
 			Address.Enabled = true;
 			PhoneNumber.Enabled = true;
-			Email.Enabled = true;
 
 			SaveBtn.Visible = true;
 			EditBtn.Visible = false;

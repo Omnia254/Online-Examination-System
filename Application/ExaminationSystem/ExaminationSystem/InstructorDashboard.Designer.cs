@@ -266,7 +266,7 @@ namespace ExaminationSystem
 		private Panels.Instructor.GenerateExam generateExam1;
 		private Panels.Instructor.EditQuestion editQuestion1;
 		private InstructorProfile instructorProfile1;
-        public Advanced advanced1;
+        private Advanced advanced1;
 		private InstructorHome instructorHome1;
 		private Button HomeButton;
         private Button AdvancedButton;
