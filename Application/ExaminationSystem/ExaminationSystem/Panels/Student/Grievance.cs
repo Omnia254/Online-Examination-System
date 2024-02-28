@@ -14,14 +14,19 @@ namespace ExaminationSystem.Panels.Student
         List<ExamAnsModel> examGrievance = new();
         Exam exam = new();
 
-
         public Grievance()
         {
             InitializeComponent();
 
             Load += Grievance_Load;
         }
+
         private void Grievance_Load(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        public void Reload()
         {
             //context.Grades.Load();
             context.Students.Load();
@@ -29,9 +34,11 @@ namespace ExaminationSystem.Panels.Student
             context.Courses.Load();
             context.Questions.Load();
             context.Choices.Load();
+
             var result = context?.Courses?
                .FromSqlRaw("EXECUTE GetStudentCourses @StudentID", new SqlParameter("@StudentID", studentID))?
                .ToList();
+
             if (result == null)
             {
                 MessageBox.Show("You have not taken any exam yet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -48,6 +55,7 @@ namespace ExaminationSystem.Panels.Student
 
             HideFields();
         }
+
         public void HideFields()
         {
             yourAnsLabel1.Visible = false;
@@ -111,6 +119,7 @@ namespace ExaminationSystem.Panels.Student
             studentAns9.Visible = false;
             studentAns10.Visible = false;
         }
+
         public void ShowFields()
         {
             yourAnsLabel1.Visible = true;
@@ -216,14 +225,10 @@ namespace ExaminationSystem.Panels.Student
 
         }
 
-
-
-
         public void SetStudentID(int _studentID)
         {
             studentID = _studentID;
         }
-
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -258,9 +263,11 @@ namespace ExaminationSystem.Panels.Student
                         break;
                     }
                 }
+
                 var result = context.Exams
                    .FromSqlRaw("EXECUTE GetExamIDbyStudentIDandCourseID @StudentID, @CourseID", new SqlParameter("@StudentID", studentID), new SqlParameter("@CourseID", courseId))
                    .ToList();
+
                 if (result == null)
                 {
                     MessageBox.Show("You have not taken any exam yet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -273,6 +280,7 @@ namespace ExaminationSystem.Panels.Student
                 var result2 = context.Set<ExamAnsModel>()
                    .FromSqlRaw("EXECUTE GetExamReportWithModelAnswer @ExamNumber, @StudentID", new SqlParameter("@ExamNumber", exam.ExamId), new SqlParameter("@StudentID", studentID))
                    .ToList();
+
                 if (result2 == null)
                 {
                     MessageBox.Show("You have not taken any exam yet.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -291,14 +299,13 @@ namespace ExaminationSystem.Panels.Student
                     MessageBox.Show("You haven't exam in this course.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
                 ShowFields();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred while executing the stored procedure: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void label8_Click_1(object sender, EventArgs e)

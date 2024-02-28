@@ -147,6 +147,8 @@ namespace ExaminationSystem
         private void GrievanceButton_Click(object sender, EventArgs e)
         {
             grievance1.SetStudentID(student.StudentId);
+            grievance1.Reload();
+            grievance1.HideFields();
 
             grievance1.Visible = true;
             studentHome1.Visible = false;

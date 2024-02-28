@@ -69,4 +69,4 @@ BEGIN
         -- If an error occurs, print an error message
         PRINT 'AN ERROR OCCURRED: ' + ERROR_MESSAGE();
     END CATCH;
-END
+END;

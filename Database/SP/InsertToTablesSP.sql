@@ -1,5 +1,5 @@
 --- DEPTINSERT stored procedure
-ALTER PROC DEPTINSERT 
+CREATE PROC DEPTINSERT 
 @COL2DATA NVARCHAR(50),
 @COL3DATA INT
 AS
@@ -240,7 +240,7 @@ END
 ------------------------------------
 
 -- QUESTIONInsert stored procedure
-ALTER PROCEDURE QUESTIONInsert 
+CREATE PROCEDURE QUESTIONInsert 
     @COL2DATA NVARCHAR(500),
     @COL3DATA NVARCHAR(20),
     @COL4DATA NVARCHAR(20),
@@ -287,7 +287,7 @@ END
 ----------------------------------------
 ----------------------------------------
 -- CHOICEInsert stored procedure
-Alter PROC CHOICEInsert 
+CREATE PROC CHOICEInsert 
     @COL2DATA NVARCHAR(200), -- ChoiceText
     @COL3DATA BIT, -- IsCorrect
     @COL4DATA INT -- QuestionID
