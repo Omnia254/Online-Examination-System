@@ -13,6 +13,11 @@ EXEC INSINSERT 'Michael', 'Smith', '2023-01-15', '555-5678', 'michael@example.co
 EXEC INSINSERT 'David', 'Miller', '2023-02-28', '555-9999', 'david@example.com', 2; -- Valid insert
 EXEC INSINSERT 'Grace', 'Lee', '2023-03-15', '555-1234', 'grace@example.com', 3; -- Valid insert
 
+-- Insert into Logins
+INSERT INTO Logins
+VALUES ('michael@example.com',777)
+INSERT INTO Logins 
+VALUES ('alice@example.com',123)
 -- Use TOPICInsert stored procedure
 EXEC TOPICInsert 1,'Geography'; -- Valid insert
 EXEC TOPICInsert 2, 'Mathematics'; -- Valid insert

@@ -3,6 +3,14 @@ CREATE DATABASE ExaminationSystem01;
 
 -- Switch to the newly created database for further operations
 USE ExaminationSystem01;
+
+--Table to store Login info
+CREATE TABLE [Logins](
+	[Email] [nvarchar](30) NOT NULL,
+	[Password] [nvarchar](30) NOT NULL,
+	PRIMARY KEY ([Email])
+	);
+
 -- Table to store information about academic departments
 CREATE TABLE [Department] (
   [DepartmentID] INT IDENTITY(1,1),
