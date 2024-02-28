@@ -9,12 +9,20 @@ namespace ExaminationSystem.Panels.Student
         ExaminationSystemContext context = new ExaminationSystemContext();
         int studentID;
         List<StudentGradeResult> studentGrades = new();
+
         public Grades()
         {
             InitializeComponent();
+            
             Load += Grades_Load;
         }
+
         private void Grades_Load(object sender, EventArgs e)
+        {
+            Reload();
+        }
+
+        public void Reload()
         {
             context.Grades.Load();
             context.Students.Load();
@@ -23,6 +31,7 @@ namespace ExaminationSystem.Panels.Student
 
             HideFields();
         }
+
         public void HideFields()
         {
             gradesView.Visible = false;
@@ -55,22 +64,20 @@ namespace ExaminationSystem.Panels.Student
 
                 var S_Grades = context.Set<StudentGradeResult>().FromSqlRaw($"EXECUTE GetStudentGrades @StudentID = {studentID}")
                                                  .ToList();
+                
+                studentGrades.Clear();
 
                 foreach (var g in S_Grades)
                 {
                     studentGrades.Add(g);
                 }
+
                 ShowFields();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred while executing the stored procedure: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        private void gradesView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

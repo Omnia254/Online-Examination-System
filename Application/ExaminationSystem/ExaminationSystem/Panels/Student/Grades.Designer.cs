@@ -74,7 +74,6 @@
             gradesView.RowHeadersWidth = 51;
             gradesView.Size = new Size(514, 188);
             gradesView.TabIndex = 83;
-            gradesView.CellContentClick += gradesView_CellContentClick;
             // 
             // Course
             // 

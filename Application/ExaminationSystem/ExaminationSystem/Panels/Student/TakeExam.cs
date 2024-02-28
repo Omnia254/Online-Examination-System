@@ -159,7 +159,7 @@ namespace ExaminationSystem.Panels.Student
             OutputParameter<int?> totalScoreOutputParameter = new OutputParameter<int?>();
             await procedures.ExamCorrectionAsync(ExamId, StudentId, CourseId, totalScoreOutputParameter);
             int? totalScore = totalScoreOutputParameter.Value;
-            DialogResult dialogResult = MessageBox.Show($"Exam Submitted! Result: {result}. Do you want to view your grade?", "Submission Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show($"Exam Submitted! {result} Rows Affected! Do you want to view your grade?", "Submission Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             assignExamPanel.ShowFields();
 

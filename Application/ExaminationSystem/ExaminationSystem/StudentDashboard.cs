@@ -123,6 +123,8 @@ namespace ExaminationSystem
         private void GradesButton_Click(object sender, EventArgs e)
         {
             grades1.SetStudentID(student.StudentId);
+            grades1.Reload();
+            grades1.HideFields();
 
             grades1.Visible = true;
             studentHome1.Visible = false;
