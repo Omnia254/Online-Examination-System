@@ -35,7 +35,7 @@ END
 
 
 
-CREATE PROCEDURE GetDistinctExamIDs 
+CREATE PROCEDURE GetDistinctExamIDs
     @CourseID INT
 AS
 BEGIN
@@ -52,8 +52,11 @@ BEGIN
     FROM Exam AS E
     INNER JOIN ExamQuestion AS EQ ON E.ExamID = EQ.ExamID
     INNER JOIN Question AS Q ON Q.QuestionID = EQ.QuestionID
-    WHERE E.ExamID NOT IN (SELECT ExamId FROM Grades)
+    WHERE E.ExamID NOT IN (SELECT ExamId FROM Answer)
     AND E.CourseID = @CourseID
 END
+
+
+
 
 
