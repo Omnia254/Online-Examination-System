@@ -1,8 +1,8 @@
 -- Create a new database named "ExaminationSystem"
-CREATE DATABASE ExaminationSystem01;
+CREATE DATABASE ExaminationSystem;
 
 -- Switch to the newly created database for further operations
-USE ExaminationSystem01;
+USE ExaminationSystem;
 
 --Table to store Login info
 CREATE TABLE [Logins](
