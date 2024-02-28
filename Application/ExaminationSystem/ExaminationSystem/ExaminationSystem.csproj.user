@@ -64,8 +64,5 @@
     <Compile Update="StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TakeExam.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

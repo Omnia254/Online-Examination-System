@@ -44,14 +44,14 @@
             ImagePanel.BackColor = Color.White;
             ImagePanel.BackgroundImage = (Image)resources.GetObject("ImagePanel.BackgroundImage");
             ImagePanel.BackgroundImageLayout = ImageLayout.Stretch;
-            ImagePanel.Location = new Point(244, 12);
+            ImagePanel.Location = new Point(259, 12);
             ImagePanel.Name = "ImagePanel";
             ImagePanel.Size = new Size(300, 113);
             ImagePanel.TabIndex = 2;
             // 
             // EmailTxt
             // 
-            EmailTxt.Location = new Point(255, 217);
+            EmailTxt.Location = new Point(297, 217);
             EmailTxt.Name = "EmailTxt";
             EmailTxt.Size = new Size(225, 27);
             EmailTxt.TabIndex = 3;
@@ -59,16 +59,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Fluent Icons", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(255, 180);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(297, 180);
             label1.Name = "label1";
-            label1.Size = new Size(89, 20);
+            label1.Size = new Size(113, 25);
             label1.TabIndex = 4;
             label1.Text = "UserName";
             // 
             // PassTxt
             // 
-            PassTxt.Location = new Point(255, 300);
+            PassTxt.Location = new Point(297, 300);
             PassTxt.Name = "PassTxt";
             PassTxt.PasswordChar = '*';
             PassTxt.Size = new Size(225, 27);
@@ -77,10 +77,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Fluent Icons", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(260, 268);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(297, 268);
             label2.Name = "label2";
-            label2.Size = new Size(84, 20);
+            label2.Size = new Size(106, 25);
             label2.TabIndex = 6;
             label2.Text = "Password";
             // 
