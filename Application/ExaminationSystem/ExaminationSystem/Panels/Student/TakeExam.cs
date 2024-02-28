@@ -176,10 +176,31 @@ namespace ExaminationSystem.Panels.Student
             RadioButton radioButton = (RadioButton)sender;
             int choiceIndex = (int)radioButton.Tag;
             int questionIndex = (int)radioButton.Parent.Tag;
-            string choiceText = radioButton.Text;
-            AnswersIdArray[Counter] = choiceIndex;
-            QuestuinsIdArray[Counter] = questionIndex;
-            Counter++;
+
+            if (Counter < AnswersIdArray.Length && Counter < QuestuinsIdArray.Length)
+            {
+                bool questionAnswered = false;
+                for (int i = 0; i < Counter; i++)
+                {
+                    if (QuestuinsIdArray[i] == questionIndex)
+                    {
+                        AnswersIdArray[i] = choiceIndex;
+                        questionAnswered = true;
+                        break;
+                    }
+                }
+
+                if (!questionAnswered)
+                {
+                    AnswersIdArray[Counter] = choiceIndex;
+                    QuestuinsIdArray[Counter] = questionIndex;
+                    Counter++;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error: Counter exceeds array bounds.");
+            }
         }
     }
 }

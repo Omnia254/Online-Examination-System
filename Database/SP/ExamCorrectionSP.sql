@@ -1,5 +1,5 @@
 
-Create PROCEDURE ExamCorrection
+Create or ALTER PROCEDURE [dbo].[ExamCorrection]
     @ExId INT,
     @StId INT,
     @CID INT,
@@ -33,7 +33,7 @@ BEGIN
                     JOIN Choice C ON EQ.QuestionID = C.QuestionID
                     JOIN Answer A ON C.ChoiceID = A.Answer AND A.StudentID = @StId
                 WHERE E.ExamID = @ExId AND C.IsCorrect = 1
-            )
+            )*10
 
         -- Update or insert the score into the Grades table
       IF EXISTS (SELECT 1 FROM Grades G
@@ -42,7 +42,7 @@ BEGIN
         BEGIN
             UPDATE Grades
             SET Score = @TotalScore ,
-			ExamID = @ExId
+      ExamID = @ExId
             WHERE  StudentID = @StId
         END
         ELSE
