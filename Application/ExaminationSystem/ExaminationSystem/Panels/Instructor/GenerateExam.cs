@@ -1,14 +1,5 @@
 ﻿using ExaminationSystem.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ExaminationSystem.Panels.Instructor
 {
@@ -50,10 +41,22 @@ namespace ExaminationSystem.Panels.Instructor
 				MessageBox.Show("The sum of the two numbers not equal 10!", "Sum Not Equal 10", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
+            int TFNum = context.Database.ExecuteSqlRaw($"SELECT COUNT(*) FROM Question WHERE [QuestionType] = 'T/F' AND [Complexity] = '{Complexity.SelectedItem}' AND [CourseID] = '{Course.SelectedValue}'");
 
-			try
+            if (TFNum< NoOfTFQuestion.SelectedIndex)
 			{
-				// Assuming context is your DbContext instance
+                MessageBox.Show($"No Enough T/F Questions with {Complexity.SelectedItem} Complexity in this Course", "No Enough T/F Questions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int MCQNum = context.Database.ExecuteSqlRaw($"SELECT COUNT(*) FROM Question WHERE [QuestionType] = 'MCQ' AND [Complexity] = '{Complexity.SelectedItem}' AND [CourseID] = '{Course.SelectedValue}'");
+            if (MCQNum < NoOfTFQuestion.SelectedIndex)
+            {
+                MessageBox.Show($"No Enough MCQ Questions with {Complexity.SelectedItem} Complexity in this Course", "No Enough MCQ Questions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+			{
+				//context is DbContext instance
 				context.Database.ExecuteSqlRaw($"EXECUTE [ExamGeneration] {Course.SelectedValue}, {NoOfTFQuestion.SelectedIndex}, {NoOfMCQQuestions.SelectedIndex}, {Complexity.SelectedItem}, {instructorID}");
 
 				MessageBox.Show("Exam added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
