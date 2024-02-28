@@ -16,10 +16,13 @@ namespace ExaminationSystem.Panels.Instructor
     public partial class AddTopic : UserControl
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
+        Advanced advancedPanel = new Advanced();
 
-        public AddTopic()
+        public AddTopic(Advanced advPanel)
         {
             InitializeComponent();
+
+            advancedPanel = advPanel;
         }
 
         private void AddTopicBtn_Click(object sender, EventArgs e)
@@ -40,6 +43,8 @@ namespace ExaminationSystem.Panels.Instructor
                 MessageBox.Show("Topic added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ClearFields();
+
+                advancedPanel.ShowFields();
             }
             catch (Exception ex)
             {

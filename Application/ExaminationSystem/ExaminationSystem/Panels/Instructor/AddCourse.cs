@@ -16,10 +16,13 @@ namespace ExaminationSystem.Panels.Instructor
     public partial class AddCourse : UserControl
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
+        Advanced advancedPanel = new Advanced();
 
-        public AddCourse()
+        public AddCourse(Advanced advPanel)
         {
             InitializeComponent();
+
+            advancedPanel = advPanel;
 
             Load += AddCourse_Load;
         }
@@ -62,6 +65,8 @@ namespace ExaminationSystem.Panels.Instructor
                 MessageBox.Show("Course added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ClearFields();
+
+                advancedPanel.ShowFields();
             }
             catch (Exception ex)
             {

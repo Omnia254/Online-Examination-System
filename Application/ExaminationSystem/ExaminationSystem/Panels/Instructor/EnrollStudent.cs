@@ -16,10 +16,13 @@ namespace ExaminationSystem.Panels.Instructor
     public partial class EnrollStudent : UserControl
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
+        Advanced advancedPanel = new Advanced();
 
-        public EnrollStudent()
+        public EnrollStudent(Advanced advPanel)
         {
             InitializeComponent();
+
+            advancedPanel = advPanel;
 
             Load += EnrollStudentToCourse_Load;
         }
@@ -66,6 +69,8 @@ namespace ExaminationSystem.Panels.Instructor
                 string enrollmentStatus = enrollmentStatusParam.Value.ToString();
 
                 MessageBox.Show(enrollmentStatus);
+
+                advancedPanel.ShowFields();
             }
             catch (Exception ex)
             {

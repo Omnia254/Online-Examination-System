@@ -237,6 +237,7 @@ namespace ExaminationSystem
             Controls.Add(MainPanel);
             Controls.Add(Header);
             Controls.Add(LeftSideBar);
+            MaximumSize = new Size(1300, 900);
             MinimumSize = new Size(1300, 900);
             Name = "InstructorDashboard";
             Text = "StudentDashboard";
@@ -265,7 +266,7 @@ namespace ExaminationSystem
 		private Panels.Instructor.GenerateExam generateExam1;
 		private Panels.Instructor.EditQuestion editQuestion1;
 		private InstructorProfile instructorProfile1;
-        private Advanced advanced1;
+        public Advanced advanced1;
 		private InstructorHome instructorHome1;
 		private Button HomeButton;
         private Button AdvancedButton;

@@ -150,6 +150,8 @@ namespace ExaminationSystem
 
         private void AdvancedButton_Click(object sender, EventArgs e)
         {
+            advanced1.ShowFields();
+
             advanced1.Visible = true;
             instructorHome1.Visible = false;
             instructorProfile1.Visible = false;

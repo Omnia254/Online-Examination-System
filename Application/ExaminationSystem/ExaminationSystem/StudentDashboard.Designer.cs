@@ -32,6 +32,7 @@ namespace ExaminationSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
             LeftSideBar = new Panel();
+            EnrolledCoursesBtn = new Button();
             GrievanceButton = new Button();
             LogOut = new Button();
             HomeButton = new Button();
@@ -43,7 +44,6 @@ namespace ExaminationSystem
             Header = new Panel();
             ImagePanel = new Panel();
             MainPanel = new Panel();
-            EnrolledCoursesBtn = new Button();
             LeftSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)StudentImage).BeginInit();
             Header.SuspendLayout();
@@ -67,6 +67,21 @@ namespace ExaminationSystem
             LeftSideBar.Size = new Size(350, 855);
             LeftSideBar.TabIndex = 0;
             // 
+            // EnrolledCoursesBtn
+            // 
+            EnrolledCoursesBtn.BackColor = Color.White;
+            EnrolledCoursesBtn.FlatAppearance.BorderSize = 0;
+            EnrolledCoursesBtn.FlatStyle = FlatStyle.Flat;
+            EnrolledCoursesBtn.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EnrolledCoursesBtn.ForeColor = Color.Black;
+            EnrolledCoursesBtn.Location = new Point(0, 689);
+            EnrolledCoursesBtn.Name = "EnrolledCoursesBtn";
+            EnrolledCoursesBtn.Size = new Size(350, 49);
+            EnrolledCoursesBtn.TabIndex = 8;
+            EnrolledCoursesBtn.Text = "Enrolled Courses";
+            EnrolledCoursesBtn.UseVisualStyleBackColor = false;
+            EnrolledCoursesBtn.Click += EnrolledCoursesBtn_Click;
+            // 
             // GrievanceButton
             // 
             GrievanceButton.BackColor = Color.White;
@@ -74,7 +89,7 @@ namespace ExaminationSystem
             GrievanceButton.FlatStyle = FlatStyle.Flat;
             GrievanceButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             GrievanceButton.ForeColor = Color.Black;
-            GrievanceButton.Location = new Point(0, 645);
+            GrievanceButton.Location = new Point(0, 634);
             GrievanceButton.Name = "GrievanceButton";
             GrievanceButton.Size = new Size(350, 49);
             GrievanceButton.TabIndex = 7;
@@ -105,7 +120,7 @@ namespace ExaminationSystem
             HomeButton.FlatStyle = FlatStyle.Flat;
             HomeButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             HomeButton.ForeColor = Color.Black;
-            HomeButton.Location = new Point(0, 425);
+            HomeButton.Location = new Point(0, 414);
             HomeButton.Name = "HomeButton";
             HomeButton.Size = new Size(350, 49);
             HomeButton.TabIndex = 5;
@@ -120,7 +135,7 @@ namespace ExaminationSystem
             GradesButton.FlatStyle = FlatStyle.Flat;
             GradesButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             GradesButton.ForeColor = Color.Black;
-            GradesButton.Location = new Point(0, 590);
+            GradesButton.Location = new Point(0, 579);
             GradesButton.Name = "GradesButton";
             GradesButton.Size = new Size(350, 49);
             GradesButton.TabIndex = 4;
@@ -135,7 +150,7 @@ namespace ExaminationSystem
             TakeExamButton.FlatStyle = FlatStyle.Flat;
             TakeExamButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TakeExamButton.ForeColor = Color.Black;
-            TakeExamButton.Location = new Point(0, 535);
+            TakeExamButton.Location = new Point(0, 524);
             TakeExamButton.Name = "TakeExamButton";
             TakeExamButton.Size = new Size(350, 49);
             TakeExamButton.TabIndex = 3;
@@ -150,7 +165,7 @@ namespace ExaminationSystem
             ProfileButton.FlatStyle = FlatStyle.Flat;
             ProfileButton.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ProfileButton.ForeColor = Color.Black;
-            ProfileButton.Location = new Point(0, 480);
+            ProfileButton.Location = new Point(0, 469);
             ProfileButton.Name = "ProfileButton";
             ProfileButton.Size = new Size(350, 49);
             ProfileButton.TabIndex = 2;
@@ -215,21 +230,6 @@ namespace ExaminationSystem
             MainPanel.Size = new Size(930, 728);
             MainPanel.TabIndex = 2;
             // 
-            // EnrolledCoursesBtn
-            // 
-            EnrolledCoursesBtn.BackColor = Color.White;
-            EnrolledCoursesBtn.FlatAppearance.BorderSize = 0;
-            EnrolledCoursesBtn.FlatStyle = FlatStyle.Flat;
-            EnrolledCoursesBtn.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EnrolledCoursesBtn.ForeColor = Color.Black;
-            EnrolledCoursesBtn.Location = new Point(0, 700);
-            EnrolledCoursesBtn.Name = "EnrolledCoursesBtn";
-            EnrolledCoursesBtn.Size = new Size(350, 49);
-            EnrolledCoursesBtn.TabIndex = 8;
-            EnrolledCoursesBtn.Text = "Enrolled Courses";
-            EnrolledCoursesBtn.UseVisualStyleBackColor = false;
-            EnrolledCoursesBtn.Click += EnrolledCoursesBtn_Click;
-            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -238,6 +238,7 @@ namespace ExaminationSystem
             Controls.Add(MainPanel);
             Controls.Add(Header);
             Controls.Add(LeftSideBar);
+            MaximumSize = new Size(1300, 900);
             MinimumSize = new Size(1300, 900);
             Name = "StudentDashboard";
             Text = "StudentDashboard";

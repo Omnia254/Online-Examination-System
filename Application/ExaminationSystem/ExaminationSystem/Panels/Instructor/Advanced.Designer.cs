@@ -126,6 +126,5 @@
         private Button EnrollStudentBtn;
         private Button AddTopicBtn;
         private Button AddCourseBtn;
-        private AddCourse addCourse1;
     }
 }
