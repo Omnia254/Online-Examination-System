@@ -161,6 +161,8 @@ namespace ExaminationSystem.Panels.Student
             int? totalScore = totalScoreOutputParameter.Value;
             DialogResult dialogResult = MessageBox.Show($"Exam Submitted! Result: {result}. Do you want to view your grade?", "Submission Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            assignExamPanel.ShowFields();
+
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show($"YOUR SCORE IS {totalScore ?? 0}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
