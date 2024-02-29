@@ -1,0 +1,12 @@
+CREATE PROC INSERTCOURSE
+@COL2DATA NVARCHAR(50),
+@COL3DATA INT
+AS
+BEGIN
+
+    -- Insert the values
+    INSERT INTO Course ( CourseName, TopicID)
+    VALUES ( @COL2DATA, @COL3DATA);
+
+
+END
