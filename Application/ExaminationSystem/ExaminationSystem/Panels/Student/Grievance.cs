@@ -294,7 +294,9 @@ namespace ExaminationSystem.Panels.Student
 
                 var examReportAnswers = context.Set<ExamAnsModel>().FromSqlRaw($"EXECUTE GetExamReportWithModelAnswer @ExamNumber = {exam.ExamId}, @StudentID={studentID}")
                                                  .ToList();
-                //
+
+                examGrievance.Clear();
+
                 foreach (var era in examReportAnswers)
                 {
                     examGrievance.Add(era);
