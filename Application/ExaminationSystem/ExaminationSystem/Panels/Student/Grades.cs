@@ -8,7 +8,7 @@ namespace ExaminationSystem.Panels.Student
     {
         ExaminationSystemContext context = new ExaminationSystemContext();
         int studentID;
-        List<StudentGradeResult> studentGrades = new();
+        List<StudentGradeResult> studentGrades;
 
         public Grades()
         {
@@ -24,6 +24,8 @@ namespace ExaminationSystem.Panels.Student
 
         public void Reload()
         {
+            studentGrades = new();
+
             context.Grades.Load();
             context.Students.Load();
             context.Exams.Load();
@@ -40,7 +42,6 @@ namespace ExaminationSystem.Panels.Student
         {
             gradesView.Visible = true;
             gradesView.DataSource = studentGrades;
-
         }
 
         public void SetStudentID(int _studentID)

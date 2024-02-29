@@ -1,5 +1,5 @@
 
-Create or ALTER PROCEDURE [dbo].[ExamCorrection]
+ALTER PROCEDURE [dbo].[ExamCorrection]
     @ExId INT,
     @StId INT,
     @CID INT,
@@ -25,14 +25,14 @@ BEGIN
         SET @TotalScore = 0
 
         -- Calculate the total score for the student
-        SELECT @TotalScore += (
+        SELECT @TotalScore = (
                 SELECT COUNT(DISTINCT Answer)
                 FROM Exam E
                     JOIN ExamQuestion EQ ON E.ExamID = EQ.ExamID
                     JOIN Question Q ON EQ.QuestionID = Q.QuestionID
                     JOIN Choice C ON EQ.QuestionID = C.QuestionID
                     JOIN Answer A ON C.ChoiceID = A.Answer AND A.StudentID = @StId
-                WHERE E.ExamID = @ExId AND C.IsCorrect = 1
+                WHERE E.ExamID = @ExId AND A.ExamID = @ExId AND C.IsCorrect = 1
             )*10
 
         -- Update or insert the score into the Grades table
@@ -41,9 +41,12 @@ BEGIN
                    WHERE G.StudentID = @StId AND E.CourseID = @CID AND G.ExamID <> @ExId)
         BEGIN
             UPDATE Grades
-            SET Score = @TotalScore ,
-      ExamID = @ExId
-            WHERE  StudentID = @StId
+			SET Score = @TotalScore,
+				ExamID = @ExId
+			WHERE StudentID = @StId AND ExamID = (SELECT G.ExamID 
+												  FROM Grades G, Exam E
+												  WHERE G.ExamID = E.ExamID AND E.CourseID = @CID 
+																			AND G.StudentID = @StId)
         END
         ELSE
         BEGIN

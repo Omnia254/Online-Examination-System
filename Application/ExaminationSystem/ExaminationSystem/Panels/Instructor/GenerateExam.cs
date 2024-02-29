@@ -59,7 +59,7 @@ namespace ExaminationSystem.Panels.Instructor
                                 q.Complexity == Complexity.SelectedItem &&
                                 q.CourseId == Convert.ToInt32(Course.SelectedValue)).Count();
 
-            if (MCQNum < NoOfTFQuestion.SelectedIndex)
+            if (MCQNum < NoOfMCQQuestions.SelectedIndex)
             {
                 MessageBox.Show($"No Enough MCQ Questions with {Complexity.SelectedItem} Complexity in this Course", "No Enough MCQ Questions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
