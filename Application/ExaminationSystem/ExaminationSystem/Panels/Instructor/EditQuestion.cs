@@ -144,8 +144,11 @@ namespace ExaminationSystem.Panels.Instructor
 
 			ChoiceText1.Text = choices[0].ChoiceText;
 			ChoiceText2.Text = choices[1].ChoiceText;
+            ChoiceText3.Text = string.Empty;
+            ChoiceText4.Text = string.Empty;
+            ChoiceText5.Text = string.Empty;
 
-			if (choices[0].IsCorrect)
+            if (choices[0].IsCorrect)
 				radioButton1.Checked = true;
 			else if (choices[1].IsCorrect)
 				radioButton2.Checked = true;

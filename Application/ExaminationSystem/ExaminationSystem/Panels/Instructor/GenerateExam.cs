@@ -1,5 +1,6 @@
 ﻿using ExaminationSystem.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ExaminationSystem.Panels.Instructor
 {
@@ -41,14 +42,23 @@ namespace ExaminationSystem.Panels.Instructor
 				MessageBox.Show("The sum of the two numbers not equal 10!", "Sum Not Equal 10", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
-            int TFNum = context.Database.ExecuteSqlRaw($"SELECT COUNT(*) FROM Question WHERE [QuestionType] = 'T/F' AND [Complexity] = '{Complexity.SelectedItem}' AND [CourseID] = '{Course.SelectedValue}'");
+
+            int TFNum = context.Questions
+                    .Where(q => q.QuestionType == "T/F" &&
+                                q.Complexity == Complexity.SelectedItem &&
+                                q.CourseId == Convert.ToInt32(Course.SelectedValue)).Count();
 
             if (TFNum< NoOfTFQuestion.SelectedIndex)
 			{
                 MessageBox.Show($"No Enough T/F Questions with {Complexity.SelectedItem} Complexity in this Course", "No Enough T/F Questions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int MCQNum = context.Database.ExecuteSqlRaw($"SELECT COUNT(*) FROM Question WHERE [QuestionType] = 'MCQ' AND [Complexity] = '{Complexity.SelectedItem}' AND [CourseID] = '{Course.SelectedValue}'");
+
+            int MCQNum = context.Questions
+                    .Where(q => q.QuestionType == "MCQ" &&
+                                q.Complexity == Complexity.SelectedItem &&
+                                q.CourseId == Convert.ToInt32(Course.SelectedValue)).Count();
+
             if (MCQNum < NoOfTFQuestion.SelectedIndex)
             {
                 MessageBox.Show($"No Enough MCQ Questions with {Complexity.SelectedItem} Complexity in this Course", "No Enough MCQ Questions", MessageBoxButtons.OK, MessageBoxIcon.Warning);
