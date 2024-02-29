@@ -28,6 +28,7 @@ namespace ExaminationSystem.Panels.Student
 
         public void Reload()
         {
+            courses = new List<Course>();
             //context.Grades.Load();
             context.Students.Load();
             context.Exams.Load();
@@ -47,6 +48,10 @@ namespace ExaminationSystem.Panels.Student
 
             var corses = context.Courses.FromSqlRaw($"EXECUTE GetStudentCourses @StudentID = {studentID}")
                                              .ToList();
+
+            courses.Clear();
+            CourseComboBox.Items.Clear();
+
             foreach (var course in corses)
             {
                 courses.Add(course);
