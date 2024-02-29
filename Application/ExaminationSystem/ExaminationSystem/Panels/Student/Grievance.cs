@@ -283,7 +283,7 @@ namespace ExaminationSystem.Panels.Student
                                                  .ToList().FirstOrDefault();
                
                 var result2 = context.Set<ExamAnsModel>()
-                   .FromSqlRaw("EXECUTE GetExamReportWithModelAnswer @ExamNumber, @StudentID", new SqlParameter("@ExamNumber", exam.ExamId), new SqlParameter("@StudentID", studentID))
+                   .FromSqlRaw("EXECUTE GetExamWithModelAnswer @ExamNumber, @StudentID", new SqlParameter("@ExamNumber", exam.ExamId), new SqlParameter("@StudentID", studentID))
                    .ToList();
 
                 if (result2 == null)
@@ -292,7 +292,7 @@ namespace ExaminationSystem.Panels.Student
                     return;
                 }
 
-                var examReportAnswers = context.Set<ExamAnsModel>().FromSqlRaw($"EXECUTE GetExamReportWithModelAnswer @ExamNumber = {exam.ExamId}, @StudentID={studentID}")
+                var examReportAnswers = context.Set<ExamAnsModel>().FromSqlRaw($"EXECUTE GetExamWithModelAnswer @ExamNumber = {exam.ExamId}, @StudentID={studentID}")
                                                  .ToList();
 
                 examGrievance.Clear();
