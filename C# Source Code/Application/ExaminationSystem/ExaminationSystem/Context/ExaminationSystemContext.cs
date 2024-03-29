@@ -50,7 +50,7 @@ public partial class ExaminationSystemContext : DbContext
            entity.HasNoKey());
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=X3;Initial Catalog=ExaminationSystem;Integrated Security=True;Encrypt=False");
+        => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ExaminationSystem;Integrated Security=True;Encrypt=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
